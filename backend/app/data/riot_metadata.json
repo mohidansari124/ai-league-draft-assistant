@@ -1,0 +1,2460 @@
+{
+  "version": "14.24.1",
+  "source": "https://ddragon.leagueoflegends.com",
+  "champions": {
+    "Ornn": {
+      "name": "Ornn",
+      "title": "The Fire below the Mountain"
+    },
+    "Garen": {
+      "name": "Garen",
+      "title": "The Might of Demacia"
+    },
+    "Malphite": {
+      "name": "Malphite",
+      "title": "Shard of the Monolith"
+    },
+    "Mordekaiser": {
+      "name": "Mordekaiser",
+      "title": "the Iron Revenant"
+    },
+    "Darius": {
+      "name": "Darius",
+      "title": "the Hand of Noxus"
+    },
+    "Aatrox": {
+      "name": "Aatrox",
+      "title": "the Darkin Blade"
+    },
+    "Camille": {
+      "name": "Camille",
+      "title": "the Steel Shadow"
+    },
+    "Jax": {
+      "name": "Jax",
+      "title": "Grandmaster at Arms"
+    },
+    "Shen": {
+      "name": "Shen",
+      "title": "the Eye of Twilight"
+    },
+    "Gwen": {
+      "name": "Gwen",
+      "title": "The Hallowed Seamstress"
+    },
+    "JarvanIV": {
+      "name": "Jarvan IV",
+      "title": "the Exemplar of Demacia"
+    },
+    "LeeSin": {
+      "name": "Lee Sin",
+      "title": "the Blind Monk"
+    },
+    "Amumu": {
+      "name": "Amumu",
+      "title": "the Sad Mummy"
+    },
+    "Sejuani": {
+      "name": "Sejuani",
+      "title": "Fury of the North"
+    },
+    "Viego": {
+      "name": "Viego",
+      "title": "The Ruined King"
+    },
+    "Vi": {
+      "name": "Vi",
+      "title": "the Piltover Enforcer"
+    },
+    "Evelynn": {
+      "name": "Evelynn",
+      "title": "Agony's Embrace"
+    },
+    "Orianna": {
+      "name": "Orianna",
+      "title": "the Lady of Clockwork"
+    },
+    "Zed": {
+      "name": "Zed",
+      "title": "the Master of Shadows"
+    },
+    "Ahri": {
+      "name": "Ahri",
+      "title": "the Nine-Tailed Fox"
+    },
+    "Syndra": {
+      "name": "Syndra",
+      "title": "the Dark Sovereign"
+    },
+    "Viktor": {
+      "name": "Viktor",
+      "title": "the Herald of the Arcane"
+    },
+    "Yasuo": {
+      "name": "Yasuo",
+      "title": "the Unforgiven"
+    },
+    "Lux": {
+      "name": "Lux",
+      "title": "the Lady of Luminosity"
+    },
+    "Jinx": {
+      "name": "Jinx",
+      "title": "the Loose Cannon"
+    },
+    "Samira": {
+      "name": "Samira",
+      "title": "the Desert Rose"
+    },
+    "Caitlyn": {
+      "name": "Caitlyn",
+      "title": "the Sheriff of Piltover"
+    },
+    "Ashe": {
+      "name": "Ashe",
+      "title": "the Frost Archer"
+    },
+    "Ezreal": {
+      "name": "Ezreal",
+      "title": "the Prodigal Explorer"
+    },
+    "Kaisa": {
+      "name": "Kai'Sa",
+      "title": "Daughter of the Void"
+    },
+    "Jhin": {
+      "name": "Jhin",
+      "title": "the Virtuoso"
+    },
+    "Lulu": {
+      "name": "Lulu",
+      "title": "the Fae Sorceress"
+    },
+    "Nautilus": {
+      "name": "Nautilus",
+      "title": "the Titan of the Depths"
+    },
+    "Leona": {
+      "name": "Leona",
+      "title": "the Radiant Dawn"
+    },
+    "Thresh": {
+      "name": "Thresh",
+      "title": "the Chain Warden"
+    },
+    "Janna": {
+      "name": "Janna",
+      "title": "the Storm's Fury"
+    },
+    "Soraka": {
+      "name": "Soraka",
+      "title": "the Starchild"
+    },
+    "Nami": {
+      "name": "Nami",
+      "title": "the Tidecaller"
+    }
+  },
+  "items": {
+    "1001": {
+      "name": "Boots",
+      "gold": 300
+    },
+    "1004": {
+      "name": "Faerie Charm",
+      "gold": 200
+    },
+    "1006": {
+      "name": "Rejuvenation Bead",
+      "gold": 300
+    },
+    "1011": {
+      "name": "Giant's Belt",
+      "gold": 900
+    },
+    "1018": {
+      "name": "Cloak of Agility",
+      "gold": 600
+    },
+    "1026": {
+      "name": "Blasting Wand",
+      "gold": 850
+    },
+    "1027": {
+      "name": "Sapphire Crystal",
+      "gold": 300
+    },
+    "1028": {
+      "name": "Ruby Crystal",
+      "gold": 400
+    },
+    "1029": {
+      "name": "Cloth Armor",
+      "gold": 300
+    },
+    "1031": {
+      "name": "Chain Vest",
+      "gold": 800
+    },
+    "1033": {
+      "name": "Null-Magic Mantle",
+      "gold": 400
+    },
+    "1035": {
+      "name": "Emberknife",
+      "gold": 350
+    },
+    "1036": {
+      "name": "Long Sword",
+      "gold": 350
+    },
+    "1037": {
+      "name": "Pickaxe",
+      "gold": 875
+    },
+    "1038": {
+      "name": "B. F. Sword",
+      "gold": 1300
+    },
+    "1039": {
+      "name": "Hailblade",
+      "gold": 350
+    },
+    "1040": {
+      "name": "Obsidian Edge",
+      "gold": 350
+    },
+    "1042": {
+      "name": "Dagger",
+      "gold": 250
+    },
+    "1043": {
+      "name": "Recurve Bow",
+      "gold": 700
+    },
+    "1052": {
+      "name": "Amplifying Tome",
+      "gold": 400
+    },
+    "1053": {
+      "name": "Vampiric Scepter",
+      "gold": 900
+    },
+    "1054": {
+      "name": "Doran's Shield",
+      "gold": 450
+    },
+    "1055": {
+      "name": "Doran's Blade",
+      "gold": 450
+    },
+    "1056": {
+      "name": "Doran's Ring",
+      "gold": 400
+    },
+    "1057": {
+      "name": "Negatron Cloak",
+      "gold": 850
+    },
+    "1058": {
+      "name": "Needlessly Large Rod",
+      "gold": 1200
+    },
+    "1082": {
+      "name": "Dark Seal",
+      "gold": 350
+    },
+    "1083": {
+      "name": "Cull",
+      "gold": 450
+    },
+    "1101": {
+      "name": "Scorchclaw Pup",
+      "gold": 450
+    },
+    "1102": {
+      "name": "Gustwalker Hatchling",
+      "gold": 450
+    },
+    "1103": {
+      "name": "Mosstomper Seedling",
+      "gold": 450
+    },
+    "1104": {
+      "name": "Eye of the Herald",
+      "gold": 0
+    },
+    "1105": {
+      "name": "Mosstomper Seedling",
+      "gold": 450
+    },
+    "1106": {
+      "name": "Gustwalker Hatchling",
+      "gold": 450
+    },
+    "1107": {
+      "name": "Scorchclaw Pup",
+      "gold": 450
+    },
+    "126697": {
+      "name": "Hubris<br>",
+      "gold": 2950
+    },
+    "1500": {
+      "name": "Penetrating Bullets",
+      "gold": 0
+    },
+    "1501": {
+      "name": "Fortification",
+      "gold": 0
+    },
+    "1502": {
+      "name": "Reinforced Armor",
+      "gold": 0
+    },
+    "1503": {
+      "name": "Warden's Eye",
+      "gold": 0
+    },
+    "1504": {
+      "name": "Vanguard",
+      "gold": 0
+    },
+    "1506": {
+      "name": "Reinforced Armor",
+      "gold": 0
+    },
+    "1507": {
+      "name": "Overcharged",
+      "gold": 0
+    },
+    "1508": {
+      "name": "Anti-tower Socks",
+      "gold": 0
+    },
+    "1509": {
+      "name": "Gusto",
+      "gold": 0
+    },
+    "1510": {
+      "name": "Phreakish Gusto",
+      "gold": 0
+    },
+    "1511": {
+      "name": "Super Mech Armor",
+      "gold": 0
+    },
+    "1512": {
+      "name": "Super Mech Power Field",
+      "gold": 0
+    },
+    "1515": {
+      "name": "Turret Plating",
+      "gold": 0
+    },
+    "1516": {
+      "name": "Structure Bounty",
+      "gold": 0
+    },
+    "1517": {
+      "name": "Structure Bounty",
+      "gold": 0
+    },
+    "1518": {
+      "name": "Structure Bounty",
+      "gold": 0
+    },
+    "1519": {
+      "name": "Structure Bounty",
+      "gold": 0
+    },
+    "1520": {
+      "name": "OvererchargedHA",
+      "gold": 0
+    },
+    "1521": {
+      "name": "Fortification",
+      "gold": 0
+    },
+    "1522": {
+      "name": "Tower Power-Up",
+      "gold": 0
+    },
+    "2003": {
+      "name": "Health Potion",
+      "gold": 50
+    },
+    "2010": {
+      "name": "Total Biscuit of Everlasting Will",
+      "gold": 50
+    },
+    "2015": {
+      "name": "Kircheis Shard",
+      "gold": 700
+    },
+    "2019": {
+      "name": "Steel Sigil",
+      "gold": 1100
+    },
+    "2020": {
+      "name": "The Brutalizer",
+      "gold": 1337
+    },
+    "2021": {
+      "name": "Tunneler",
+      "gold": 1150
+    },
+    "2022": {
+      "name": "Glowing Mote",
+      "gold": 250
+    },
+    "2031": {
+      "name": "Refillable Potion",
+      "gold": 150
+    },
+    "2033": {
+      "name": "Corrupting Potion",
+      "gold": 500
+    },
+    "2049": {
+      "name": "Guardian's Amulet",
+      "gold": 500
+    },
+    "2050": {
+      "name": "Guardian's Shroud",
+      "gold": 500
+    },
+    "2051": {
+      "name": "Guardian's Horn",
+      "gold": 950
+    },
+    "2052": {
+      "name": "Poro-Snax",
+      "gold": 0
+    },
+    "2055": {
+      "name": "Control Ward",
+      "gold": 75
+    },
+    "2056": {
+      "name": "Stealth Ward",
+      "gold": 40
+    },
+    "2065": {
+      "name": "Shurelya's Battlesong",
+      "gold": 2200
+    },
+    "2138": {
+      "name": "Elixir of Iron",
+      "gold": 500
+    },
+    "2139": {
+      "name": "Elixir of Sorcery",
+      "gold": 500
+    },
+    "2140": {
+      "name": "Elixir of Wrath",
+      "gold": 500
+    },
+    "2141": {
+      "name": "Cappa Juice",
+      "gold": 100
+    },
+    "2142": {
+      "name": "Juice of Power",
+      "gold": 500
+    },
+    "2143": {
+      "name": "Juice of Vitality",
+      "gold": 500
+    },
+    "2144": {
+      "name": "Juice of Haste",
+      "gold": 500
+    },
+    "2145": {
+      "name": "Lucky Dice",
+      "gold": 0
+    },
+    "2150": {
+      "name": "Elixir of Skill",
+      "gold": 0
+    },
+    "2151": {
+      "name": "Elixir of Avarice",
+      "gold": 50
+    },
+    "2152": {
+      "name": "Elixir of Force",
+      "gold": 50
+    },
+    "220000": {
+      "name": "Stat Bonus",
+      "gold": 750
+    },
+    "220001": {
+      "name": "Legendary Fighter Item",
+      "gold": 2000
+    },
+    "220002": {
+      "name": "Legendary Marksman Item",
+      "gold": 2000
+    },
+    "220003": {
+      "name": "Legendary Assassin Item",
+      "gold": 2000
+    },
+    "220004": {
+      "name": "Legendary Mage Item",
+      "gold": 2000
+    },
+    "220005": {
+      "name": "Legendary Tank Item",
+      "gold": 2000
+    },
+    "220006": {
+      "name": "Legendary Support Item",
+      "gold": 2000
+    },
+    "220007": {
+      "name": "Prismatic Item",
+      "gold": 4000
+    },
+    "221011": {
+      "name": "Giant's Belt",
+      "gold": 500
+    },
+    "221026": {
+      "name": "Blasting Wand",
+      "gold": 500
+    },
+    "221031": {
+      "name": "Chain Vest",
+      "gold": 500
+    },
+    "221038": {
+      "name": "B. F. Sword",
+      "gold": 1300
+    },
+    "221043": {
+      "name": "Recurve Bow",
+      "gold": 500
+    },
+    "221053": {
+      "name": "Vampiric Scepter",
+      "gold": 500
+    },
+    "221057": {
+      "name": "Negatron Cloak",
+      "gold": 450
+    },
+    "221058": {
+      "name": "Needlessly Large Rod",
+      "gold": 500
+    },
+    "222022": {
+      "name": "Glowing Mote",
+      "gold": 250
+    },
+    "222051": {
+      "name": "Guardian's Horn",
+      "gold": 500
+    },
+    "222065": {
+      "name": "Shurelya's Battlesong",
+      "gold": 2500
+    },
+    "222141": {
+      "name": "Cappa Juice",
+      "gold": 500
+    },
+    "222502": {
+      "name": "Unending Despair",
+      "gold": 2500
+    },
+    "222503": {
+      "name": "Blackfire Torch",
+      "gold": 2500
+    },
+    "222504": {
+      "name": "Kaenic Rookern",
+      "gold": 2500
+    },
+    "223001": {
+      "name": "Evenshroud",
+      "gold": 2500
+    },
+    "223002": {
+      "name": "Trailblazer",
+      "gold": 2500
+    },
+    "223003": {
+      "name": "Archangel's Staff",
+      "gold": 2500
+    },
+    "223004": {
+      "name": "Manamune",
+      "gold": 2500
+    },
+    "223005": {
+      "name": "Ghostcrawlers",
+      "gold": 500
+    },
+    "223006": {
+      "name": "Berserker's Greaves",
+      "gold": 500
+    },
+    "223009": {
+      "name": "Boots of Swiftness",
+      "gold": 500
+    },
+    "223011": {
+      "name": "Chemtech Putrifier",
+      "gold": 1900
+    },
+    "223020": {
+      "name": "Sorcerer's Shoes",
+      "gold": 500
+    },
+    "223026": {
+      "name": "Guardian Angel",
+      "gold": 2500
+    },
+    "223031": {
+      "name": "Infinity Edge",
+      "gold": 2500
+    },
+    "223032": {
+      "name": "Yun Tal Wildarrows",
+      "gold": 2500
+    },
+    "223033": {
+      "name": "Mortal Reminder",
+      "gold": 2500
+    },
+    "223036": {
+      "name": "Lord Dominik's Regards",
+      "gold": 2500
+    },
+    "223039": {
+      "name": "Atma's Reckoning",
+      "gold": 2500
+    },
+    "223040": {
+      "name": "Seraph's Embrace",
+      "gold": 2500
+    },
+    "223042": {
+      "name": "Muramana",
+      "gold": 2500
+    },
+    "223046": {
+      "name": "Phantom Dancer",
+      "gold": 2500
+    },
+    "223047": {
+      "name": "Plated Steelcaps",
+      "gold": 500
+    },
+    "223050": {
+      "name": "Zeke's Convergence",
+      "gold": 2500
+    },
+    "223053": {
+      "name": "Sterak's Gage",
+      "gold": 2500
+    },
+    "223057": {
+      "name": "Sheen",
+      "gold": 2500
+    },
+    "223065": {
+      "name": "Spirit Visage",
+      "gold": 2500
+    },
+    "223067": {
+      "name": "Kindlegem",
+      "gold": 500
+    },
+    "223068": {
+      "name": "Sunfire Aegis",
+      "gold": 2500
+    },
+    "223071": {
+      "name": "Black Cleaver",
+      "gold": 2500
+    },
+    "223072": {
+      "name": "Bloodthirster",
+      "gold": 2500
+    },
+    "223073": {
+      "name": "Experimental Hexplate",
+      "gold": 2500
+    },
+    "223074": {
+      "name": "Ravenous Hydra",
+      "gold": 2500
+    },
+    "223075": {
+      "name": "Thornmail",
+      "gold": 2500
+    },
+    "223078": {
+      "name": "Trinity Force",
+      "gold": 2500
+    },
+    "223084": {
+      "name": "Heartsteel",
+      "gold": 2500
+    },
+    "223085": {
+      "name": "Runaan's Hurricane",
+      "gold": 2500
+    },
+    "223087": {
+      "name": "Statikk Shiv",
+      "gold": 2500
+    },
+    "223089": {
+      "name": "Rabadon's Deathcap",
+      "gold": 2500
+    },
+    "223091": {
+      "name": "Wit's End",
+      "gold": 2500
+    },
+    "223094": {
+      "name": "Rapid Firecannon",
+      "gold": 2500
+    },
+    "223095": {
+      "name": "Stormrazor",
+      "gold": 2500
+    },
+    "223100": {
+      "name": "Lich Bane",
+      "gold": 2500
+    },
+    "223102": {
+      "name": "Banshee's Veil",
+      "gold": 2500
+    },
+    "223105": {
+      "name": "Aegis of the Legion",
+      "gold": 500
+    },
+    "223107": {
+      "name": "Redemption",
+      "gold": 2500
+    },
+    "223109": {
+      "name": "Knight's Vow",
+      "gold": 2500
+    },
+    "223110": {
+      "name": "Frozen Heart",
+      "gold": 2500
+    },
+    "223111": {
+      "name": "Mercury's Treads",
+      "gold": 500
+    },
+    "223112": {
+      "name": "Guardian's Orb",
+      "gold": 500
+    },
+    "223115": {
+      "name": "Nashor's Tooth",
+      "gold": 2500
+    },
+    "223116": {
+      "name": "Rylai's Crystal Scepter",
+      "gold": 2500
+    },
+    "223118": {
+      "name": "Malignance",
+      "gold": 2500
+    },
+    "223119": {
+      "name": "Winter's Approach",
+      "gold": 2500
+    },
+    "223121": {
+      "name": "Fimbulwinter",
+      "gold": 2500
+    },
+    "223124": {
+      "name": "Guinsoo's Rageblade",
+      "gold": 2500
+    },
+    "223135": {
+      "name": "Void Staff",
+      "gold": 2500
+    },
+    "223137": {
+      "name": "Cryptbloom",
+      "gold": 2500
+    },
+    "223139": {
+      "name": "Mercurial Scimitar",
+      "gold": 2500
+    },
+    "223142": {
+      "name": "Youmuu's Ghostblade",
+      "gold": 2500
+    },
+    "223143": {
+      "name": "Randuin's Omen",
+      "gold": 2500
+    },
+    "223146": {
+      "name": "Hextech Gunblade",
+      "gold": 2500
+    },
+    "223152": {
+      "name": "Hextech Rocketbelt",
+      "gold": 2500
+    },
+    "223153": {
+      "name": "Blade of The Ruined King",
+      "gold": 2500
+    },
+    "223156": {
+      "name": "Maw of Malmortius",
+      "gold": 2500
+    },
+    "223157": {
+      "name": "Zhonya's Hourglass",
+      "gold": 2500
+    },
+    "223158": {
+      "name": "Ionian Boots of Lucidity",
+      "gold": 500
+    },
+    "223161": {
+      "name": "Spear of Shojin",
+      "gold": 2500
+    },
+    "223165": {
+      "name": "Morellonomicon",
+      "gold": 2500
+    },
+    "223172": {
+      "name": "Zephyr",
+      "gold": 2500
+    },
+    "223177": {
+      "name": "Guardian's Blade",
+      "gold": 500
+    },
+    "223181": {
+      "name": "Hullbreaker",
+      "gold": 2500
+    },
+    "223184": {
+      "name": "Guardian's Hammer",
+      "gold": 500
+    },
+    "223185": {
+      "name": "Guardian's Dirk",
+      "gold": 500
+    },
+    "223190": {
+      "name": "Locket of the Iron Solari",
+      "gold": 2500
+    },
+    "223193": {
+      "name": "Gargoyle Stoneplate",
+      "gold": 2500
+    },
+    "223222": {
+      "name": "Mikael's Blessing",
+      "gold": 2500
+    },
+    "223302": {
+      "name": "Terminus",
+      "gold": 2500
+    },
+    "223504": {
+      "name": "Ardent Censer",
+      "gold": 2500
+    },
+    "223508": {
+      "name": "Essence Reaver",
+      "gold": 2500
+    },
+    "223742": {
+      "name": "Dead Man's Plate",
+      "gold": 2500
+    },
+    "223748": {
+      "name": "Titanic Hydra",
+      "gold": 2500
+    },
+    "223814": {
+      "name": "Edge of Night",
+      "gold": 2500
+    },
+    "224004": {
+      "name": "Spectral Cutlass",
+      "gold": 2500
+    },
+    "224005": {
+      "name": "Imperial Mandate",
+      "gold": 2500
+    },
+    "224401": {
+      "name": "Force of Nature",
+      "gold": 2500
+    },
+    "224403": {
+      "name": "The Golden Spatula",
+      "gold": 2500
+    },
+    "224628": {
+      "name": "Horizon Focus",
+      "gold": 2500
+    },
+    "224629": {
+      "name": "Cosmic Drive",
+      "gold": 2500
+    },
+    "224633": {
+      "name": "Riftmaker",
+      "gold": 2500
+    },
+    "224636": {
+      "name": "Night Harvester",
+      "gold": 2500
+    },
+    "224637": {
+      "name": "Demonic Embrace",
+      "gold": 2500
+    },
+    "224644": {
+      "name": "Crown of the Shattered Queen",
+      "gold": 2500
+    },
+    "224645": {
+      "name": "Shadowflame",
+      "gold": 2500
+    },
+    "224646": {
+      "name": "Stormsurge",
+      "gold": 2500
+    },
+    "226035": {
+      "name": "Silvermere Dawn",
+      "gold": 2500
+    },
+    "226333": {
+      "name": "Death's Dance",
+      "gold": 2500
+    },
+    "226609": {
+      "name": "Chempunk Chainsword",
+      "gold": 2500
+    },
+    "226610": {
+      "name": "Sundered Sky",
+      "gold": 2500
+    },
+    "226616": {
+      "name": "Staff of Flowing Water",
+      "gold": 2500
+    },
+    "226617": {
+      "name": "Moonstone Renewer",
+      "gold": 2500
+    },
+    "226620": {
+      "name": "Echoes of Helia",
+      "gold": 2500
+    },
+    "226621": {
+      "name": "Dawncore",
+      "gold": 2500
+    },
+    "226630": {
+      "name": "Goredrinker",
+      "gold": 2500
+    },
+    "226631": {
+      "name": "Stridebreaker",
+      "gold": 2500
+    },
+    "226632": {
+      "name": "Divine Sunderer",
+      "gold": 2500
+    },
+    "226653": {
+      "name": "Liandry's Anguish",
+      "gold": 2500
+    },
+    "226655": {
+      "name": "Luden's Companion",
+      "gold": 2500
+    },
+    "226656": {
+      "name": "Everfrost",
+      "gold": 2500
+    },
+    "226657": {
+      "name": "Rod of Ages",
+      "gold": 2500
+    },
+    "226662": {
+      "name": "Iceborn Gauntlet",
+      "gold": 2500
+    },
+    "226664": {
+      "name": "Hollow Radiance<br>",
+      "gold": 2500
+    },
+    "226665": {
+      "name": "Jak'Sho, The Protean",
+      "gold": 2500
+    },
+    "226667": {
+      "name": "Radiant Virtue",
+      "gold": 2500
+    },
+    "226671": {
+      "name": "Galeforce",
+      "gold": 2500
+    },
+    "226672": {
+      "name": "Kraken Slayer",
+      "gold": 2500
+    },
+    "226673": {
+      "name": "Immortal Shieldbow",
+      "gold": 2500
+    },
+    "226675": {
+      "name": "Navori Quickblades",
+      "gold": 2500
+    },
+    "226676": {
+      "name": "The Collector",
+      "gold": 2500
+    },
+    "226691": {
+      "name": "Duskblade of Draktharr",
+      "gold": 2500
+    },
+    "226692": {
+      "name": "Eclipse",
+      "gold": 2500
+    },
+    "226693": {
+      "name": "Prowler's Claw",
+      "gold": 3000
+    },
+    "226694": {
+      "name": "Serylda's Grudge",
+      "gold": 2500
+    },
+    "226695": {
+      "name": "Serpent's Fang",
+      "gold": 2500
+    },
+    "226696": {
+      "name": "Axiom Arc",
+      "gold": 2500
+    },
+    "226697": {
+      "name": "Hubris",
+      "gold": 2500
+    },
+    "226698": {
+      "name": "Profane Hydra",
+      "gold": 2500
+    },
+    "226699": {
+      "name": "Voltaic Cyclosword",
+      "gold": 2500
+    },
+    "226701": {
+      "name": "Opportunity",
+      "gold": 2500
+    },
+    "228001": {
+      "name": "Anathema's Chains",
+      "gold": 2500
+    },
+    "228002": {
+      "name": "Wooglet's Witchcap",
+      "gold": 6000
+    },
+    "228003": {
+      "name": "Deathblade",
+      "gold": 9000
+    },
+    "228004": {
+      "name": "Adaptive Helm",
+      "gold": 6000
+    },
+    "228005": {
+      "name": "Obsidian Cleaver",
+      "gold": 3000
+    },
+    "228006": {
+      "name": "Sanguine Blade",
+      "gold": 3000
+    },
+    "228008": {
+      "name": "Runeglaive",
+      "gold": 9000
+    },
+    "228020": {
+      "name": "Abyssal Mask",
+      "gold": 2500
+    },
+    "2403": {
+      "name": "Minion Dematerializer",
+      "gold": 0
+    },
+    "2420": {
+      "name": "Seeker's Armguard",
+      "gold": 1600
+    },
+    "2421": {
+      "name": "Shattered Armguard",
+      "gold": 1600
+    },
+    "2422": {
+      "name": "Slightly Magical Footwear",
+      "gold": 300
+    },
+    "2501": {
+      "name": "Overlord's Bloodmail",
+      "gold": 3300
+    },
+    "2502": {
+      "name": "Unending Despair",
+      "gold": 2800
+    },
+    "2503": {
+      "name": "Blackfire Torch",
+      "gold": 2800
+    },
+    "2504": {
+      "name": "Kaenic Rookern",
+      "gold": 2900
+    },
+    "2508": {
+      "name": "Fated Ashes",
+      "gold": 900
+    },
+    "3001": {
+      "name": "Evenshroud",
+      "gold": 2300
+    },
+    "3002": {
+      "name": "Trailblazer",
+      "gold": 2400
+    },
+    "3003": {
+      "name": "Archangel's Staff",
+      "gold": 2900
+    },
+    "3004": {
+      "name": "Manamune",
+      "gold": 2900
+    },
+    "3005": {
+      "name": "Ghostcrawlers",
+      "gold": 1000
+    },
+    "3006": {
+      "name": "Berserker's Greaves",
+      "gold": 1100
+    },
+    "3009": {
+      "name": "Boots of Swiftness",
+      "gold": 1000
+    },
+    "3010": {
+      "name": "Symbiotic Soles",
+      "gold": 900
+    },
+    "3011": {
+      "name": "Chemtech Putrifier",
+      "gold": 1900
+    },
+    "3012": {
+      "name": "Chalice of Blessing",
+      "gold": 900
+    },
+    "3013": {
+      "name": "Synchronized Souls",
+      "gold": 900
+    },
+    "3020": {
+      "name": "Sorcerer's Shoes",
+      "gold": 1100
+    },
+    "3023": {
+      "name": "Lifewell Pendant",
+      "gold": 1050
+    },
+    "3024": {
+      "name": "Glacial Buckler",
+      "gold": 900
+    },
+    "3026": {
+      "name": "Guardian Angel",
+      "gold": 3200
+    },
+    "3031": {
+      "name": "Infinity Edge",
+      "gold": 3600
+    },
+    "3032": {
+      "name": "Yun Tal Wildarrows",
+      "gold": 2900
+    },
+    "3033": {
+      "name": "Mortal Reminder",
+      "gold": 3200
+    },
+    "3035": {
+      "name": "Last Whisper",
+      "gold": 1450
+    },
+    "3036": {
+      "name": "Lord Dominik's Regards",
+      "gold": 3000
+    },
+    "3039": {
+      "name": "Atma's Reckoning",
+      "gold": 3000
+    },
+    "3040": {
+      "name": "Seraph's Embrace",
+      "gold": 2900
+    },
+    "3041": {
+      "name": "Mejai's Soulstealer",
+      "gold": 1500
+    },
+    "3042": {
+      "name": "Muramana",
+      "gold": 2900
+    },
+    "3044": {
+      "name": "Phage",
+      "gold": 1100
+    },
+    "3046": {
+      "name": "Phantom Dancer",
+      "gold": 2650
+    },
+    "3047": {
+      "name": "Plated Steelcaps",
+      "gold": 1200
+    },
+    "3050": {
+      "name": "Zeke's Convergence",
+      "gold": 2200
+    },
+    "3051": {
+      "name": "Hearthbound Axe",
+      "gold": 1200
+    },
+    "3053": {
+      "name": "Sterak's Gage",
+      "gold": 3200
+    },
+    "3057": {
+      "name": "Sheen",
+      "gold": 900
+    },
+    "3065": {
+      "name": "Spirit Visage",
+      "gold": 2700
+    },
+    "3066": {
+      "name": "Winged Moonplate",
+      "gold": 800
+    },
+    "3067": {
+      "name": "Kindlegem",
+      "gold": 800
+    },
+    "3068": {
+      "name": "Sunfire Aegis",
+      "gold": 2700
+    },
+    "3070": {
+      "name": "Tear of the Goddess",
+      "gold": 400
+    },
+    "3071": {
+      "name": "Black Cleaver",
+      "gold": 3000
+    },
+    "3072": {
+      "name": "Bloodthirster",
+      "gold": 3400
+    },
+    "3073": {
+      "name": "Experimental Hexplate",
+      "gold": 3000
+    },
+    "3074": {
+      "name": "Ravenous Hydra",
+      "gold": 3300
+    },
+    "3075": {
+      "name": "Thornmail",
+      "gold": 2450
+    },
+    "3076": {
+      "name": "Bramble Vest",
+      "gold": 800
+    },
+    "3077": {
+      "name": "Tiamat",
+      "gold": 1200
+    },
+    "3078": {
+      "name": "Trinity Force",
+      "gold": 3333
+    },
+    "3082": {
+      "name": "Warden's Mail",
+      "gold": 1000
+    },
+    "3083": {
+      "name": "Warmog's Armor",
+      "gold": 3300
+    },
+    "3084": {
+      "name": "Heartsteel",
+      "gold": 3000
+    },
+    "3085": {
+      "name": "Runaan's Hurricane",
+      "gold": 2650
+    },
+    "3086": {
+      "name": "Zeal",
+      "gold": 1200
+    },
+    "3087": {
+      "name": "Statikk Shiv",
+      "gold": 2700
+    },
+    "3089": {
+      "name": "Rabadon's Deathcap",
+      "gold": 3600
+    },
+    "3091": {
+      "name": "Wit's End",
+      "gold": 2800
+    },
+    "3094": {
+      "name": "Rapid Firecannon",
+      "gold": 2650
+    },
+    "3095": {
+      "name": "Stormrazor",
+      "gold": 3100
+    },
+    "3100": {
+      "name": "Lich Bane",
+      "gold": 3200
+    },
+    "3102": {
+      "name": "Banshee's Veil",
+      "gold": 3000
+    },
+    "3105": {
+      "name": "Aegis of the Legion",
+      "gold": 1200
+    },
+    "3107": {
+      "name": "Redemption",
+      "gold": 2300
+    },
+    "3108": {
+      "name": "Fiendish Codex",
+      "gold": 850
+    },
+    "3109": {
+      "name": "Knight's Vow",
+      "gold": 2300
+    },
+    "3110": {
+      "name": "Frozen Heart",
+      "gold": 2500
+    },
+    "3111": {
+      "name": "Mercury's Treads",
+      "gold": 1300
+    },
+    "3112": {
+      "name": "Guardian's Orb",
+      "gold": 950
+    },
+    "3113": {
+      "name": "Aether Wisp",
+      "gold": 900
+    },
+    "3114": {
+      "name": "Forbidden Idol",
+      "gold": 600
+    },
+    "3115": {
+      "name": "Nashor's Tooth",
+      "gold": 3000
+    },
+    "3116": {
+      "name": "Rylai's Crystal Scepter",
+      "gold": 2600
+    },
+    "3117": {
+      "name": "Mobility Boots",
+      "gold": 1000
+    },
+    "3118": {
+      "name": "Malignance",
+      "gold": 2700
+    },
+    "3119": {
+      "name": "Winter's Approach",
+      "gold": 2400
+    },
+    "3121": {
+      "name": "Fimbulwinter",
+      "gold": 2400
+    },
+    "3123": {
+      "name": "Executioner's Calling",
+      "gold": 800
+    },
+    "3124": {
+      "name": "Guinsoo's Rageblade",
+      "gold": 3000
+    },
+    "3128": {
+      "name": "Deathfire Grasp",
+      "gold": 2900
+    },
+    "3131": {
+      "name": "Sword of the Divine",
+      "gold": 2300
+    },
+    "3133": {
+      "name": "Caulfield's Warhammer",
+      "gold": 1050
+    },
+    "3134": {
+      "name": "Serrated Dirk",
+      "gold": 1000
+    },
+    "3135": {
+      "name": "Void Staff",
+      "gold": 3000
+    },
+    "3137": {
+      "name": "Cryptbloom",
+      "gold": 2850
+    },
+    "3139": {
+      "name": "Mercurial Scimitar",
+      "gold": 3200
+    },
+    "3140": {
+      "name": "Quicksilver Sash",
+      "gold": 1300
+    },
+    "3142": {
+      "name": "Youmuu's Ghostblade",
+      "gold": 2800
+    },
+    "3143": {
+      "name": "Randuin's Omen",
+      "gold": 2700
+    },
+    "3144": {
+      "name": "Scout's Slingshot",
+      "gold": 600
+    },
+    "3145": {
+      "name": "Hextech Alternator",
+      "gold": 1100
+    },
+    "3146": {
+      "name": "Hextech Gunblade",
+      "gold": 3250
+    },
+    "3147": {
+      "name": "Haunting Guise",
+      "gold": 1300
+    },
+    "3152": {
+      "name": "Hextech Rocketbelt",
+      "gold": 2600
+    },
+    "3153": {
+      "name": "Blade of The Ruined King",
+      "gold": 3200
+    },
+    "3155": {
+      "name": "Hexdrinker",
+      "gold": 1300
+    },
+    "3156": {
+      "name": "Maw of Malmortius",
+      "gold": 3100
+    },
+    "3157": {
+      "name": "Zhonya's Hourglass",
+      "gold": 3250
+    },
+    "3158": {
+      "name": "Ionian Boots of Lucidity",
+      "gold": 900
+    },
+    "3161": {
+      "name": "Spear of Shojin",
+      "gold": 3100
+    },
+    "3165": {
+      "name": "Morellonomicon",
+      "gold": 2950
+    },
+    "3172": {
+      "name": "Zephyr",
+      "gold": 3100
+    },
+    "3177": {
+      "name": "Guardian's Blade",
+      "gold": 950
+    },
+    "3179": {
+      "name": "Umbral Glaive",
+      "gold": 2600
+    },
+    "3181": {
+      "name": "Hullbreaker",
+      "gold": 3000
+    },
+    "3184": {
+      "name": "Guardian's Hammer",
+      "gold": 950
+    },
+    "3190": {
+      "name": "Locket of the Iron Solari",
+      "gold": 2200
+    },
+    "3193": {
+      "name": "Gargoyle Stoneplate",
+      "gold": 3250
+    },
+    "3211": {
+      "name": "Spectre's Cowl",
+      "gold": 1250
+    },
+    "3222": {
+      "name": "Mikael's Blessing",
+      "gold": 2300
+    },
+    "3302": {
+      "name": "Terminus",
+      "gold": 3000
+    },
+    "3330": {
+      "name": "Scarecrow Effigy",
+      "gold": 0
+    },
+    "3340": {
+      "name": "Stealth Ward",
+      "gold": 0
+    },
+    "3348": {
+      "name": "Arcane Sweeper",
+      "gold": 0
+    },
+    "3349": {
+      "name": "Lucent Singularity",
+      "gold": 0
+    },
+    "3363": {
+      "name": "Farsight Alteration",
+      "gold": 0
+    },
+    "3364": {
+      "name": "Oracle Lens",
+      "gold": 0
+    },
+    "3400": {
+      "name": "Your Cut",
+      "gold": 0
+    },
+    "3430": {
+      "name": "Rite Of Ruin",
+      "gold": 2500
+    },
+    "3504": {
+      "name": "Ardent Censer",
+      "gold": 2200
+    },
+    "3508": {
+      "name": "Essence Reaver",
+      "gold": 2900
+    },
+    "3513": {
+      "name": "Eye of the Herald",
+      "gold": 0
+    },
+    "3599": {
+      "name": "Kalista's Black Spear",
+      "gold": 0
+    },
+    "3600": {
+      "name": "Kalista's Black Spear",
+      "gold": 0
+    },
+    "3742": {
+      "name": "Dead Man's Plate",
+      "gold": 2900
+    },
+    "3748": {
+      "name": "Titanic Hydra",
+      "gold": 3300
+    },
+    "3801": {
+      "name": "Crystalline Bracer",
+      "gold": 800
+    },
+    "3802": {
+      "name": "Lost Chapter",
+      "gold": 1200
+    },
+    "3803": {
+      "name": "Catalyst of Aeons",
+      "gold": 1300
+    },
+    "3814": {
+      "name": "Edge of Night",
+      "gold": 3000
+    },
+    "3850": {
+      "name": "Spellthief's Edge",
+      "gold": 400
+    },
+    "3851": {
+      "name": "Frostfang",
+      "gold": 400
+    },
+    "3853": {
+      "name": "Shard of True Ice",
+      "gold": 400
+    },
+    "3854": {
+      "name": "Steel Shoulderguards",
+      "gold": 400
+    },
+    "3855": {
+      "name": "Runesteel Spaulders",
+      "gold": 400
+    },
+    "3857": {
+      "name": "Pauldrons of Whiterock",
+      "gold": 400
+    },
+    "3858": {
+      "name": "Relic Shield",
+      "gold": 400
+    },
+    "3859": {
+      "name": "Targon's Buckler",
+      "gold": 400
+    },
+    "3860": {
+      "name": "Bulwark of the Mountain",
+      "gold": 400
+    },
+    "3862": {
+      "name": "Spectral Sickle",
+      "gold": 400
+    },
+    "3863": {
+      "name": "Harrowing Crescent",
+      "gold": 400
+    },
+    "3864": {
+      "name": "Black Mist Scythe",
+      "gold": 400
+    },
+    "3865": {
+      "name": "World Atlas",
+      "gold": 400
+    },
+    "3866": {
+      "name": "Runic Compass",
+      "gold": 400
+    },
+    "3867": {
+      "name": "Bounty of Worlds",
+      "gold": 400
+    },
+    "3869": {
+      "name": "Celestial Opposition",
+      "gold": 400
+    },
+    "3870": {
+      "name": "Dream Maker",
+      "gold": 400
+    },
+    "3871": {
+      "name": "Zaz'Zak's Realmspike",
+      "gold": 400
+    },
+    "3876": {
+      "name": "Solstice Sleigh",
+      "gold": 400
+    },
+    "3877": {
+      "name": "Bloodsong",
+      "gold": 400
+    },
+    "3901": {
+      "name": "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
+      "gold": 0
+    },
+    "3902": {
+      "name": "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
+      "gold": 0
+    },
+    "3903": {
+      "name": "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
+      "gold": 0
+    },
+    "3916": {
+      "name": "Oblivion Orb",
+      "gold": 800
+    },
+    "4003": {
+      "name": "Lifeline",
+      "gold": 2500
+    },
+    "4004": {
+      "name": "Spectral Cutlass",
+      "gold": 3900
+    },
+    "4005": {
+      "name": "Imperial Mandate",
+      "gold": 2250
+    },
+    "4010": {
+      "name": "Bloodletter's Curse",
+      "gold": 2500
+    },
+    "4011": {
+      "name": "Sword of Blossoming Dawn",
+      "gold": 2500
+    },
+    "4012": {
+      "name": "Sin Eater",
+      "gold": 3000
+    },
+    "4013": {
+      "name": "Lightning Braid",
+      "gold": 3000
+    },
+    "4014": {
+      "name": "Frozen Mallet",
+      "gold": 3000
+    },
+    "4015": {
+      "name": "Perplexity",
+      "gold": 2500
+    },
+    "4016": {
+      "name": "Wordless Promise",
+      "gold": 2500
+    },
+    "4017": {
+      "name": "Hellfire Hatchet",
+      "gold": 2500
+    },
+    "4401": {
+      "name": "Force of Nature",
+      "gold": 2800
+    },
+    "4402": {
+      "name": "Innervating Locket",
+      "gold": 2950
+    },
+    "4403": {
+      "name": "The Golden Spatula",
+      "gold": 7287
+    },
+    "443054": {
+      "name": "Darksteel Talons",
+      "gold": 1000
+    },
+    "443055": {
+      "name": "Fulmination",
+      "gold": 1000
+    },
+    "443056": {
+      "name": "Demon King's Crown",
+      "gold": 1000
+    },
+    "443058": {
+      "name": "Shield of Molten Stone",
+      "gold": 1000
+    },
+    "443059": {
+      "name": "Cloak of Starry Night",
+      "gold": 1000
+    },
+    "443060": {
+      "name": "Sword of the Divine",
+      "gold": 1000
+    },
+    "443061": {
+      "name": "Force Of Entropy",
+      "gold": 1000
+    },
+    "443062": {
+      "name": "Sanguine Gift",
+      "gold": 1000
+    },
+    "443063": {
+      "name": "Eleisa's Miracle",
+      "gold": 1000
+    },
+    "443064": {
+      "name": "Talisman Of Ascension",
+      "gold": 1000
+    },
+    "443069": {
+      "name": "Hamstringer",
+      "gold": 1000
+    },
+    "443079": {
+      "name": "Turbo Chemtank",
+      "gold": 1000
+    },
+    "443080": {
+      "name": "Twin Mask",
+      "gold": 1000
+    },
+    "443081": {
+      "name": "Hexbolt Companion",
+      "gold": 1000
+    },
+    "443090": {
+      "name": "Reaper's Toll",
+      "gold": 1000
+    },
+    "443193": {
+      "name": "Gargoyle Stoneplate",
+      "gold": 1000
+    },
+    "444636": {
+      "name": "Night Harvester",
+      "gold": 1000
+    },
+    "444637": {
+      "name": "Demonic Embrace",
+      "gold": 1000
+    },
+    "444644": {
+      "name": "Crown of the Shattered Queen",
+      "gold": 1000
+    },
+    "446632": {
+      "name": "Divine Sunderer",
+      "gold": 1000
+    },
+    "446656": {
+      "name": "Everfrost",
+      "gold": 1000
+    },
+    "446667": {
+      "name": "Radiant Virtue",
+      "gold": 1000
+    },
+    "446671": {
+      "name": "Galeforce",
+      "gold": 1000
+    },
+    "446691": {
+      "name": "Duskblade of Draktharr",
+      "gold": 1000
+    },
+    "446693": {
+      "name": "Prowler's Claw",
+      "gold": 1000
+    },
+    "447100": {
+      "name": "Mirage Blade",
+      "gold": 1000
+    },
+    "447101": {
+      "name": "Gambler's Blade",
+      "gold": 1000
+    },
+    "447102": {
+      "name": "Reality Fracture",
+      "gold": 1000
+    },
+    "447103": {
+      "name": "Hemomancer's Helm",
+      "gold": 1000
+    },
+    "447104": {
+      "name": "Innervating Locket",
+      "gold": 1000
+    },
+    "447105": {
+      "name": "Empyrean Promise",
+      "gold": 1000
+    },
+    "447106": {
+      "name": "Dragonheart",
+      "gold": 1000
+    },
+    "447107": {
+      "name": "Decapitator",
+      "gold": 1000
+    },
+    "447108": {
+      "name": "Runecarver",
+      "gold": 1000
+    },
+    "447109": {
+      "name": "Cruelty",
+      "gold": 1000
+    },
+    "447110": {
+      "name": "Moonflair Spellblade",
+      "gold": 1000
+    },
+    "447111": {
+      "name": "Overlord's Bloodmail",
+      "gold": 1000
+    },
+    "447112": {
+      "name": "Flesheater",
+      "gold": 1000
+    },
+    "447113": {
+      "name": "Detonation Orb",
+      "gold": 1000
+    },
+    "447114": {
+      "name": "Reverberation",
+      "gold": 1000
+    },
+    "447115": {
+      "name": "Regicide",
+      "gold": 1000
+    },
+    "447116": {
+      "name": "Kinkou Jitte",
+      "gold": 1000
+    },
+    "447118": {
+      "name": "Pyromancer's Cloak",
+      "gold": 1000
+    },
+    "447119": {
+      "name": "Lightning Rod",
+      "gold": 1000
+    },
+    "447120": {
+      "name": "Diamond-Tipped Spear",
+      "gold": 1000
+    },
+    "447121": {
+      "name": "Twilight's Edge",
+      "gold": 1000
+    },
+    "447122": {
+      "name": "Black Hole Gauntlet",
+      "gold": 1000
+    },
+    "447123": {
+      "name": "Puppeteer",
+      "gold": 1000
+    },
+    "4628": {
+      "name": "Horizon Focus",
+      "gold": 2700
+    },
+    "4629": {
+      "name": "Cosmic Drive",
+      "gold": 3000
+    },
+    "4630": {
+      "name": "Blighting Jewel",
+      "gold": 1100
+    },
+    "4632": {
+      "name": "Verdant Barrier",
+      "gold": 1600
+    },
+    "4633": {
+      "name": "Riftmaker",
+      "gold": 3100
+    },
+    "4635": {
+      "name": "Leeching Leer",
+      "gold": 1265
+    },
+    "4636": {
+      "name": "Night Harvester",
+      "gold": 2765
+    },
+    "4637": {
+      "name": "Demonic Embrace",
+      "gold": 3000
+    },
+    "4638": {
+      "name": "Watchful Wardstone",
+      "gold": 1100
+    },
+    "4641": {
+      "name": "Stirring Wardstone",
+      "gold": 350
+    },
+    "4642": {
+      "name": "Bandleglass Mirror",
+      "gold": 900
+    },
+    "4643": {
+      "name": "Vigilant Wardstone",
+      "gold": 2300
+    },
+    "4644": {
+      "name": "Crown of the Shattered Queen",
+      "gold": 2865
+    },
+    "4645": {
+      "name": "Shadowflame",
+      "gold": 3200
+    },
+    "4646": {
+      "name": "Stormsurge",
+      "gold": 2900
+    },
+    "6029": {
+      "name": "Ironspike Whip",
+      "gold": 1100
+    },
+    "6035": {
+      "name": "Silvermere Dawn",
+      "gold": 3000
+    },
+    "6333": {
+      "name": "Death's Dance",
+      "gold": 3300
+    },
+    "6609": {
+      "name": "Chempunk Chainsword",
+      "gold": 3100
+    },
+    "6610": {
+      "name": "Sundered Sky",
+      "gold": 3100
+    },
+    "6616": {
+      "name": "Staff of Flowing Water",
+      "gold": 2250
+    },
+    "6617": {
+      "name": "Moonstone Renewer",
+      "gold": 2200
+    },
+    "6620": {
+      "name": "Echoes of Helia",
+      "gold": 2200
+    },
+    "6621": {
+      "name": "Dawncore",
+      "gold": 2500
+    },
+    "6630": {
+      "name": "Goredrinker",
+      "gold": 3200
+    },
+    "6631": {
+      "name": "Stridebreaker",
+      "gold": 3300
+    },
+    "6632": {
+      "name": "Divine Sunderer",
+      "gold": 3450
+    },
+    "6653": {
+      "name": "Liandry's Torment",
+      "gold": 3000
+    },
+    "6655": {
+      "name": "Luden's Companion",
+      "gold": 2850
+    },
+    "6656": {
+      "name": "Everfrost",
+      "gold": 2865
+    },
+    "6657": {
+      "name": "Rod of Ages",
+      "gold": 2600
+    },
+    "6660": {
+      "name": "Bami's Cinder",
+      "gold": 900
+    },
+    "6662": {
+      "name": "Iceborn Gauntlet",
+      "gold": 2900
+    },
+    "6664": {
+      "name": "Hollow Radiance",
+      "gold": 2800
+    },
+    "6665": {
+      "name": "Jak'Sho, The Protean",
+      "gold": 3200
+    },
+    "6667": {
+      "name": "Radiant Virtue",
+      "gold": 2700
+    },
+    "6670": {
+      "name": "Noonquiver",
+      "gold": 1300
+    },
+    "6671": {
+      "name": "Galeforce",
+      "gold": 3500
+    },
+    "6672": {
+      "name": "Kraken Slayer",
+      "gold": 3100
+    },
+    "6673": {
+      "name": "Immortal Shieldbow",
+      "gold": 3000
+    },
+    "6675": {
+      "name": "Navori Flickerblade",
+      "gold": 2650
+    },
+    "6676": {
+      "name": "The Collector",
+      "gold": 3000
+    },
+    "6677": {
+      "name": "Rageknife",
+      "gold": 1100
+    },
+    "6690": {
+      "name": "Rectrix",
+      "gold": 775
+    },
+    "6691": {
+      "name": "Duskblade of Draktharr",
+      "gold": 2950
+    },
+    "6692": {
+      "name": "Eclipse",
+      "gold": 2900
+    },
+    "6693": {
+      "name": "Prowler's Claw",
+      "gold": 2850
+    },
+    "6694": {
+      "name": "Serylda's Grudge",
+      "gold": 3000
+    },
+    "6695": {
+      "name": "Serpent's Fang",
+      "gold": 2500
+    },
+    "6696": {
+      "name": "Axiom Arc",
+      "gold": 3000
+    },
+    "6697": {
+      "name": "Hubris",
+      "gold": 3000
+    },
+    "6698": {
+      "name": "Profane Hydra",
+      "gold": 3200
+    },
+    "6699": {
+      "name": "Voltaic Cyclosword",
+      "gold": 3000
+    },
+    "6700": {
+      "name": "Shield of the Rakkor",
+      "gold": 2675
+    },
+    "6701": {
+      "name": "Opportunity",
+      "gold": 2700
+    },
+    "7050": {
+      "name": "Gangplank Placeholder",
+      "gold": 0
+    },
+    "8001": {
+      "name": "Anathema's Chains",
+      "gold": 2500
+    },
+    "8020": {
+      "name": "Abyssal Mask",
+      "gold": 2650
+    },
+    "9168": {
+      "name": "Locked Weapon Slot",
+      "gold": 0
+    },
+    "9171": {
+      "name": "Cyclonic Slicers",
+      "gold": 0
+    },
+    "9172": {
+      "name": "YuumiBot",
+      "gold": 0
+    },
+    "9173": {
+      "name": "Radiant Field",
+      "gold": 0
+    },
+    "9174": {
+      "name": "Statikk Sword",
+      "gold": 0
+    },
+    "9175": {
+      "name": "Lioness's Lament",
+      "gold": 0
+    },
+    "9176": {
+      "name": "Gatling Bunny-Guns",
+      "gold": 0
+    },
+    "9177": {
+      "name": "Searing Shortbow",
+      "gold": 0
+    },
+    "9178": {
+      "name": "The Annihilator",
+      "gold": 0
+    },
+    "9179": {
+      "name": "Battle Bunny Crossbow",
+      "gold": 0
+    },
+    "9180": {
+      "name": "UwU Blaster",
+      "gold": 0
+    },
+    "9181": {
+      "name": "Vortex Glove",
+      "gold": 0
+    },
+    "9183": {
+      "name": "Blade-o-rang",
+      "gold": 0
+    },
+    "9184": {
+      "name": "Bunny Mega-Blast",
+      "gold": 0
+    },
+    "9185": {
+      "name": "Anti-Shark Sea Mine",
+      "gold": 0
+    },
+    "9187": {
+      "name": "T.I.B.B.E.R.S",
+      "gold": 0
+    },
+    "9188": {
+      "name": "Ani-Mines",
+      "gold": 0
+    },
+    "9189": {
+      "name": "Final City Transit",
+      "gold": 0
+    },
+    "9190": {
+      "name": "Echoing Batblades",
+      "gold": 0
+    },
+    "9192": {
+      "name": "Paw Print Poisoner",
+      "gold": 0
+    },
+    "9193": {
+      "name": "Iceblast Armor",
+      "gold": 0
+    },
+    "9271": {
+      "name": "Unceasing Cyclone",
+      "gold": 0
+    },
+    "9272": {
+      "name": "YuumiBot_Final_FINAL",
+      "gold": 0
+    },
+    "9273": {
+      "name": "Explosive Embrace",
+      "gold": 0
+    },
+    "9274": {
+      "name": "Prumbis's Electrocarver",
+      "gold": 0
+    },
+    "9275": {
+      "name": "Enveloping Light",
+      "gold": 0
+    },
+    "9276": {
+      "name": "Double Bun-Bun Barrage",
+      "gold": 0
+    },
+    "9277": {
+      "name": "Evolved Embershot",
+      "gold": 0
+    },
+    "9278": {
+      "name": "Animapocalypse",
+      "gold": 0
+    },
+    "9279": {
+      "name": "Bunny Prime Ballista",
+      "gold": 0
+    },
+    "9280": {
+      "name": "OwO Blaster",
+      "gold": 0
+    },
+    "9281": {
+      "name": "Tempest's Gauntlet",
+      "gold": 0
+    },
+    "9283": {
+      "name": "Quad-o-rang",
+      "gold": 0
+    },
+    "9284": {
+      "name": "Rapid Rabbit Raindown",
+      "gold": 0
+    },
+    "9285": {
+      "name": "Neverending Mobstomper",
+      "gold": 0
+    },
+    "9287": {
+      "name": "T.I.B.B.E.R.S (B.E.E.G Edition)",
+      "gold": 0
+    },
+    "9288": {
+      "name": "Jinx's Tri-Namite",
+      "gold": 0
+    },
+    "9289": {
+      "name": "FC Limited Express",
+      "gold": 0
+    },
+    "9290": {
+      "name": "Vayne's Chromablades",
+      "gold": 0
+    },
+    "9292": {
+      "name": "Bearfoot Chem-Dispenser",
+      "gold": 0
+    },
+    "9293": {
+      "name": "Deep Freeze",
+      "gold": 0
+    },
+    "9300": {
+      "name": "Meow Meow",
+      "gold": 0
+    },
+    "9301": {
+      "name": "Shield Slam",
+      "gold": 0
+    },
+    "9302": {
+      "name": "Sound Wave",
+      "gold": 0
+    },
+    "9303": {
+      "name": "Pillory Swipe",
+      "gold": 0
+    },
+    "9304": {
+      "name": "Steel Tempest",
+      "gold": 0
+    },
+    "9305": {
+      "name": "Tentacle Slam",
+      "gold": 0
+    },
+    "9306": {
+      "name": "Winged Dagger",
+      "gold": 0
+    },
+    "9307": {
+      "name": "Guiding Hex",
+      "gold": 0
+    },
+    "9308": {
+      "name": "Bunny Hop",
+      "gold": 0
+    },
+    "9400": {
+      "name": "Battle Cat Barrage",
+      "gold": 0
+    },
+    "9401": {
+      "name": "Light of the Lion",
+      "gold": 0
+    },
+    "9402": {
+      "name": "Anima Echo",
+      "gold": 0
+    },
+    "9403": {
+      "name": "Savage Slice",
+      "gold": 0
+    },
+    "9404": {
+      "name": "Wandering Storms",
+      "gold": 0
+    },
+    "9405": {
+      "name": "Grizzly Smash",
+      "gold": 0
+    },
+    "9406": {
+      "name": "Lover's Ricochet",
+      "gold": 0
+    },
+    "9407": {
+      "name": "Hopped-Up Hex",
+      "gold": 0
+    },
+    "9408": {
+      "name": "Carrot Crash",
+      "gold": 0
+    }
+  }
+}

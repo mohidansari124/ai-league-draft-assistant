@@ -1,0 +1,1256 @@
+{
+  "Ornn": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Grasp of the Undying",
+      "runes": [
+        "Demolish",
+        "Second Wind",
+        "Overgrowth",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Sunfire Aegis",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Thornmail",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Jak’Sho, The Protean",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Garen": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Haste",
+        "Last Stand",
+        "Conditioning",
+        "Overgrowth"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Stridebreaker",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Phantom Dancer",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Dead Man’s Plate",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Malphite": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Grasp of the Undying",
+      "runes": [
+        "Demolish",
+        "Second Wind",
+        "Overgrowth",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Sunfire Aegis",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Thornmail",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Jak’Sho, The Protean",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Mordekaiser": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Haste",
+        "Last Stand",
+        "Second Wind",
+        "Revitalize"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Rylai’s Crystal Scepter",
+        "reason": "Sample ap-fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Riftmaker",
+        "reason": "Sample ap-fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Liandry’s Torment",
+        "reason": "Sample ap-fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Darius": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Stridebreaker",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Dead Man’s Plate",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Aatrox": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Eclipse",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sundered Sky",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Camille": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Trinity Force",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Death’s Dance",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Jax": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Trinity Force",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Death’s Dance",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Shen": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Grasp of the Undying",
+      "runes": [
+        "Demolish",
+        "Second Wind",
+        "Overgrowth",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Sunfire Aegis",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Thornmail",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Jak’Sho, The Protean",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Gwen": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Haste",
+        "Last Stand",
+        "Second Wind",
+        "Revitalize"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Riftmaker",
+        "reason": "Sample ap-fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Nashor’s Tooth",
+        "reason": "Sample ap-fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Zhonya’s Hourglass",
+        "reason": "Sample ap-fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Jarvan IV": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Sundered Sky",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Black Cleaver",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Lee Sin": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Eclipse",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sundered Sky",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Amumu": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Aftershock",
+      "runes": [
+        "Demolish",
+        "Second Wind",
+        "Overgrowth",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Liandry’s Torment",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sunfire Aegis",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Abyssal Mask",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Sejuani": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Aftershock",
+      "runes": [
+        "Demolish",
+        "Second Wind",
+        "Overgrowth",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Sunfire Aegis",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Thornmail",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Jak’Sho, The Protean",
+        "reason": "Sample tank core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Viego": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Trinity Force",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Death’s Dance",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Vi": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Sundered Sky",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Black Cleaver",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Sterak’s Gage",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Evelynn": {
+    "runes": {
+      "primary": "Domination",
+      "secondary": "Sorcery",
+      "keystone": "Electrocute",
+      "runes": [
+        "Sudden Impact",
+        "Eyeball Collection",
+        "Relentless Hunter",
+        "Absolute Focus",
+        "Gathering Storm"
+      ],
+      "shards": [
+        "Adaptive force",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Lich Bane",
+        "reason": "Sample ap-assassin core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Rabadon’s Deathcap",
+        "reason": "Sample ap-assassin core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Void Staff",
+        "reason": "Sample ap-assassin core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Orianna": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Inspiration",
+      "keystone": "Arcane Comet",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Scorch",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Luden’s Companion",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Shadowflame",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Rabadon’s Deathcap",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Zed": {
+    "runes": {
+      "primary": "Domination",
+      "secondary": "Sorcery",
+      "keystone": "Electrocute",
+      "runes": [
+        "Sudden Impact",
+        "Eyeball Collection",
+        "Ultimate Hunter",
+        "Transcendence",
+        "Scorch"
+      ],
+      "shards": [
+        "Adaptive force",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Youmuu’s Ghostblade",
+        "reason": "Sample ad-assassin core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Opportunity",
+        "reason": "Sample ad-assassin core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Edge of Night",
+        "reason": "Sample ad-assassin core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Ahri": {
+    "runes": {
+      "primary": "Domination",
+      "secondary": "Sorcery",
+      "keystone": "Electrocute",
+      "runes": [
+        "Taste of Blood",
+        "Eyeball Collection",
+        "Ultimate Hunter",
+        "Manaflow Band",
+        "Transcendence"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Luden’s Companion",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Shadowflame",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Rabadon’s Deathcap",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Syndra": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Inspiration",
+      "keystone": "Arcane Comet",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Scorch",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Luden’s Companion",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Shadowflame",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Rabadon’s Deathcap",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Viktor": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Inspiration",
+      "keystone": "Arcane Comet",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Scorch",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Luden’s Companion",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Shadowflame",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Rabadon’s Deathcap",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Yasuo": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Resolve",
+      "keystone": "Conqueror",
+      "runes": [
+        "Triumph",
+        "Legend: Alacrity",
+        "Last Stand",
+        "Bone Plating",
+        "Unflinching"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Blade of the Ruined King",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Infinity Edge",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Immortal Shieldbow",
+        "reason": "Sample fighter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Lux": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Inspiration",
+      "keystone": "Arcane Comet",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Scorch",
+        "Magical Footwear",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Luden’s Companion",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Shadowflame",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Rabadon’s Deathcap",
+        "reason": "Sample mage core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Jinx": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Inspiration",
+      "keystone": "Press the Attack",
+      "runes": [
+        "Presence of Mind",
+        "Legend: Bloodline",
+        "Coup de Grace",
+        "Magical Footwear",
+        "Biscuit Delivery"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Infinity Edge",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Runaan’s Hurricane",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Lord Dominik’s Regards",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Samira": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Inspiration",
+      "keystone": "Conqueror",
+      "runes": [
+        "Presence of Mind",
+        "Legend: Bloodline",
+        "Coup de Grace",
+        "Magical Footwear",
+        "Biscuit Delivery"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "The Collector",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Infinity Edge",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Bloodthirster",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Caitlyn": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Inspiration",
+      "keystone": "Press the Attack",
+      "runes": [
+        "Presence of Mind",
+        "Legend: Bloodline",
+        "Coup de Grace",
+        "Magical Footwear",
+        "Biscuit Delivery"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Infinity Edge",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Phantom Dancer",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Lord Dominik’s Regards",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Ashe": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Inspiration",
+      "keystone": "Press the Attack",
+      "runes": [
+        "Presence of Mind",
+        "Legend: Bloodline",
+        "Coup de Grace",
+        "Magical Footwear",
+        "Biscuit Delivery"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Infinity Edge",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Phantom Dancer",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Lord Dominik’s Regards",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Ezreal": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Inspiration",
+      "keystone": "Conqueror",
+      "runes": [
+        "Presence of Mind",
+        "Legend: Bloodline",
+        "Coup de Grace",
+        "Magical Footwear",
+        "Biscuit Delivery"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Trinity Force",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Manamune",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Serylda’s Grudge",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Kai'Sa": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Inspiration",
+      "keystone": "Press the Attack",
+      "runes": [
+        "Presence of Mind",
+        "Legend: Bloodline",
+        "Coup de Grace",
+        "Magical Footwear",
+        "Biscuit Delivery"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Statikk Shiv",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Guinsoo’s Rageblade",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Nashor’s Tooth",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Jhin": {
+    "runes": {
+      "primary": "Precision",
+      "secondary": "Inspiration",
+      "keystone": "Fleet Footwork",
+      "runes": [
+        "Presence of Mind",
+        "Legend: Bloodline",
+        "Coup de Grace",
+        "Magical Footwear",
+        "Biscuit Delivery"
+      ],
+      "shards": [
+        "Attack speed",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "The Collector",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Infinity Edge",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Rapid Firecannon",
+        "reason": "Sample marksman core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Lulu": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Resolve",
+      "keystone": "Summon Aery",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Gathering Storm",
+        "Font of Life",
+        "Revitalize"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Moonstone Renewer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Ardent Censer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Redemption",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Nautilus": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Aftershock",
+      "runes": [
+        "Font of Life",
+        "Bone Plating",
+        "Unflinching",
+        "Hextech Flashtraption",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Locket of the Iron Solari",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Knight’s Vow",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Zeke’s Convergence",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Leona": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Aftershock",
+      "runes": [
+        "Font of Life",
+        "Bone Plating",
+        "Unflinching",
+        "Hextech Flashtraption",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Locket of the Iron Solari",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Knight’s Vow",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Zeke’s Convergence",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Thresh": {
+    "runes": {
+      "primary": "Resolve",
+      "secondary": "Inspiration",
+      "keystone": "Aftershock",
+      "runes": [
+        "Font of Life",
+        "Bone Plating",
+        "Unflinching",
+        "Hextech Flashtraption",
+        "Cosmic Insight"
+      ],
+      "shards": [
+        "Ability haste",
+        "Health scaling",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Locket of the Iron Solari",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Knight’s Vow",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Zeke’s Convergence",
+        "reason": "Sample tank-support core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Janna": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Resolve",
+      "keystone": "Summon Aery",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Gathering Storm",
+        "Font of Life",
+        "Revitalize"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Moonstone Renewer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Ardent Censer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Redemption",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Soraka": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Resolve",
+      "keystone": "Summon Aery",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Gathering Storm",
+        "Font of Life",
+        "Revitalize"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Moonstone Renewer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Ardent Censer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Redemption",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  },
+  "Nami": {
+    "runes": {
+      "primary": "Sorcery",
+      "secondary": "Resolve",
+      "keystone": "Summon Aery",
+      "runes": [
+        "Manaflow Band",
+        "Transcendence",
+        "Gathering Storm",
+        "Font of Life",
+        "Revitalize"
+      ],
+      "shards": [
+        "Ability haste",
+        "Adaptive force",
+        "Health scaling"
+      ]
+    },
+    "coreItems": [
+      {
+        "name": "Moonstone Renewer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Ardent Censer",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      },
+      {
+        "name": "Redemption",
+        "reason": "Sample enchanter core item. Adapt purchase order to lane and gold."
+      }
+    ]
+  }
+}

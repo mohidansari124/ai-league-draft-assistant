@@ -1,0 +1,778 @@
+{
+  "version": "sample-v1 (educational heuristics)",
+  "notice": "38 curated champions. Trait ratings, matchups and builds are illustrative sample data, not live patch statistics or win rates.",
+  "champions": [
+    {
+      "id": "Ornn",
+      "name": "Ornn",
+      "roles": [
+        "top"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.35,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 2,
+        "control": 3,
+        "scaling": 3
+      },
+      "tags": [
+        "teamfight"
+      ]
+    },
+    {
+      "id": "Garen",
+      "name": "Garen",
+      "roles": [
+        "top"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.9,
+      "traits": {
+        "frontline": 2,
+        "engage": 1,
+        "peel": 1,
+        "control": 1,
+        "scaling": 2
+      },
+      "tags": [
+        "execute"
+      ]
+    },
+    {
+      "id": "Malphite",
+      "name": "Malphite",
+      "roles": [
+        "top"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.2,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "armor",
+        "teamfight"
+      ]
+    },
+    {
+      "id": "Mordekaiser",
+      "name": "Mordekaiser",
+      "roles": [
+        "top"
+      ],
+      "archetype": "ap-fighter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 2,
+        "engage": 1,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "isolate"
+      ]
+    },
+    {
+      "id": "Darius",
+      "name": "Darius",
+      "roles": [
+        "top"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 2,
+        "engage": 1,
+        "peel": 1,
+        "control": 1,
+        "scaling": 2
+      },
+      "tags": [
+        "healing",
+        "execute"
+      ]
+    },
+    {
+      "id": "Aatrox",
+      "name": "Aatrox",
+      "roles": [
+        "top"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 2,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "healing"
+      ]
+    },
+    {
+      "id": "Camille",
+      "name": "Camille",
+      "roles": [
+        "top"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 1,
+        "engage": 2,
+        "peel": 1,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "dive",
+        "splitpush"
+      ]
+    },
+    {
+      "id": "Jax",
+      "name": "Jax",
+      "roles": [
+        "top"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.65,
+      "traits": {
+        "frontline": 2,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "splitpush"
+      ]
+    },
+    {
+      "id": "Shen",
+      "name": "Shen",
+      "roles": [
+        "top"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.4,
+      "traits": {
+        "frontline": 3,
+        "engage": 2,
+        "peel": 3,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "protect"
+      ]
+    },
+    {
+      "id": "Gwen",
+      "name": "Gwen",
+      "roles": [
+        "top"
+      ],
+      "archetype": "ap-fighter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 1,
+        "engage": 1,
+        "peel": 0,
+        "control": 0,
+        "scaling": 3
+      },
+      "tags": [
+        "healing",
+        "splitpush"
+      ]
+    },
+    {
+      "id": "JarvanIV",
+      "name": "Jarvan IV",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 2,
+        "engage": 3,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "dive",
+        "teamfight"
+      ]
+    },
+    {
+      "id": "LeeSin",
+      "name": "Lee Sin",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 1,
+        "engage": 3,
+        "peel": 2,
+        "control": 2,
+        "scaling": 1
+      },
+      "tags": [
+        "dive",
+        "healing"
+      ]
+    },
+    {
+      "id": "Amumu",
+      "name": "Amumu",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.1,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "teamfight"
+      ]
+    },
+    {
+      "id": "Sejuani",
+      "name": "Sejuani",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.3,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "teamfight"
+      ]
+    },
+    {
+      "id": "Viego",
+      "name": "Viego",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.85,
+      "traits": {
+        "frontline": 1,
+        "engage": 2,
+        "peel": 0,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "healing",
+        "dive"
+      ]
+    },
+    {
+      "id": "Vi",
+      "name": "Vi",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 2,
+        "engage": 3,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "dive"
+      ]
+    },
+    {
+      "id": "Evelynn",
+      "name": "Evelynn",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "ap-assassin",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 0,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "dive"
+      ]
+    },
+    {
+      "id": "Orianna",
+      "name": "Orianna",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 2,
+        "peel": 2,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "teamfight",
+        "protect"
+      ]
+    },
+    {
+      "id": "Zed",
+      "name": "Zed",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "ad-assassin",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 0,
+        "control": 0,
+        "scaling": 2
+      },
+      "tags": [
+        "dive"
+      ]
+    },
+    {
+      "id": "Ahri",
+      "name": "Ahri",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.1,
+      "traits": {
+        "frontline": 0,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "pick"
+      ]
+    },
+    {
+      "id": "Syndra",
+      "name": "Syndra",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 2,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "burst"
+      ]
+    },
+    {
+      "id": "Viktor",
+      "name": "Viktor",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 2,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "teamfight"
+      ]
+    },
+    {
+      "id": "Yasuo",
+      "name": "Yasuo",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 1,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "knockup-synergy"
+      ]
+    },
+    {
+      "id": "Lux",
+      "name": "Lux",
+      "roles": [
+        "mid",
+        "support"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 2,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "protect",
+        "pick"
+      ]
+    },
+    {
+      "id": "Jinx",
+      "name": "Jinx",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 1,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "carry"
+      ]
+    },
+    {
+      "id": "Samira",
+      "name": "Samira",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.9,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 0,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "dive",
+        "healing",
+        "knockup-synergy"
+      ]
+    },
+    {
+      "id": "Caitlyn",
+      "name": "Caitlyn",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 1,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "carry"
+      ]
+    },
+    {
+      "id": "Ashe",
+      "name": "Ashe",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 2,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "carry",
+        "pick"
+      ]
+    },
+    {
+      "id": "Ezreal",
+      "name": "Ezreal",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.7,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 0,
+        "control": 0,
+        "scaling": 3
+      },
+      "tags": [
+        "carry"
+      ]
+    },
+    {
+      "id": "Kaisa",
+      "name": "Kai'Sa",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.55,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 0,
+        "control": 0,
+        "scaling": 3
+      },
+      "tags": [
+        "carry",
+        "dive"
+      ]
+    },
+    {
+      "id": "Jhin",
+      "name": "Jhin",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "pick"
+      ]
+    },
+    {
+      "id": "Lulu",
+      "name": "Lulu",
+      "roles": [
+        "support"
+      ],
+      "archetype": "enchanter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 3,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "protect"
+      ]
+    },
+    {
+      "id": "Nautilus",
+      "name": "Nautilus",
+      "roles": [
+        "support"
+      ],
+      "archetype": "tank-support",
+      "physicalShare": 0.25,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 3,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "teamfight"
+      ]
+    },
+    {
+      "id": "Leona",
+      "name": "Leona",
+      "roles": [
+        "support"
+      ],
+      "archetype": "tank-support",
+      "physicalShare": 0.25,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "teamfight"
+      ]
+    },
+    {
+      "id": "Thresh",
+      "name": "Thresh",
+      "roles": [
+        "support"
+      ],
+      "archetype": "tank-support",
+      "physicalShare": 0.4,
+      "traits": {
+        "frontline": 2,
+        "engage": 2,
+        "peel": 3,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "protect",
+        "pick"
+      ]
+    },
+    {
+      "id": "Janna",
+      "name": "Janna",
+      "roles": [
+        "support"
+      ],
+      "archetype": "enchanter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 3,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "protect",
+        "healing"
+      ]
+    },
+    {
+      "id": "Soraka",
+      "name": "Soraka",
+      "roles": [
+        "support"
+      ],
+      "archetype": "enchanter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 2,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "protect",
+        "healing"
+      ]
+    },
+    {
+      "id": "Nami",
+      "name": "Nami",
+      "roles": [
+        "support"
+      ],
+      "archetype": "enchanter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 2,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "protect",
+        "healing"
+      ]
+    }
+  ],
+  "matchups": {
+    "Ornn|Darius": {
+      "value": -0.6,
+      "text": "Darius threatens extended trades. Keep the wave close, trade briefly after his pull is down, and prioritize safe farm into teamfights."
+    },
+    "Garen|Darius": {
+      "value": -0.8,
+      "text": "Extended melee trades favor Darius in this sample matchup. Use short trades and disengage before his bleed stacks build."
+    },
+    "Malphite|Darius": {
+      "value": -0.7,
+      "text": "Armor does not answer Darius’s true-damage execute. Conserve mana, avoid extended trades, and find value through teamfight engage."
+    },
+    "Mordekaiser|Darius": {
+      "value": 0.1,
+      "text": "A close melee duel in this sample model. Avoid the outer edge of his axe, manage your shield, and choose your ultimate timing carefully."
+    },
+    "Shen|Darius": {
+      "value": -0.5,
+      "text": "Limit prolonged fights and use defensive trades. Find cross-map ultimate opportunities without surrendering too much farm."
+    }
+  },
+  "synergies": {
+    "Malphite|Orianna": "Reliable initiation creates a setup for Orianna’s follow-up.",
+    "Ornn|Orianna": "Layer crowd control with Orianna for coordinated teamfights.",
+    "Malphite|Yasuo": "Your knock-up enables Yasuo’s ultimate follow-up.",
+    "Lulu|Jinx": "Protective utility helps Jinx stay alive long enough to reset.",
+    "Nautilus|Samira": "Hard crowd control creates an opening for Samira.",
+    "Jarvan IV|Orianna": "Jarvan can carry the ball into a coordinated engage.",
+    "Ornn|Jinx": "Frontline and disruption create space for Jinx to deal damage.",
+    "Shen|Jinx": "Defensive utility helps protect an immobile carry."
+  }
+}
