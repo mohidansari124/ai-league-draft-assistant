@@ -1,9 +1,13 @@
 import { Sparkles, Layers3, Shield, Plus } from "lucide-react";
+import AdcAdvice from "./AdcAdvice";
 import type { Recommendation } from "../types";
 
 export default function Build({ result }: { result: Recommendation }) {
   return (
     <>
+      {result.adcAdvice && (
+        <AdcAdvice advice={result.adcAdvice} decisionsOnly />
+      )}
       <section className="panel detail-panel">
         <div className="detail-heading">
           <Sparkles size={19} />

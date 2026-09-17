@@ -34,7 +34,22 @@ export type Factor = {
   maximum: number;
   reason: string;
 };
+export type AdcAdvice = {
+  identity: string;
+  reviewedAt: string;
+  basis: string;
+  opponentCovered: boolean;
+  coverage: string;
+  notes: {
+    title: string;
+    text: string;
+    sources: { title: string; url: string }[];
+  }[];
+  decisions: string[];
+  limitations: string;
+};
 export type Recommendation = {
+  adcAdvice: AdcAdvice | null;
   champion: string;
   score: number;
   rank: number;

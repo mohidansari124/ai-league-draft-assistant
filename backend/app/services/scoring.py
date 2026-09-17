@@ -2,6 +2,8 @@
 from app.models import AnalyzeRequest, AnalysisResponse, Composition, Factor, Matchup, Recommendation
 from app.services.catalog import champions_by_name, load_catalog, load_guides, load_metadata
 
+from app.services.adc_advice import advice_for, FOCUSED_POOL
+
 WEIGHTS = {"performance": 10, "comfort": 15, "matchup": 20, "frontline": 8, "engage": 6, "peel": 6,
            "balance": 8, "control": 6, "scaling": 6, "synergy": 6, "threats": 9}
 TARGETS = {"frontline": 4, "engage": 4, "peel": 4, "control": 5, "scaling": 7}
@@ -140,13 +142,14 @@ def analyze(request: AnalyzeRequest, statistics=None, statistics_requested=False
         plan = ["Heuristic lane plan: " + lane_tip if lane_tip else "Track enemy positions and avoid committing without vision. Secure safe farm, learn the opponent's trading pattern, and keep a defensive cooldown for disengaging."]
         plan.append("Coordinate initiation with your team, then use crowd control to create space for allied damage." if (c["traits"]["engage"] or 0) >= 2 else "Play around your team's initiation and preserve your defensive cooldowns before committing damage.")
         plan.append("Protect your carry and contest objectives together once lanes converge." if (c["traits"]["peel"] or 0) >= 2 else "Fight from a safe angle around objectives; adapt between side-lane pressure and grouping based on your team's position.")
-        results.append(Recommendation(champion=c["name"], score=round(sum(f.points for f in factors), 2), factors=factors, explanation=explanation, matchup=matchup, runes=runes, coreItems=core, situationalItems=situational_items(c, enemies, core) if c.get("traitSource") != "unrated" and all(e["physicalShare"] is not None for e in enemies) else [], gamePlan=plan, statistics={**stats,"usedForScoring":usable} if stats else None, buildSource=build_source, runeSource=rune_source, traitSource=c.get("traitSource","curated sample")))
+        results.append(Recommendation(adcAdvice=advice_for(c["name"], request), champion=c["name"], score=round(sum(f.points for f in factors), 2), factors=factors, explanation=explanation, matchup=matchup, runes=runes, coreItems=core, situationalItems=situational_items(c, enemies, core) if c.get("traitSource") != "unrated" and all(e["physicalShare"] is not None for e in enemies) else [], gamePlan=plan, statistics={**stats,"usedForScoring":usable} if stats else None, buildSource=build_source, runeSource=rune_source, traitSource=c.get("traitSource","curated sample")))
     results.sort(key=lambda r: (-r.score, r.champion))
-    for i, result in enumerate(results[:3], 1): result.rank = i
+    limit = 4 if request.role == "adc" and set(request.championPool).issubset(FOCUSED_POOL) else 3
+    for i, result in enumerate(results[:limit], 1): result.rank = i
     warnings = [catalog["notice"], "Scores describe draft fit, not win probability. Recommendations are suggestions, not guaranteed outcomes."]
     if comp.unratedChampions: warnings.append("Unreviewed allied composition traits: " + ", ".join(comp.unratedChampions) + ". Composition factors receive neutral credit.")
     if any(not usable_statistics(v) for v in statistics.values()): warnings.append("Some OP.GG data has an unknown/different patch or fewer than 100 games; it is displayed for context but not used for scoring or builds.")
     if len(allies) < 4 or len(enemies) < 5: warnings.append("Partial draft: scores may change as more champions are picked.")
     if excluded: warnings.append("Excluded already-picked or role-incompatible pool champions: " + ", ".join(excluded))
     if len(results) < 3: warnings.append(f"Only {len(results)} eligible champion(s) available; showing all eligible picks.")
-    return AnalysisResponse(recommendations=results[:3], composition=comp, warnings=warnings, excluded=excluded, dataVersion=catalog["version"], statisticsMode="opgg" if any(usable_statistics(v) for v in statistics.values()) else "fallback")
+    return AnalysisResponse(recommendations=results[:limit], composition=comp, warnings=warnings, excluded=excluded, dataVersion=catalog["version"], statisticsMode="opgg" if any(usable_statistics(v) for v in statistics.values()) else "fallback")

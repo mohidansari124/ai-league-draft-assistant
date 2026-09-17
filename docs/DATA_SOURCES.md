@@ -42,3 +42,16 @@ The public site provides champion analysis, but I did not find a documented thir
 ## Replacement boundary
 
 Providers live in `backend/app/services/`. A future provider should expose validated champion identity, role, queue, patch, rank, region, sample counts, perspective-correct matchup rates, fetch time, source links and observed builds. Do not blend aggregates with different patch/region/rank scopes as though they were interchangeable.
+
+
+## Focused ADC notebook — reviewed 2026-09-17
+
+The default pool is Draven, Twitch, Caitlyn and Ashe. All 173 champions remain selectable. The focused pool shows up to four results; other pools retain the top-three behavior.
+
+`backend/app/data/adc_advice.json` contains short editorial paraphrases of mechanics advice from the four Mobalytics champion guides and ten counter pages (Draven, Twitch, Caitlyn, Ashe, Jinx, Jhin, Ezreal, Kai'Sa, Vayne, Samira), plus enemy-threat notes for Nautilus and Lux. Each displayed note links its guide or counter page. URL pattern: `https://mobalytics.gg/lol/champions/{slug}/guide` or `/counters`; Kai'Sa uses `kaisa`.
+
+The notebook combines the player's champion plan with opposing-champion notes. These are NOT 36 independently validated pair guides, and no win rates are extracted from these pages. They do not affect ranking. Threat notes trigger on enemy presence without guessing a support role. Unsupported opponents receive an explicit coverage notice. Advice is restricted to the four champions in ADC role.
+
+Review date is our editorial retrieval date, not the publisher's update date or a claim that all advice is current-patch optimized. Mechanic summaries deliberately omit obsolete purchases present in some source prose. Build/rune data still comes from the existing OP.GG provider when sufficient and patch-matched, otherwise its labeled fallback. The new purchase-decision section is app-authored qualitative guidance; it does not prescribe opponent-specific rune pages or item orders.
+
+There is no LoLalytics scraper, Reddit feed, or Onetricks ingestion in this implementation. Future sources need their own access and quality checks. This narrow library can be replaced or expanded independently of the statistics adapter.

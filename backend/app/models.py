@@ -71,6 +71,25 @@ class ChampionStatistics(BaseModel):
     status: str
     usedForScoring: bool = False
 
+class AdviceSource(BaseModel):
+    title: str
+    url: str
+
+class AdviceNote(BaseModel):
+    title: str
+    text: str
+    sources: list[AdviceSource]
+
+class AdcAdvice(BaseModel):
+    identity: str
+    reviewedAt: str
+    basis: str
+    opponentCovered: bool
+    coverage: str
+    notes: list[AdviceNote]
+    decisions: list[str]
+    limitations: str
+
 class Recommendation(BaseModel):
     champion: str
     score: float
@@ -87,6 +106,7 @@ class Recommendation(BaseModel):
     buildSource: str = "Sample guide"
     runeSource: str = "Sample guide"
     traitSource: str = "curated sample"
+    adcAdvice: AdcAdvice | None = None
 
 class Composition(BaseModel):
     traits: dict[str, float]

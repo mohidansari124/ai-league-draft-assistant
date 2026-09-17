@@ -26,6 +26,7 @@ import { analyzeDraft, getChampions } from "./api";
 import Portrait from "./components/Portrait";
 import Modal from "./components/Modal";
 import Build from "./components/Build";
+import AdcAdvice from "./components/AdcAdvice";
 import Statistics from "./components/Statistics";
 import type { Analysis, Catalog, Draft, Role } from "./types";
 
@@ -48,7 +49,7 @@ const DEFAULT_POOLS: Record<Role, string[]> = {
   top: ["Ornn", "Garen", "Malphite", "Mordekaiser"],
   jungle: ["Jarvan IV", "Amumu", "Vi", "Lee Sin"],
   mid: ["Orianna", "Ahri", "Syndra", "Zed"],
-  adc: ["Jinx", "Caitlyn", "Ashe", "Ezreal"],
+  adc: ["Draven", "Twitch", "Caitlyn", "Ashe"],
   support: ["Lulu", "Nautilus", "Leona", "Janna"],
 };
 const DEMO: Draft = {
@@ -57,6 +58,14 @@ const DEMO: Draft = {
   allies: ["Jarvan IV", "Orianna", "Jinx", "Lulu"],
   enemies: ["Darius", "Lee Sin", "Zed", "Samira", "Nautilus"],
   laneOpponent: "Darius",
+  comfort: {},
+};
+const ADC_DEMO: Draft = {
+  role: "adc",
+  championPool: DEFAULT_POOLS.adc,
+  allies: ["Ornn", "Vi", "Orianna", "Lulu"],
+  enemies: ["Garen", "Lee Sin", "Ahri", "Jhin", "Nautilus"],
+  laneOpponent: "Jhin",
   comfort: {},
 };
 type Picker = {
@@ -68,7 +77,7 @@ type Picker = {
 export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState("");
-  const [draft, setDraft] = useState<Draft>({ ...DEMO });
+  const [draft, setDraft] = useState<Draft>({ ...ADC_DEMO });
   const [picker, setPicker] = useState<Picker | null>(null);
   const [search, setSearch] = useState("");
   const [help, setHelp] = useState(false);
@@ -78,7 +87,7 @@ export default function App() {
   const [selected, setSelected] = useState(0);
   const [tab, setTab] = useState("overview");
   const [announcement, setAnnouncement] = useState(
-    "Example draft loaded. Change any pick to explore.",
+    "Your ADC pool is loaded with an example lane. Change picks to match your game.",
   );
   const resultHeading = useRef<HTMLHeadingElement>(null);
   const fetchCatalog = () => {
@@ -358,6 +367,13 @@ export default function App() {
                           <Plus size={15} /> Edit pool
                         </button>
                       </div>
+                      {draft.role === "adc" && (
+                        <p className="stats-warning">
+                          ADC notebook: Draven, Twitch, Caitlyn and Ashe.
+                          Reviewed mechanics notes for 10 ADC opponents; all
+                          champions remain selectable.
+                        </p>
+                      )}
                       <p className="section-description">
                         Start with champions you know. Set your comfort from 1
                         to 5.
@@ -722,7 +738,9 @@ export default function App() {
                       : "Heuristic fallback"}
                   </span>
                 </section>
-                <div className="recommendation-grid">
+                <div
+                  className={`recommendation-grid ${analysis.recommendations.length === 4 ? "four-picks" : ""}`}
+                >
                   {analysis.recommendations.map((r, i) => (
                     <button
                       className={`recommendation-card ${selected === i ? "selected" : ""}`}
@@ -830,6 +848,9 @@ export default function App() {
                                 : "Unrated matchup · neutral scoring applied"}
                             </span>
                           </section>
+                          {result.adcAdvice && (
+                            <AdcAdvice advice={result.adcAdvice} />
+                          )}
                           <section className="panel detail-panel">
                             <div className="detail-heading">
                               <Layers3 size={19} />
@@ -839,7 +860,15 @@ export default function App() {
                               </span>
                             </div>
                             <ol className="game-plan">
-                              {result.gamePlan.map((step, i) => (
+                              {(result.adcAdvice
+                                ? [
+                                    result.adcAdvice.notes[0].text,
+                                    result.adcAdvice.notes[
+                                      result.adcAdvice.notes.length - 1
+                                    ].text,
+                                  ]
+                                : result.gamePlan
+                              ).map((step, i) => (
                                 <li key={i}>
                                   <span>0{i + 1}</span>
                                   <div>

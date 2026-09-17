@@ -178,3 +178,10 @@ See [data-source research](docs/DATA_SOURCES.md) for OP.GG, U.GG and FOW finding
 - [OpenAI text generation / Responses API](https://developers.openai.com/api/docs/guides/text)
 
 Draftwise is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
+
+### Personal ADC mode
+
+The app starts with Draven, Twitch, Caitlyn and Ashe and an editable example lane. It compares all four eligible picks and includes a source-linked ADC matchup notebook for ten common ADC opponents, with extra threat notes for Nautilus and Lux. Other champions and roles remain available. `Load example` restores the original top-lane demo.
+
+The notebook is a small reviewed mechanics library, separate from live OP.GG statistics. It does not supply matchup win rates, matchup-specific builds or rune substitutions. Each note links its evidence and shows its review date; unreviewed opponents are labeled. See [data sources](docs/DATA_SOURCES.md).

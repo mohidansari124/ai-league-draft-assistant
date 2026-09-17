@@ -9,6 +9,7 @@ test("example draft produces ranked picks, builds, and transparent scores", asyn
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
+  await page.getByRole("button", { name: "Load example" }).click();
   await expect(
     page.getByRole("button", { name: "Analyze draft", exact: true }),
   ).toBeEnabled();
@@ -57,6 +58,7 @@ test("search, pool editing, comfort, draft changes, and duplicate prevention", a
   page,
 }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: "Load example" }).click();
   await page.getByRole("combobox", { name: "Ornn comfort" }).selectOption("5");
   await page.getByRole("button", { name: "Edit pool" }).click();
   await page.getByRole("textbox", { name: "Search champions" }).fill("Gwen");
@@ -90,6 +92,7 @@ test("all roles work with partial drafts and jungle disables lane opponent", asy
   page,
 }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: "Load example" }).click();
   await expect(
     page.getByRole("button", { name: "Analyze draft", exact: true }),
   ).toBeEnabled();
@@ -102,7 +105,9 @@ test("all roles work with partial drafts and jungle disables lane opponent", asy
     await page
       .getByRole("button", { name: "Analyze draft", exact: true })
       .click();
-    await expect(page.locator(".recommendation-card")).toHaveCount(3);
+    await expect(page.locator(".recommendation-card")).toHaveCount(
+      role === "ADC" ? 4 : 3,
+    );
     await expect(
       page.getByText(/Partial draft: scores may change/),
     ).toBeVisible();
@@ -114,6 +119,7 @@ test("empty pool prevents analysis and failed requests stay recoverable", async 
   page,
 }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: "Load example" }).click();
   await page.getByRole("button", { name: "Edit pool" }).click();
   for (const name of ["Ornn", "Garen", "Malphite", "Mordekaiser"])
     await page
@@ -150,6 +156,7 @@ test("mobile layout, keyboard dialog, and results have no horizontal overflow", 
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
+  await page.getByRole("button", { name: "Load example" }).click();
   await expect(
     page.getByRole("button", { name: "Analyze draft", exact: true }),
   ).toBeEnabled();
@@ -187,6 +194,7 @@ test("full roster champions can be searched, picked, and analyzed", async ({
   page,
 }) => {
   await page.goto("/");
+  await page.getByRole("button", { name: "Load example" }).click();
   await page.getByRole("button", { name: "Mid", exact: true }).click();
   await page.getByRole("button", { name: "Edit pool" }).click();
   await page.getByRole("textbox", { name: "Search champions" }).fill("Akali");
@@ -213,4 +221,53 @@ test("full roster champions can be searched, picked, and analyzed", async ({
   await expect(
     page.getByRole("region", { name: "Recommendation statistics" }),
   ).toBeVisible();
+});
+
+test("ADC default pool has four picks and cited opponent advice", async ({
+  page,
+}) => {
+  await page.goto("/");
+  for (const name of ["Draven", "Twitch", "Caitlyn", "Ashe"]) {
+    await expect(
+      page.getByRole("combobox", { name: `${name} comfort` }),
+    ).toBeVisible();
+  }
+  await page
+    .getByRole("button", { name: "Analyze draft", exact: true })
+    .click();
+  await expect(page.locator(".recommendation-card")).toHaveCount(4);
+  for (const name of ["Draven", "Twitch", "Caitlyn", "Ashe"]) {
+    await page
+      .locator(".recommendation-card")
+      .filter({ hasText: name })
+      .click();
+    const notebook = page.getByRole("region", { name: "ADC matchup notebook" });
+    await expect(notebook).toContainText("Against Jhin");
+    await expect(notebook).toContainText("Enemy threat: Nautilus");
+    await expect(
+      notebook.getByRole("link", { name: "Mobalytics: Jhin counters" }),
+    ).toHaveAttribute(
+      "href",
+      "https://mobalytics.gg/lol/champions/jhin/counters",
+    );
+  }
+  await page.screenshot({
+    path: `${artifacts}/adc-notebook-desktop.png`,
+    fullPage: true,
+  });
+  await page.getByRole("tab", { name: "Build & runes" }).click();
+  await expect(
+    page.getByRole("region", { name: "ADC build decisions" }),
+  ).toContainText("not this particular opponent");
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole("tab", { name: "Game plan" }).click();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({
+    path: `${artifacts}/adc-notebook-mobile.png`,
+    fullPage: true,
+  });
 });

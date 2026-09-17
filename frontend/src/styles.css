@@ -1874,3 +1874,37 @@ footer p {
   margin-top: 12px;
   line-height: 1.7;
 }
+
+.adc-advice article {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #26313d;
+}
+.adc-advice h3 {
+  margin-top: 14px;
+}
+.adc-advice a {
+  margin-top: 10px;
+  font-size: 11px;
+}
+.adc-advice small {
+  display: block;
+  color: #9ba8b6;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+.adc-advice ul {
+  padding-left: 18px;
+}
+.adc-advice li {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 12px;
+  color: #a0adba;
+}
+
+@media (min-width: 701px) {
+  .recommendation-grid.four-picks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

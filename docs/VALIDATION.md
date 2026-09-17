@@ -11,3 +11,12 @@ Verified on Windows with Python 3.12.14 and Node.js 24.19.0.
 - No paid AI inference was used. Explanations remain deterministic by default.
 
 The source does not expose every matchup or a region filter. Composition traits remain heuristic, with unreviewed champions handled neutrally. See DATA_SOURCES.md and SCORING.md for precise scope.
+
+
+## Focused ADC notebook validation — 2026-09-17
+
+- 60 backend tests pass, including all four focused champions, all 36 non-mirror combinations of their plans with ten opponent notes, source links, absent coverage, role gating and already-picked exclusions.
+- Seven browser scenarios pass. The new scenario checks the default pool, four recommendations, source attribution, enemy threats, build scope labels and 390px overflow. It was rerun after final four-card desktop styling.
+- Production TypeScript/Vite build passes. Mobile notebook screenshot reviewed.
+- Live API smoke check returned OP.GG patch 16.18 builds and four advice notes for each of Draven, Twitch, Caitlyn and Ashe against the Jhin/Nautilus example. Frontend HTTP 200 verified and preview restored.
+- Guide summaries are qualitative and do not change numeric scores. No scraper or Reddit integration is enabled.

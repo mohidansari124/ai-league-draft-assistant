@@ -1,0 +1,46 @@
+{
+  "reviewedAt": "2026-09-17",
+  "basis": "Editorial synthesis of linked guide mechanics; not measured matchup strength. Review dates are not publisher update dates.",
+  "profiles": {
+    "Draven": {
+      "identity": "Early pressure and cash-in opportunities",
+      "lane": "Trade with axes ready after the opposing lane spends its important cooldowns. Keep a safe catch route; a dropped axe is better than a death.",
+      "teamfight": "Stay near your support and hit reachable targets. Preserve Stand Aside for threats entering your space.",
+      "decision": "Prioritize a recall that preserves your damage timing without exposing accumulated Adoration stacks."
+    },
+    "Twitch": {
+      "identity": "Patient lane, surprise teamfight angles",
+      "lane": "Protect health and farm early. Use Ambush to choose an entry when your support can follow, rather than treating camouflage as an escape.",
+      "teamfight": "Look for a safe Spray and Pray line through grouped enemies. Wait for dangerous crowd control before revealing.",
+      "decision": "Value a recall that keeps you healthy enough to reach your next item timing; avoid forcing a duel just because Ambush is available."
+    },
+    "Caitlyn": {
+      "identity": "Range pressure and controlled sieges",
+      "lane": "Use ranged attacks to contest farm and pressure the wave when vision permits. Keep Net available if the enemy can engage.",
+      "teamfight": "Approach objectives with your team and establish space before the fight. Keep an exit route instead of using Net for unnecessary damage.",
+      "decision": "Use a safe wave crash to shop, then return to pressure; extending a siege without vision risks surrendering the lane advantage."
+    },
+    "Ashe": {
+      "identity": "Spacing, vision and pick setup",
+      "lane": "Use ranged poke and slows to control trades. Avoid following a slowed target beyond your support or into an unwarded lane.",
+      "teamfight": "Create an Arrow opportunity that teammates can follow. Fight near protection and kite reachable targets.",
+      "decision": "Coordinate your shopping and return timing with your support; your next engage is more useful when allies are present."
+    }
+  },
+  "opponents": {
+    "Draven": "Avoid matching sustained axe trades without an advantage. An axe drop creates an opening; his catch location also helps aim crowd control.",
+    "Twitch": "Account for a camouflaged return after his recall. Prefer a brief exchange before poison builds up, and do not assume an empty lane is safe.",
+    "Caitlyn": "Track Headshot and trap positions before approaching farm. Concede an unsafe last hit rather than lose health repeatedly to her range.",
+    "Ashe": "Keep minions between you and Volley. After level six, account for Arrow plus a jungle follow-up before extending the lane.",
+    "Jinx": "Avoid standing beside low-health minions where rockets can splash you. A spent Chompers cooldown creates an opening for your support.",
+    "Jhin": "Respect the fourth shot, then consider a trade during his reload. Account for his support setting up a follow-up root.",
+    "Ezreal": "Use minions to screen Mystic Shot. A spent Arcane Shift is a better commitment window than chasing while his escape is ready.",
+    "Kai'Sa": "Avoid isolated trades that concentrate her missiles on you. Keep exchanges brief when you cannot safely contest her passive stacks.",
+    "Vayne": "Avoid volunteering repeated three-hit exchanges. A spent Tumble creates an opening, but only commit with your support and wave in mind.",
+    "Samira": "Track her Style before committing, especially after level six. Coordinate an interrupt for her ultimate rather than clustering around her."
+  },
+  "threats": {
+    "Nautilus": "Keep a living minion in the hook path and avoid greedy poke when that cover is about to disappear.",
+    "Lux": "One minion does not protect you from her binding. Keep two targets in its path and space away from the wave to reduce simultaneous poke and push."
+  }
+}
