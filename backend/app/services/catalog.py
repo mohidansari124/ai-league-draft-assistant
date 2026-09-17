@@ -1,4 +1,5 @@
 import json
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -24,6 +25,6 @@ def champions_by_name():
 def public_catalog():
     catalog, metadata = load_catalog(), load_metadata()
     return {"dataVersion": catalog["version"], "metadataVersion": metadata["version"],
-            "notice": catalog["notice"], "champions": [
+            "notice": catalog["notice"], "statisticsProvider": "OP.GG" if os.getenv("STATS_PROVIDER", "opgg") == "opgg" else "disabled", "champions": [
                 {**c, "title": metadata["champions"].get(c["id"], {}).get("title", c["archetype"]),
                  "portrait": f"/portraits/{c['id']}.png"} for c in catalog["champions"]]}

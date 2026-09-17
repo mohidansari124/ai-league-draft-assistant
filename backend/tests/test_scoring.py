@@ -24,7 +24,7 @@ def test_comfort_changes_only_comfort_points():
     low = analyze(AnalyzeRequest(role="top", championPool=["Ornn"], comfort={"Ornn": 1})).recommendations[0]
     high = analyze(AnalyzeRequest(role="top", championPool=["Ornn"], comfort={"Ornn": 5})).recommendations[0]
     assert high.score - low.score == pytest.approx(12)
-    assert low.factors[1:] == high.factors[1:]
+    assert [f for f in low.factors if f.key != "comfort"] == [f for f in high.factors if f.key != "comfort"]
 
 def test_unknown_matchup_is_neutral_and_honest():
     result = analyze(AnalyzeRequest(role="top", championPool=["Ornn"], enemies=["Camille"], laneOpponent="Camille")).recommendations[0]

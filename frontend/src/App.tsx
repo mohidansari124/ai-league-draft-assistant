@@ -26,6 +26,7 @@ import { analyzeDraft, getChampions } from "./api";
 import Portrait from "./components/Portrait";
 import Modal from "./components/Modal";
 import Build from "./components/Build";
+import Statistics from "./components/Statistics";
 import type { Analysis, Catalog, Draft, Role } from "./types";
 
 const ROLES: Role[] = ["top", "jungle", "mid", "adc", "support"];
@@ -265,7 +266,10 @@ export default function App() {
           </div>
           <div className="topbar-right">
             <span className="sample-badge">
-              <span className="status-dot" /> Sample data
+              <span className="status-dot" />{" "}
+              {catalog?.statisticsProvider === "OP.GG"
+                ? "OP.GG enabled"
+                : "Heuristic mode"}
             </span>
             <span className="avatar">MA</span>
           </div>
@@ -370,7 +374,7 @@ export default function App() {
                               <span>
                                 {availablePool.includes(name)
                                   ? champion(name)?.archetype.replace("-", " ")
-                                  : "Already picked"}
+                                  : "Unavailable for this draft"}
                               </span>
                               <label className="comfort-label">
                                 Comfort{" "}
@@ -566,6 +570,14 @@ export default function App() {
                       <p className="section-description">
                         A quick read on your allies so far.
                       </p>
+                      {allies.some(
+                        (n) => champion(n)?.traitSource === "unrated",
+                      ) && (
+                        <p className="stats-warning">
+                          Some allied traits are unreviewed. These bars show
+                          known contributions only.
+                        </p>
+                      )}
                       <div className="trait-bars">
                         {[
                           ["frontline", "Frontline"],
@@ -655,7 +667,7 @@ export default function App() {
                       <div>
                         <h3>Reasoning you can inspect</h3>
                         <p>
-                          Transparent scoring. Curated sample data. No API key
+                          OP.GG statistics with transparent scoring. No API key
                           needed.
                         </p>
                         <button
@@ -667,7 +679,11 @@ export default function App() {
                       </div>
                     </div>
                     <p className="demo-note">
-                      DEMO CATALOG <span>38 champions · All 5 roles</span>
+                      RIOT ROSTER{" "}
+                      <span>
+                        {catalog.champions.length} champions · Patch{" "}
+                        {catalog.metadataVersion}
+                      </span>
                     </p>
                   </aside>
                 </div>
@@ -701,9 +717,9 @@ export default function App() {
                   </div>
                   <span className="mode-badge">
                     <Sparkles size={14} />
-                    {analysis.explanationMode === "openai"
-                      ? "AI-assisted explanations"
-                      : "Deterministic analysis"}
+                    {analysis.statisticsMode === "opgg"
+                      ? "OP.GG statistics + heuristics"
+                      : "Heuristic fallback"}
                   </span>
                 </section>
                 <div className="recommendation-grid">
@@ -760,6 +776,7 @@ export default function App() {
                       </div>
                       <p className="explanation">{result.explanation}</p>
                     </section>
+                    <Statistics result={result} />
                     <div
                       className="result-tabs"
                       role="tablist"
@@ -807,7 +824,9 @@ export default function App() {
                             <p>{result.matchup.explanation}</p>
                             <span className="data-label">
                               {result.matchup.known
-                                ? "Curated sample matchup · not a statistical prediction"
+                                ? result.matchup.source === "OP.GG"
+                                  ? "OP.GG match outcomes · not lane-win statistics"
+                                  : "Historical sample matchup · not statistical data"
                                 : "Unrated matchup · neutral scoring applied"}
                             </span>
                           </section>
@@ -815,6 +834,9 @@ export default function App() {
                             <div className="detail-heading">
                               <Layers3 size={19} />
                               <h2>Your game plan</h2>
+                              <span className="data-label">
+                                HEURISTIC ADVICE
+                              </span>
                             </div>
                             <ol className="game-plan">
                               {result.gamePlan.map((step, i) => (
@@ -846,7 +868,7 @@ export default function App() {
                             <h2>Every point, explained</h2>
                           </div>
                           <p>
-                            Ten weighted factors add up to 100. This is a fit
+                            Eleven weighted factors add up to 100. This is a fit
                             score, not a win rate.
                           </p>
                           <div className="factor-list">
@@ -900,6 +922,13 @@ export default function App() {
                           <span key={n}>{n}</span>
                         ))}
                       </div>
+                      {analysis.composition.unratedChampions.length > 0 && (
+                        <p className="stats-warning">
+                          Incomplete trait coverage:{" "}
+                          {analysis.composition.unratedChampions.join(", ")}.
+                          Unreviewed traits are not zero strength.
+                        </p>
+                      )}
                       {analysis.composition.physicalShare !== null && (
                         <div className="damage-mix">
                           <div>
@@ -1015,11 +1044,13 @@ export default function App() {
             </div>
             {!pickerChampions.length && (
               <p className="no-results">
-                No matching champions in the sample catalog.
+                No matching champions in the Riot roster.
               </p>
             )}
             <div className="picker-footer">
-              <small>Curated sample catalog · 38 champions</small>
+              <small>
+                Riot roster · {catalog?.champions.length || 0} champions
+              </small>
               <button
                 className="button primary"
                 onClick={() => setPicker(null)}
@@ -1040,21 +1071,22 @@ export default function App() {
             <h3>Game data → scoring → explanations</h3>
             <p>
               The engine filters your pool by role and availability, then scores
-              every eligible champion on ten factors. Your top three picks are
-              sorted by total score, with alphabetical tie-breaking.
+              every eligible champion on eleven factors. Your top three picks
+              are sorted by total score, with alphabetical tie-breaking.
             </p>
             <div className="help-weights">
               {[
+                ["Observed role performance", 10],
                 ["Lane matchup", 20],
                 ["Your comfort", 15],
-                ["Frontline", 10],
-                ["Damage balance", 10],
-                ["Enemy threats", 10],
-                ["Engage", 7],
-                ["Carry protection", 7],
-                ["Crowd control", 7],
-                ["Scaling", 7],
-                ["Ally synergy", 7],
+                ["Frontline", 8],
+                ["Damage balance", 8],
+                ["Enemy threats", 9],
+                ["Engage", 6],
+                ["Carry protection", 6],
+                ["Crowd control", 6],
+                ["Scaling", 6],
+                ["Ally synergy", 6],
               ].map(([label, weight]) => (
                 <div key={label}>
                   <span>{label}</span>
@@ -1068,15 +1100,18 @@ export default function App() {
               champion card.
             </p>
             <p>
-              <strong>This is a classroom MVP.</strong> Traits, build guides,
-              and matchup ratings are curated samples. Scores are not win
-              probabilities or current-patch statistics. Champion names and
-              portraits use a pinned Riot Data Dragon snapshot when available.
+              <strong>Real statistics, explicit limits.</strong> The full Riot
+              roster is available. OP.GG supplies role performance, selected
+              matchup samples, observed builds and runes. Only matching-patch
+              samples with at least 100 games affect scores; small samples are
+              shrunk toward neutral. The API does not expose its region filter.
+              Composition traits and situational advice remain heuristics;
+              unreviewed traits receive neutral credit.
             </p>
             <p>
-              The app works without an API key. An optional AI service can
-              explain the same scored facts; it never controls the rankings or
-              builds.
+              The app fetches statistics without an API key and falls back
+              safely when offline. An optional AI service can explain the same
+              scored facts; it never controls the rankings or builds.
             </p>
             <button className="button primary" onClick={() => setHelp(false)}>
               Got it <Check size={16} />

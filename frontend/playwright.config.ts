@@ -20,7 +20,7 @@ export default defineConfig({
       command: `"${path.resolve(python)}" -m uvicorn app.main:app --app-dir ../backend --host 127.0.0.1 --port 8000`,
       url: "http://127.0.0.1:8000/api/health",
       reuseExistingServer: !process.env.CI,
-      env: { EXPLANATION_PROVIDER: "template" },
+      env: { EXPLANATION_PROVIDER: "template", STATS_PROVIDER: "disabled" },
     },
     {
       command: "node node_modules/vite/bin/vite.js --host 127.0.0.1",

@@ -2,7 +2,7 @@
 
 A working CS4800 Software Engineering with AI MVP. Enter a League draft, choose a personal champion pool, and get up to three contextual recommendations with transparent scores, matchup notes, runes, item suggestions, and a game plan.
 
-**React + TypeScript + Vite + Tailwind CSS frontend; Python + FastAPI backend.** Works without API keys. No login or accounts.
+**React + TypeScript + Vite + Tailwind CSS frontend; Python + FastAPI backend.** Includes all 173 champions in Riot Data Dragon 16.18.1 and real OP.GG statistics through its official public MCP service. Works without API keys. No login or accounts.
 
 ## Run on Windows (PowerShell)
 
@@ -22,7 +22,7 @@ cd ..
 
 Open **http://127.0.0.1:5173**. API health: http://127.0.0.1:8000/api/health. Interactive API docs: http://127.0.0.1:8000/docs. Press **Ctrl+C** in the launcher terminal to stop both servers. No environment file is needed for the demo.
 
-The private repository requires GitHub access. If Python is installed as `python` instead of the Windows `py` launcher, use `python -m venv .venv` with Python 3.12. Dependencies and browser testing binaries require internet for their initial installation; normal template-mode use does not.
+The private repository requires GitHub access. If Python is installed as `python` instead of the Windows `py` launcher, use `python -m venv .venv` with Python 3.12. Dependencies and browser testing binaries require internet for their initial installation; live OP.GG queries require internet. The roster and heuristic fallback work offline.
 
 ### Run frontend and backend separately
 
@@ -68,7 +68,8 @@ backend/
   app/models.py             Validation and response models
   app/data/                 Curated champion profiles and sample guides
   app/services/catalog.py   Local game-data boundary
-  app/services/scoring.py   Pure deterministic ranking
+  app/services/scoring.py   Deterministic statistical/heuristic ranking
+  app/services/opgg.py      Official OP.GG MCP adapter and 6-hour local cache
   app/services/explanations.py  Optional AI prose, safe fallback
   app/services/data_dragon.py   Riot static metadata adapter
   scripts/sync_data.py      Optional pinned metadata/portrait refresh
@@ -77,7 +78,7 @@ scripts/dev.py              Start/stop both local servers
 docs/SCORING.md              Exact scoring formulas and limitations
 ```
 
-Data → scoring → explanation are deliberately separate. Neither a live API nor an LLM decides the rankings. Read [the scoring specification](docs/SCORING.md) for weights, sample assumptions, and replacement points.
+Data → scoring → explanation are deliberately separate. A deterministic engine combines observed OP.GG statistics with labeled heuristic factors; an LLM never decides the rankings. Read [the scoring specification](docs/SCORING.md) for weights, sample assumptions, and replacement points.
 
 ## API
 
@@ -134,17 +135,31 @@ OPENAI_MODEL=gpt-4.1-mini
 
 Restart the backend. `EXPLANATION_PROVIDER=template` (the default) or an absent key keeps deterministic explanations. An explicitly enabled OpenAI provider sends scored champion facts to the Responses API; no account/player data is collected. API usage may incur charges. Timeout, transport failure or invalid output falls back to templates without changing scores. The API key is read only on the backend and `.env` is ignored by Git. Live paid inference is not required for any test.
 
-## Sample data and assets
+## Real statistics and the full roster
 
-38 champions cover all five roles. Traits, five Darius matchups, synergies, runes and builds are **educational samples**, not current-patch recommendations or win-rate statistics. Riot Data Dragon **14.24.1** supplies historical champion names/titles/portraits and an item metadata snapshot; small identification portraits are bundled locally. No splash art, Riot logos or scraped recommendation data are used. Without portraits, cards fall back to initials.
+**173 champions**, including the latest roster entries, are selectable across the draft. Riot Data Dragon **16.18.1** supplies names, titles, portraits and static item metadata. Observed OP.GG role shares determine the initial role map (at least 10% of that champion's observed games in the role); this is not a prohibition on creative off-meta picks. In the personal pool, the app currently filters by supported roles.
 
-To refresh the same pinned static snapshot (optional; internet required):
+`STATS_PROVIDER=opgg` is the default. No OP.GG or Riot API key is required for the public MCP integration. Requests fetch statistics only for eligible pool champions. Results are cached locally under ignored `.cache/opgg/` for six hours, with a maximum of four concurrent requests and an 18-second overall statistics budget. No website HTML is scraped and no private website endpoints are used.
+
+The result UI shows source, provider patch, role sample count, match win rate, retrieval time, cache state, and rank/region scope. The request asks for **ranked / all ranks**. The provider does not expose a region parameter; the app explicitly says **Provider default (not exposed)**. Reported win rates may be rounded by the provider.
+
+Only statistics on the same major/minor patch as the bundled Riot roster, with at least **100 games**, influence scores. Small samples are shrunk toward 50%. OP.GG returns selected strong/weak counter matchups, **not every opponent pair**. A missing matchup receives neutral credit and is labeled unrated; its absence is not proof of an even matchup. These are match outcomes, not lane-win rates or a user's predicted win probability.
+
+Observed core builds and rune pages replace old sample guides when available on the matching patch with at least 100 observations. Build-completion outcomes are affected by game length and gold and are not causal estimates. When missing, the 38 original historical guides remain clearly labeled **Historical sample guide (14.24)**. New champions without a verified guide show **Unavailable**, rather than invented items/runes.
+
+The original 38 composition profiles remain **heuristic sample ratings**; other champions' frontline/engage/peel/etc. traits are unreviewed and receive neutral credit. Unknown allied traits do not count as zero strength. Situational-item and general game-plan advice remain heuristic. All 173 champions can be analyzed, but statistical and heuristic coverage are separate.
+
+Disable external calls with `STATS_PROVIDER=disabled` in the root `.env`, then restart the backend. Provider failures fall back safely and display a warning. Expired cached data is not silently scored as current data.
+
+### Refresh for a new patch or champion release
 
 ```powershell
 ./.venv/Scripts/python.exe backend/scripts/sync_data.py
 ```
 
-Changing the adapter's version does not update the handwritten scoring model or guides. Review these separately before presenting the app as current. Draft fit scores are not win probabilities; play, coordination and patch changes matter.
+The script fetches the latest published Data Dragon version, refreshes the entire roster and portraits, and refreshes observed role mappings through OP.GG when available. Existing reviewed profiles are preserved; new profiles are explicitly unrated. Restart the backend afterward. To pin a version, add `--version 16.18.1`. Refreshing metadata does not calibrate heuristic traits or update the historical fallback guides.
+
+See [data-source research](docs/DATA_SOURCES.md) for OP.GG, U.GG and FOW findings, and [the scoring specification](docs/SCORING.md) for the exact formulas.
 
 ## Troubleshooting
 

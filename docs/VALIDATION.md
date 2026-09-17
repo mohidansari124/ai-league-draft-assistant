@@ -1,11 +1,13 @@
-# MVP validation
+# Full-roster and real-statistics validation
 
-Verified locally on Windows with Python 3.12.14 and Node.js 24.19.0.
+Verified on Windows with Python 3.12.14 and Node.js 24.19.0.
 
-- Backend: **29 passing pytest cases** covering deterministic ranking, score bounds, factor totals, comfort influence, matchup uncertainty, role eligibility, exclusion, input validation, damage threats, every role, API responses, and mocked AI success/failure.
-- Frontend: **TypeScript compilation and Vite production build pass**.
-- Browser: **5 passing Playwright scenarios** against the running frontend and backend, covering the demo, results details, draft editing/search, comfort, duplicate prevention, every role, partial drafts, empty pools, API failure recovery, keyboard focus/Escape, and mobile overflow.
-- Visual review: inspected desktop draft/results and mobile draft captures. Screenshots are generated under the ignored `.test-artifacts/` folder.
-- Optional paid OpenAI requests were not made. The integration is verified with mocked provider responses and outages. Template mode is the default.
+- **47 passing backend tests**: existing scoring/API checks plus all 173 champions, actual influence of statistical inputs on ranking, low-sample shrinkage, wrong/unknown patches, selected-champion counter perspective, safe compact-response parsing, identity aliases, cache hit/expiry, failures, and unreviewed trait neutrality.
+- **6 passing browser scenarios**: original draft/results flows, all roles, partial drafts, pool/search/editing, failures, keyboard focus, mobile overflow, and adding champions outside the original sample roster.
+- **Production build passes** with TypeScript and Vite.
+- **Real provider smoke checks** succeeded for the four demonstration top champions, Kai'Sa, Nunu & Willump, Akali and Locke. These are real OP.GG responses, separate from mocked unit tests.
+- A browser smoke check against the live-enabled local servers confirmed OP.GG mode, patch 16.18, real sample counts, observed core builds/runes for all three recommendations, no browser runtime errors, and no horizontal overflow at 390px.
+- Desktop and mobile screenshots under ignored `.test-artifacts/` were visually reviewed.
+- No paid AI inference was used. Explanations remain deterministic by default.
 
-Run instructions and verification commands are in the root README. Data accuracy is limited to the clearly labeled historical/static snapshot and handcrafted sample model; no claim of current-patch performance is made.
+The source does not expose every matchup or a region filter. Composition traits remain heuristic, with unreviewed champions handled neutrally. See DATA_SOURCES.md and SCORING.md for precise scope.

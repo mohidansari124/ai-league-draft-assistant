@@ -8,7 +8,7 @@ export default function Build({ result }: { result: Recommendation }) {
         <div className="detail-heading">
           <Sparkles size={19} />
           <h2>Rune page</h2>
-          <span className="data-label">SAMPLE GUIDE</span>
+          <span className="data-label">{result.runeSource}</span>
         </div>
         <div className="rune-page">
           <div className="keystone">
@@ -43,8 +43,13 @@ export default function Build({ result }: { result: Recommendation }) {
         <div className="detail-heading">
           <Layers3 size={19} />
           <h2>Core items</h2>
+          <span className="data-label">{result.buildSource}</span>
         </div>
-        <p>Example build direction. Adapt order and purchases to the game.</p>
+        <p>
+          {result.coreItems.length
+            ? "Adapt the observed or sample build to your game; item completion depends on gold and game length."
+            : "No verified build was returned for this champion. No item recommendations have been invented."}
+        </p>
         <div className="item-list">
           {result.coreItems.map((item, i) => (
             <div key={item.name}>
@@ -61,6 +66,7 @@ export default function Build({ result }: { result: Recommendation }) {
         <div className="detail-heading">
           <Shield size={19} />
           <h2>Situational choices</h2>
+          <span className="data-label">HEURISTIC ADVICE</span>
         </div>
         {result.situationalItems.length ? (
           <div className="item-list">
@@ -78,7 +84,7 @@ export default function Build({ result }: { result: Recommendation }) {
           </div>
         ) : (
           <p>
-            Your core build already covers the sample situational suggestions.
+            No additional reviewed situational suggestions are available.
             Reassess defensive items as the game develops.
           </p>
         )}

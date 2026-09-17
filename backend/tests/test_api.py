@@ -10,14 +10,15 @@ client = TestClient(app)
 @pytest.fixture(autouse=True)
 def no_real_ai(monkeypatch):
     monkeypatch.setenv("EXPLANATION_PROVIDER", "template")
+    monkeypatch.setenv("STATS_PROVIDER", "disabled")
     monkeypatch.delenv("OPENAI_API_KEY", raising=False)
 
 def test_catalog_and_health():
     assert client.get("/api/health").json()["status"] == "ok"
     response = client.get("/api/champions")
     assert response.status_code == 200
-    assert len(response.json()["champions"]) == 38
-    assert "sample" in response.json()["dataVersion"]
+    assert len(response.json()["champions"]) == 173
+    assert "Riot" in response.json()["dataVersion"]
 
 @pytest.mark.parametrize("payload", [
     {"role": "invalid", "championPool": ["Ornn"]},

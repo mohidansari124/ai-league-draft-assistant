@@ -40,7 +40,7 @@ test("example draft produces ranked picks, builds, and transparent scores", asyn
   ).toBeVisible();
   await expect(page.locator(".rune-trees p")).toHaveCount(5);
   await page.getByRole("tab", { name: "Score breakdown" }).click();
-  await expect(page.locator(".factor")).toHaveCount(10);
+  await expect(page.locator(".factor")).toHaveCount(11);
   await page.locator(".recommendation-card").nth(1).click();
   await expect(page.locator(".recommendation-card").nth(1)).toHaveAttribute(
     "aria-pressed",
@@ -117,7 +117,7 @@ test("empty pool prevents analysis and failed requests stay recoverable", async 
   await page.getByRole("button", { name: "Edit pool" }).click();
   for (const name of ["Ornn", "Garen", "Malphite", "Mordekaiser"])
     await page
-      .getByRole("button", { name: new RegExp(`^${name} Top$`) })
+      .getByRole("button", { name: new RegExp(`^${name} (Top.*)$`) })
       .click();
   await page.getByRole("button", { name: "Done", exact: true }).click();
   await expect(
@@ -181,4 +181,36 @@ test("mobile layout, keyboard dialog, and results have no horizontal overflow", 
     path: `${artifacts}/results-mobile.png`,
     fullPage: true,
   });
+});
+
+test("full roster champions can be searched, picked, and analyzed", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Mid", exact: true }).click();
+  await page.getByRole("button", { name: "Edit pool" }).click();
+  await page.getByRole("textbox", { name: "Search champions" }).fill("Akali");
+  await page.getByRole("button", { name: /Akali/ }).click();
+  await page.getByRole("textbox", { name: "Search champions" }).fill("Locke");
+  await expect(page.getByRole("button", { name: /Locke/ })).toBeVisible();
+  await page.getByRole("button", { name: /Locke/ }).click();
+  await page.getByRole("button", { name: "Done", exact: true }).click();
+  await expect(
+    page.getByRole("combobox", { name: "Akali comfort" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("combobox", { name: "Locke comfort" }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Select enemy Top", exact: true })
+    .click();
+  await page.getByRole("textbox", { name: "Search champions" }).fill("Zaahen");
+  await page.getByRole("button", { name: /Zaahen/ }).click();
+  await page
+    .getByRole("button", { name: "Analyze draft", exact: true })
+    .click();
+  await expect(page.locator(".recommendation-card")).toHaveCount(3);
+  await expect(
+    page.getByRole("region", { name: "Recommendation statistics" }),
+  ).toBeVisible();
 });

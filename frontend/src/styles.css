@@ -1837,3 +1837,40 @@ footer p {
     scroll-behavior: auto !important;
   }
 }
+
+.statistics-panel {
+  margin-top: 18px;
+}
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+.statistics-grid strong {
+  display: block;
+  color: var(--green);
+  font-size: 24px;
+  font-weight: 550;
+}
+.statistics-grid span {
+  font-size: 10px;
+  color: #9ba8b6;
+}
+.statistics-panel p {
+  font-size: 11px;
+  color: #a0adba;
+  margin-top: 7px;
+}
+.statistics-panel small {
+  display: block;
+  font-size: 10px;
+  color: #8493a3;
+  margin-top: 14px;
+}
+.stats-warning {
+  color: #d8ba8e !important;
+  font-size: 11px;
+  margin-top: 12px;
+  line-height: 1.7;
+}

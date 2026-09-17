@@ -5,7 +5,7 @@ Role = Literal["top", "jungle", "mid", "adc", "support"]
 
 class AnalyzeRequest(BaseModel):
     role: Role
-    championPool: list[str] = Field(min_length=1, max_length=40)
+    championPool: list[str] = Field(min_length=1, max_length=250)
     allies: list[str] = Field(default_factory=list, max_length=4)
     enemies: list[str] = Field(default_factory=list, max_length=5)
     laneOpponent: str | None = None
@@ -41,6 +41,9 @@ class Matchup(BaseModel):
     rating: str
     known: bool
     explanation: str
+    source: str = "sample"
+    winRate: float | None = None
+    games: int | None = None
 
 class BuildItem(BaseModel):
     name: str
@@ -52,6 +55,21 @@ class RunePage(BaseModel):
     keystone: str
     runes: list[str]
     shards: list[str]
+
+class ChampionStatistics(BaseModel):
+    source: str
+    sourceUrl: str
+    role: str
+    patch: str | None
+    tier: str
+    region: str
+    queue: str
+    winRate: float
+    games: int
+    fetchedAt: str
+    sourceUpdatedAt: str | None = None
+    status: str
+    usedForScoring: bool = False
 
 class Recommendation(BaseModel):
     champion: str
@@ -65,12 +83,17 @@ class Recommendation(BaseModel):
     situationalItems: list[BuildItem]
     gamePlan: list[str]
     explanationSource: str = "template"
+    statistics: ChampionStatistics | None = None
+    buildSource: str = "Sample guide"
+    runeSource: str = "Sample guide"
+    traitSource: str = "curated sample"
 
 class Composition(BaseModel):
     traits: dict[str, float]
     physicalShare: float | None
     strengths: list[str]
     needs: list[str]
+    unratedChampions: list[str] = Field(default_factory=list)
 
 class AnalysisResponse(BaseModel):
     recommendations: list[Recommendation]
@@ -78,5 +101,6 @@ class AnalysisResponse(BaseModel):
     warnings: list[str]
     excluded: list[str]
     dataVersion: str
-    scoringVersion: str = "1.0"
+    scoringVersion: str = "2.0"
     explanationMode: str = "template"
+    statisticsMode: str = "heuristic"

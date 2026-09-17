@@ -4,17 +4,20 @@ export type Champion = {
   name: string;
   roles: Role[];
   archetype: string;
-  physicalShare: number;
-  traits: Record<string, number>;
+  physicalShare: number | null;
+  traits: Record<string, number | null>;
   tags: string[];
   title: string;
   portrait: string;
+  traitSource: string;
+  roleSource: string;
 };
 export type Catalog = {
   champions: Champion[];
   notice: string;
   dataVersion: string;
   metadataVersion: string | null;
+  statisticsProvider: string;
 };
 export type Draft = {
   role: Role;
@@ -38,11 +41,18 @@ export type Recommendation = {
   factors: Factor[];
   explanation: string;
   explanationSource: string;
+  statistics: ChampionStatistics | null;
+  buildSource: string;
+  runeSource: string;
+  traitSource: string;
   matchup: {
     opponent: string | null;
     rating: string;
     known: boolean;
     explanation: string;
+    source: string;
+    winRate: number | null;
+    games: number | null;
   };
   runes: {
     primary: string;
@@ -58,13 +68,31 @@ export type Recommendation = {
 export type Analysis = {
   recommendations: Recommendation[];
   composition: {
-    traits: Record<string, number>;
+    traits: Record<string, number | null>;
     physicalShare: number | null;
     strengths: string[];
     needs: string[];
+    unratedChampions: string[];
   };
   warnings: string[];
   excluded: string[];
   dataVersion: string;
   explanationMode: string;
+  statisticsMode: string;
+};
+
+export type ChampionStatistics = {
+  source: string;
+  sourceUrl: string;
+  role: string;
+  patch: string | null;
+  tier: string;
+  region: string;
+  queue: string;
+  winRate: number;
+  games: number;
+  fetchedAt: string;
+  sourceUpdatedAt: string | null;
+  status: string;
+  usedForScoring: boolean;
 };

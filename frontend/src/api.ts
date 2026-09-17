@@ -4,7 +4,7 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   try {
     response = await fetch(path, {
       ...options,
-      signal: AbortSignal.timeout(25000),
+      signal: AbortSignal.timeout(45000),
     });
   } catch {
     throw new Error(

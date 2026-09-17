@@ -1,25 +1,806 @@
 {
-  "version": "sample-v1 (educational heuristics)",
-  "notice": "38 curated champions. Trait ratings, matchups and builds are illustrative sample data, not live patch statistics or win rates.",
+  "version": "Riot 16.18.1 roster + heuristic traits v1",
+  "notice": "Full Riot roster. Win rates, builds and runes use OP.GG when available; team-composition traits remain labeled heuristics. Missing statistics are neutral, never invented.",
   "champions": [
     {
-      "id": "Ornn",
-      "name": "Ornn",
+      "id": "Aatrox",
+      "name": "Aatrox",
       "roles": [
-        "top"
+        "top",
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 2,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "healing"
+      ],
+      "key": "266",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ahri",
+      "name": "Ahri",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.1,
+      "traits": {
+        "frontline": 0,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "pick"
+      ],
+      "key": "103",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Akali",
+      "name": "Akali",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "84",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Akshan",
+      "name": "Akshan",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "166",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Alistar",
+      "name": "Alistar",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "12",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ambessa",
+      "name": "Ambessa",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "799",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Amumu",
+      "name": "Amumu",
+      "roles": [
+        "jungle",
+        "support"
       ],
       "archetype": "tank",
-      "physicalShare": 0.35,
+      "physicalShare": 0.1,
       "traits": {
         "frontline": 3,
         "engage": 3,
         "peel": 2,
         "control": 3,
-        "scaling": 3
+        "scaling": 2
       },
       "tags": [
         "teamfight"
-      ]
+      ],
+      "key": "32",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Anivia",
+      "name": "Anivia",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "34",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Annie",
+      "name": "Annie",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "1",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Aphelios",
+      "name": "Aphelios",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "523",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ashe",
+      "name": "Ashe",
+      "roles": [
+        "adc",
+        "support"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 2,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "carry",
+        "pick"
+      ],
+      "key": "22",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "AurelionSol",
+      "name": "Aurelion Sol",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "136",
+      "roles": [
+        "mid",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Aurora",
+      "name": "Aurora",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "893",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Azir",
+      "name": "Azir",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "268",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Bard",
+      "name": "Bard",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "432",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Belveth",
+      "name": "Bel'Veth",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "200",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Blitzcrank",
+      "name": "Blitzcrank",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "53",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Brand",
+      "name": "Brand",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "63",
+      "roles": [
+        "mid",
+        "adc",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Braum",
+      "name": "Braum",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "201",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Briar",
+      "name": "Briar",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "233",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Caitlyn",
+      "name": "Caitlyn",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 1,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "carry"
+      ],
+      "key": "51",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Camille",
+      "name": "Camille",
+      "roles": [
+        "top",
+        "support"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 1,
+        "engage": 2,
+        "peel": 1,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "dive",
+        "splitpush"
+      ],
+      "key": "164",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Cassiopeia",
+      "name": "Cassiopeia",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "69",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Chogath",
+      "name": "Cho'Gath",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "31",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Corki",
+      "name": "Corki",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "42",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Darius",
+      "name": "Darius",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 2,
+        "engage": 1,
+        "peel": 1,
+        "control": 1,
+        "scaling": 2
+      },
+      "tags": [
+        "healing",
+        "execute"
+      ],
+      "key": "122",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Diana",
+      "name": "Diana",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "131",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "DrMundo",
+      "name": "Dr. Mundo",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "36",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Draven",
+      "name": "Draven",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "119",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ekko",
+      "name": "Ekko",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "245",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Elise",
+      "name": "Elise",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "60",
+      "roles": [
+        "jungle",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Evelynn",
+      "name": "Evelynn",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "ap-assassin",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 0,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "dive"
+      ],
+      "key": "28",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ezreal",
+      "name": "Ezreal",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.7,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 0,
+        "control": 0,
+        "scaling": 3
+      },
+      "tags": [
+        "carry"
+      ],
+      "key": "81",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Fiddlesticks",
+      "name": "Fiddlesticks",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "9",
+      "roles": [
+        "jungle",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Fiora",
+      "name": "Fiora",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "114",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Fizz",
+      "name": "Fizz",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "105",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Galio",
+      "name": "Galio",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "3",
+      "roles": [
+        "mid",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Gangplank",
+      "name": "Gangplank",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "41",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     },
     {
       "id": "Garen",
@@ -38,149 +819,80 @@
       },
       "tags": [
         "execute"
-      ]
+      ],
+      "key": "86",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Malphite",
-      "name": "Malphite",
-      "roles": [
-        "top"
-      ],
-      "archetype": "tank",
-      "physicalShare": 0.2,
-      "traits": {
-        "frontline": 3,
-        "engage": 3,
-        "peel": 1,
-        "control": 2,
-        "scaling": 2
-      },
-      "tags": [
-        "armor",
-        "teamfight"
-      ]
-    },
-    {
-      "id": "Mordekaiser",
-      "name": "Mordekaiser",
-      "roles": [
-        "top"
-      ],
-      "archetype": "ap-fighter",
-      "physicalShare": 0.05,
-      "traits": {
-        "frontline": 2,
-        "engage": 1,
-        "peel": 1,
-        "control": 2,
-        "scaling": 2
-      },
-      "tags": [
-        "isolate"
-      ]
-    },
-    {
-      "id": "Darius",
-      "name": "Darius",
-      "roles": [
-        "top"
-      ],
+      "id": "Gnar",
+      "name": "Gnar",
       "archetype": "fighter",
-      "physicalShare": 0.95,
+      "physicalShare": null,
       "traits": {
-        "frontline": 2,
-        "engage": 1,
-        "peel": 1,
-        "control": 1,
-        "scaling": 2
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
       },
-      "tags": [
-        "healing",
-        "execute"
-      ]
-    },
-    {
-      "id": "Aatrox",
-      "name": "Aatrox",
+      "tags": [],
+      "key": "150",
       "roles": [
         "top"
       ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Gragas",
+      "name": "Gragas",
       "archetype": "fighter",
-      "physicalShare": 0.95,
+      "physicalShare": null,
       "traits": {
-        "frontline": 2,
-        "engage": 2,
-        "peel": 1,
-        "control": 2,
-        "scaling": 2
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
       },
-      "tags": [
-        "healing"
-      ]
+      "tags": [],
+      "key": "79",
+      "roles": [
+        "top",
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Camille",
-      "name": "Camille",
-      "roles": [
-        "top"
-      ],
-      "archetype": "fighter",
-      "physicalShare": 0.95,
+      "id": "Graves",
+      "name": "Graves",
+      "archetype": "marksman",
+      "physicalShare": null,
       "traits": {
-        "frontline": 1,
-        "engage": 2,
-        "peel": 1,
-        "control": 1,
-        "scaling": 3
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
       },
-      "tags": [
-        "dive",
-        "splitpush"
-      ]
-    },
-    {
-      "id": "Jax",
-      "name": "Jax",
+      "tags": [],
+      "key": "104",
       "roles": [
-        "top"
+        "jungle"
       ],
-      "archetype": "fighter",
-      "physicalShare": 0.65,
-      "traits": {
-        "frontline": 2,
-        "engage": 2,
-        "peel": 1,
-        "control": 2,
-        "scaling": 3
-      },
-      "tags": [
-        "splitpush"
-      ]
-    },
-    {
-      "id": "Shen",
-      "name": "Shen",
-      "roles": [
-        "top"
-      ],
-      "archetype": "tank",
-      "physicalShare": 0.4,
-      "traits": {
-        "frontline": 3,
-        "engage": 2,
-        "peel": 3,
-        "control": 2,
-        "scaling": 2
-      },
-      "tags": [
-        "protect"
-      ]
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     },
     {
       "id": "Gwen",
       "name": "Gwen",
       "roles": [
-        "top"
+        "top",
+        "mid",
+        "jungle"
       ],
       "archetype": "ap-fighter",
       "physicalShare": 0.05,
@@ -194,7 +906,156 @@
       "tags": [
         "healing",
         "splitpush"
-      ]
+      ],
+      "key": "887",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Hecarim",
+      "name": "Hecarim",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "120",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Heimerdinger",
+      "name": "Heimerdinger",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "74",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Hwei",
+      "name": "Hwei",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "910",
+      "roles": [
+        "mid",
+        "adc",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Illaoi",
+      "name": "Illaoi",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "420",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Irelia",
+      "name": "Irelia",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "39",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ivern",
+      "name": "Ivern",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "427",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Janna",
+      "name": "Janna",
+      "roles": [
+        "support"
+      ],
+      "archetype": "enchanter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 3,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "protect",
+        "healing"
+      ],
+      "key": "40",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
       "id": "JarvanIV",
@@ -214,7 +1075,405 @@
       "tags": [
         "dive",
         "teamfight"
-      ]
+      ],
+      "key": "59",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Jax",
+      "name": "Jax",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.65,
+      "traits": {
+        "frontline": 2,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "splitpush"
+      ],
+      "key": "24",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Jayce",
+      "name": "Jayce",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "126",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Jhin",
+      "name": "Jhin",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "pick"
+      ],
+      "key": "202",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Jinx",
+      "name": "Jinx",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 0,
+        "peel": 1,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "carry"
+      ],
+      "key": "222",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "KSante",
+      "name": "K'Sante",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "897",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kaisa",
+      "name": "Kai'Sa",
+      "roles": [
+        "adc"
+      ],
+      "archetype": "marksman",
+      "physicalShare": 0.55,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 0,
+        "control": 0,
+        "scaling": 3
+      },
+      "tags": [
+        "carry",
+        "dive"
+      ],
+      "key": "145",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kalista",
+      "name": "Kalista",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "429",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Karma",
+      "name": "Karma",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "43",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Karthus",
+      "name": "Karthus",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "30",
+      "roles": [
+        "jungle",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kassadin",
+      "name": "Kassadin",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "38",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Katarina",
+      "name": "Katarina",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "55",
+      "roles": [
+        "mid",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kayle",
+      "name": "Kayle",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "10",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kayn",
+      "name": "Kayn",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "141",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kennen",
+      "name": "Kennen",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "85",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Khazix",
+      "name": "Kha'Zix",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "121",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kindred",
+      "name": "Kindred",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "203",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Kled",
+      "name": "Kled",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "240",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "KogMaw",
+      "name": "Kog'Maw",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "96",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Leblanc",
+      "name": "LeBlanc",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "7",
+      "roles": [
+        "mid",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     },
     {
       "id": "LeeSin",
@@ -234,16 +1493,19 @@
       "tags": [
         "dive",
         "healing"
-      ]
+      ],
+      "key": "64",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Amumu",
-      "name": "Amumu",
+      "id": "Leona",
+      "name": "Leona",
       "roles": [
-        "jungle"
+        "support"
       ],
-      "archetype": "tank",
-      "physicalShare": 0.1,
+      "archetype": "tank-support",
+      "physicalShare": 0.25,
       "traits": {
         "frontline": 3,
         "engage": 3,
@@ -253,199 +1515,112 @@
       },
       "tags": [
         "teamfight"
-      ]
+      ],
+      "key": "89",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Sejuani",
-      "name": "Sejuani",
-      "roles": [
-        "jungle"
-      ],
-      "archetype": "tank",
-      "physicalShare": 0.3,
-      "traits": {
-        "frontline": 3,
-        "engage": 3,
-        "peel": 2,
-        "control": 3,
-        "scaling": 2
-      },
-      "tags": [
-        "teamfight"
-      ]
-    },
-    {
-      "id": "Viego",
-      "name": "Viego",
-      "roles": [
-        "jungle"
-      ],
+      "id": "Lillia",
+      "name": "Lillia",
       "archetype": "fighter",
-      "physicalShare": 0.85,
+      "physicalShare": null,
       "traits": {
-        "frontline": 1,
-        "engage": 2,
-        "peel": 0,
-        "control": 1,
-        "scaling": 3
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
       },
-      "tags": [
-        "healing",
-        "dive"
-      ]
-    },
-    {
-      "id": "Vi",
-      "name": "Vi",
+      "tags": [],
+      "key": "876",
       "roles": [
         "jungle"
       ],
-      "archetype": "fighter",
-      "physicalShare": 0.95,
-      "traits": {
-        "frontline": 2,
-        "engage": 3,
-        "peel": 1,
-        "control": 2,
-        "scaling": 2
-      },
-      "tags": [
-        "dive"
-      ]
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Evelynn",
-      "name": "Evelynn",
-      "roles": [
-        "jungle"
-      ],
-      "archetype": "ap-assassin",
-      "physicalShare": 0.05,
+      "id": "Lissandra",
+      "name": "Lissandra",
+      "archetype": "mage",
+      "physicalShare": null,
       "traits": {
-        "frontline": 0,
-        "engage": 1,
-        "peel": 0,
-        "control": 1,
-        "scaling": 3
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
       },
-      "tags": [
-        "dive"
-      ]
-    },
-    {
-      "id": "Orianna",
-      "name": "Orianna",
+      "tags": [],
+      "key": "127",
       "roles": [
         "mid"
       ],
-      "archetype": "mage",
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Locke",
+      "name": "Locke",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "805",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Lucian",
+      "name": "Lucian",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "236",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Lulu",
+      "name": "Lulu",
+      "roles": [
+        "support"
+      ],
+      "archetype": "enchanter",
       "physicalShare": 0.05,
       "traits": {
         "frontline": 0,
-        "engage": 2,
-        "peel": 2,
+        "engage": 0,
+        "peel": 3,
         "control": 2,
-        "scaling": 3
+        "scaling": 2
       },
       "tags": [
-        "teamfight",
         "protect"
-      ]
-    },
-    {
-      "id": "Zed",
-      "name": "Zed",
-      "roles": [
-        "mid"
       ],
-      "archetype": "ad-assassin",
-      "physicalShare": 0.95,
-      "traits": {
-        "frontline": 0,
-        "engage": 1,
-        "peel": 0,
-        "control": 0,
-        "scaling": 2
-      },
-      "tags": [
-        "dive"
-      ]
-    },
-    {
-      "id": "Ahri",
-      "name": "Ahri",
-      "roles": [
-        "mid"
-      ],
-      "archetype": "mage",
-      "physicalShare": 0.1,
-      "traits": {
-        "frontline": 0,
-        "engage": 2,
-        "peel": 1,
-        "control": 2,
-        "scaling": 2
-      },
-      "tags": [
-        "pick"
-      ]
-    },
-    {
-      "id": "Syndra",
-      "name": "Syndra",
-      "roles": [
-        "mid"
-      ],
-      "archetype": "mage",
-      "physicalShare": 0.05,
-      "traits": {
-        "frontline": 0,
-        "engage": 1,
-        "peel": 2,
-        "control": 2,
-        "scaling": 3
-      },
-      "tags": [
-        "burst"
-      ]
-    },
-    {
-      "id": "Viktor",
-      "name": "Viktor",
-      "roles": [
-        "mid"
-      ],
-      "archetype": "mage",
-      "physicalShare": 0.05,
-      "traits": {
-        "frontline": 0,
-        "engage": 1,
-        "peel": 2,
-        "control": 2,
-        "scaling": 3
-      },
-      "tags": [
-        "teamfight"
-      ]
-    },
-    {
-      "id": "Yasuo",
-      "name": "Yasuo",
-      "roles": [
-        "mid"
-      ],
-      "archetype": "fighter",
-      "physicalShare": 0.95,
-      "traits": {
-        "frontline": 1,
-        "engage": 2,
-        "peel": 1,
-        "control": 2,
-        "scaling": 3
-      },
-      "tags": [
-        "knockup-synergy"
-      ]
+      "key": "117",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
       "id": "Lux",
@@ -466,26 +1641,757 @@
       "tags": [
         "protect",
         "pick"
-      ]
+      ],
+      "key": "99",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Jinx",
-      "name": "Jinx",
+      "id": "Malphite",
+      "name": "Malphite",
+      "roles": [
+        "top"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.2,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "armor",
+        "teamfight"
+      ],
+      "key": "54",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Malzahar",
+      "name": "Malzahar",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "90",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Maokai",
+      "name": "Maokai",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "57",
+      "roles": [
+        "jungle",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "MasterYi",
+      "name": "Master Yi",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "11",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Mel",
+      "name": "Mel",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "800",
+      "roles": [
+        "mid",
+        "adc",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Milio",
+      "name": "Milio",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "902",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "MissFortune",
+      "name": "Miss Fortune",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "21",
       "roles": [
         "adc"
       ],
-      "archetype": "marksman",
-      "physicalShare": 0.95,
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Mordekaiser",
+      "name": "Mordekaiser",
+      "roles": [
+        "top"
+      ],
+      "archetype": "ap-fighter",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 2,
+        "engage": 1,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "isolate"
+      ],
+      "key": "82",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Morgana",
+      "name": "Morgana",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "25",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Naafiri",
+      "name": "Naafiri",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "950",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Nami",
+      "name": "Nami",
+      "roles": [
+        "support"
+      ],
+      "archetype": "enchanter",
+      "physicalShare": 0.05,
       "traits": {
         "frontline": 0,
-        "engage": 0,
-        "peel": 1,
-        "control": 1,
+        "engage": 2,
+        "peel": 2,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "protect",
+        "healing"
+      ],
+      "key": "267",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Nasus",
+      "name": "Nasus",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "75",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Nautilus",
+      "name": "Nautilus",
+      "roles": [
+        "support"
+      ],
+      "archetype": "tank-support",
+      "physicalShare": 0.25,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 3,
+        "control": 3,
+        "scaling": 2
+      },
+      "tags": [
+        "teamfight"
+      ],
+      "key": "111",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Neeko",
+      "name": "Neeko",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "518",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Nidalee",
+      "name": "Nidalee",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "76",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Nilah",
+      "name": "Nilah",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "895",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Nocturne",
+      "name": "Nocturne",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "56",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Nunu",
+      "name": "Nunu & Willump",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "20",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Olaf",
+      "name": "Olaf",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "2",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Orianna",
+      "name": "Orianna",
+      "roles": [
+        "mid"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 2,
+        "peel": 2,
+        "control": 2,
         "scaling": 3
       },
       "tags": [
-        "carry"
-      ]
+        "teamfight",
+        "protect"
+      ],
+      "key": "61",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ornn",
+      "name": "Ornn",
+      "roles": [
+        "top"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.35,
+      "traits": {
+        "frontline": 3,
+        "engage": 3,
+        "peel": 2,
+        "control": 3,
+        "scaling": 3
+      },
+      "tags": [
+        "teamfight"
+      ],
+      "key": "516",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Pantheon",
+      "name": "Pantheon",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "80",
+      "roles": [
+        "top",
+        "mid",
+        "jungle",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Poppy",
+      "name": "Poppy",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "78",
+      "roles": [
+        "top",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Pyke",
+      "name": "Pyke",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "555",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Qiyana",
+      "name": "Qiyana",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "246",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Quinn",
+      "name": "Quinn",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "133",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Rakan",
+      "name": "Rakan",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "497",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Rammus",
+      "name": "Rammus",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "33",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "RekSai",
+      "name": "Rek'Sai",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "421",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Rell",
+      "name": "Rell",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "526",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Renata",
+      "name": "Renata Glasc",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "888",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Renekton",
+      "name": "Renekton",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "58",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Rengar",
+      "name": "Rengar",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "107",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Riven",
+      "name": "Riven",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "92",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Rumble",
+      "name": "Rumble",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "68",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ryze",
+      "name": "Ryze",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "13",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     },
     {
       "id": "Samira",
@@ -506,201 +2412,279 @@
         "dive",
         "healing",
         "knockup-synergy"
-      ]
+      ],
+      "key": "360",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Caitlyn",
-      "name": "Caitlyn",
+      "id": "Sejuani",
+      "name": "Sejuani",
       "roles": [
-        "adc"
+        "jungle"
       ],
-      "archetype": "marksman",
-      "physicalShare": 0.95,
+      "archetype": "tank",
+      "physicalShare": 0.3,
       "traits": {
-        "frontline": 0,
-        "engage": 0,
-        "peel": 1,
-        "control": 1,
-        "scaling": 3
-      },
-      "tags": [
-        "carry"
-      ]
-    },
-    {
-      "id": "Ashe",
-      "name": "Ashe",
-      "roles": [
-        "adc"
-      ],
-      "archetype": "marksman",
-      "physicalShare": 0.95,
-      "traits": {
-        "frontline": 0,
-        "engage": 2,
+        "frontline": 3,
+        "engage": 3,
         "peel": 2,
         "control": 3,
         "scaling": 2
       },
       "tags": [
-        "carry",
-        "pick"
-      ]
-    },
-    {
-      "id": "Ezreal",
-      "name": "Ezreal",
-      "roles": [
-        "adc"
+        "teamfight"
       ],
-      "archetype": "marksman",
-      "physicalShare": 0.7,
-      "traits": {
-        "frontline": 0,
-        "engage": 0,
-        "peel": 0,
-        "control": 0,
-        "scaling": 3
-      },
-      "tags": [
-        "carry"
-      ]
+      "key": "113",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Kaisa",
-      "name": "Kai'Sa",
-      "roles": [
-        "adc"
-      ],
-      "archetype": "marksman",
-      "physicalShare": 0.55,
+      "id": "Senna",
+      "name": "Senna",
+      "archetype": "support",
+      "physicalShare": null,
       "traits": {
-        "frontline": 0,
-        "engage": 1,
-        "peel": 0,
-        "control": 0,
-        "scaling": 3
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
       },
-      "tags": [
-        "carry",
-        "dive"
-      ]
-    },
-    {
-      "id": "Jhin",
-      "name": "Jhin",
-      "roles": [
-        "adc"
-      ],
-      "archetype": "marksman",
-      "physicalShare": 0.95,
-      "traits": {
-        "frontline": 0,
-        "engage": 1,
-        "peel": 1,
-        "control": 2,
-        "scaling": 2
-      },
-      "tags": [
-        "pick"
-      ]
-    },
-    {
-      "id": "Lulu",
-      "name": "Lulu",
+      "tags": [],
+      "key": "235",
       "roles": [
         "support"
       ],
-      "archetype": "enchanter",
-      "physicalShare": 0.05,
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Seraphine",
+      "name": "Seraphine",
+      "archetype": "support",
+      "physicalShare": null,
       "traits": {
-        "frontline": 0,
-        "engage": 0,
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "147",
+      "roles": [
+        "adc",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Sett",
+      "name": "Sett",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "875",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Shaco",
+      "name": "Shaco",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "35",
+      "roles": [
+        "jungle",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Shen",
+      "name": "Shen",
+      "roles": [
+        "top",
+        "support"
+      ],
+      "archetype": "tank",
+      "physicalShare": 0.4,
+      "traits": {
+        "frontline": 3,
+        "engage": 2,
         "peel": 3,
         "control": 2,
         "scaling": 2
       },
       "tags": [
         "protect"
-      ]
+      ],
+      "key": "98",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Nautilus",
-      "name": "Nautilus",
+      "id": "Shyvana",
+      "name": "Shyvana",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "102",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Singed",
+      "name": "Singed",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "27",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Sion",
+      "name": "Sion",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "14",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Sivir",
+      "name": "Sivir",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "15",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Skarner",
+      "name": "Skarner",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "72",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Smolder",
+      "name": "Smolder",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "901",
+      "roles": [
+        "mid",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Sona",
+      "name": "Sona",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "37",
       "roles": [
         "support"
       ],
-      "archetype": "tank-support",
-      "physicalShare": 0.25,
-      "traits": {
-        "frontline": 3,
-        "engage": 3,
-        "peel": 3,
-        "control": 3,
-        "scaling": 2
-      },
-      "tags": [
-        "teamfight"
-      ]
-    },
-    {
-      "id": "Leona",
-      "name": "Leona",
-      "roles": [
-        "support"
-      ],
-      "archetype": "tank-support",
-      "physicalShare": 0.25,
-      "traits": {
-        "frontline": 3,
-        "engage": 3,
-        "peel": 2,
-        "control": 3,
-        "scaling": 2
-      },
-      "tags": [
-        "teamfight"
-      ]
-    },
-    {
-      "id": "Thresh",
-      "name": "Thresh",
-      "roles": [
-        "support"
-      ],
-      "archetype": "tank-support",
-      "physicalShare": 0.4,
-      "traits": {
-        "frontline": 2,
-        "engage": 2,
-        "peel": 3,
-        "control": 3,
-        "scaling": 2
-      },
-      "tags": [
-        "protect",
-        "pick"
-      ]
-    },
-    {
-      "id": "Janna",
-      "name": "Janna",
-      "roles": [
-        "support"
-      ],
-      "archetype": "enchanter",
-      "physicalShare": 0.05,
-      "traits": {
-        "frontline": 0,
-        "engage": 0,
-        "peel": 3,
-        "control": 3,
-        "scaling": 2
-      },
-      "tags": [
-        "protect",
-        "healing"
-      ]
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     },
     {
       "id": "Soraka",
@@ -720,27 +2704,938 @@
       "tags": [
         "protect",
         "healing"
-      ]
+      ],
+      "key": "16",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
     },
     {
-      "id": "Nami",
-      "name": "Nami",
+      "id": "Swain",
+      "name": "Swain",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "50",
       "roles": [
+        "top",
+        "mid",
+        "adc",
         "support"
       ],
-      "archetype": "enchanter",
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Sylas",
+      "name": "Sylas",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "517",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Syndra",
+      "name": "Syndra",
+      "roles": [
+        "mid",
+        "adc"
+      ],
+      "archetype": "mage",
       "physicalShare": 0.05,
       "traits": {
         "frontline": 0,
-        "engage": 2,
+        "engage": 1,
         "peel": 2,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "burst"
+      ],
+      "key": "134",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "TahmKench",
+      "name": "Tahm Kench",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "223",
+      "roles": [
+        "top",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Taliyah",
+      "name": "Taliyah",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "163",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Talon",
+      "name": "Talon",
+      "archetype": "assassin",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "91",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Taric",
+      "name": "Taric",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "44",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Teemo",
+      "name": "Teemo",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "17",
+      "roles": [
+        "top",
+        "jungle",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Thresh",
+      "name": "Thresh",
+      "roles": [
+        "support"
+      ],
+      "archetype": "tank-support",
+      "physicalShare": 0.4,
+      "traits": {
+        "frontline": 2,
+        "engage": 2,
+        "peel": 3,
         "control": 3,
         "scaling": 2
       },
       "tags": [
         "protect",
-        "healing"
-      ]
+        "pick"
+      ],
+      "key": "412",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Tristana",
+      "name": "Tristana",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "18",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Trundle",
+      "name": "Trundle",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "48",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Tryndamere",
+      "name": "Tryndamere",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "23",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "TwistedFate",
+      "name": "Twisted Fate",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "4",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Twitch",
+      "name": "Twitch",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "29",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Udyr",
+      "name": "Udyr",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "77",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Urgot",
+      "name": "Urgot",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "6",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Varus",
+      "name": "Varus",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "110",
+      "roles": [
+        "top",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Vayne",
+      "name": "Vayne",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "67",
+      "roles": [
+        "top",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Veigar",
+      "name": "Veigar",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "45",
+      "roles": [
+        "mid",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Velkoz",
+      "name": "Vel'Koz",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "161",
+      "roles": [
+        "mid",
+        "adc",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Vex",
+      "name": "Vex",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "711",
+      "roles": [
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Vi",
+      "name": "Vi",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 2,
+        "engage": 3,
+        "peel": 1,
+        "control": 2,
+        "scaling": 2
+      },
+      "tags": [
+        "dive"
+      ],
+      "key": "254",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Viego",
+      "name": "Viego",
+      "roles": [
+        "jungle"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.85,
+      "traits": {
+        "frontline": 1,
+        "engage": 2,
+        "peel": 0,
+        "control": 1,
+        "scaling": 3
+      },
+      "tags": [
+        "healing",
+        "dive"
+      ],
+      "key": "234",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Viktor",
+      "name": "Viktor",
+      "roles": [
+        "mid",
+        "adc"
+      ],
+      "archetype": "mage",
+      "physicalShare": 0.05,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 2,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "teamfight"
+      ],
+      "key": "112",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Vladimir",
+      "name": "Vladimir",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "8",
+      "roles": [
+        "top",
+        "mid",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Volibear",
+      "name": "Volibear",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "106",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Warwick",
+      "name": "Warwick",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "19",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "MonkeyKing",
+      "name": "Wukong",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "62",
+      "roles": [
+        "top",
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Xayah",
+      "name": "Xayah",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "498",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Xerath",
+      "name": "Xerath",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "101",
+      "roles": [
+        "mid",
+        "adc",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "XinZhao",
+      "name": "Xin Zhao",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "5",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Yasuo",
+      "name": "Yasuo",
+      "roles": [
+        "top",
+        "mid",
+        "adc"
+      ],
+      "archetype": "fighter",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 1,
+        "engage": 2,
+        "peel": 1,
+        "control": 2,
+        "scaling": 3
+      },
+      "tags": [
+        "knockup-synergy"
+      ],
+      "key": "157",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Yone",
+      "name": "Yone",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "777",
+      "roles": [
+        "top",
+        "mid"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Yorick",
+      "name": "Yorick",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "83",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Yunara",
+      "name": "Yunara",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "804",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Yuumi",
+      "name": "Yuumi",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "350",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Zaahen",
+      "name": "Zaahen",
+      "archetype": "fighter",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "904",
+      "roles": [
+        "top"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Zac",
+      "name": "Zac",
+      "archetype": "tank",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "154",
+      "roles": [
+        "jungle"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Zed",
+      "name": "Zed",
+      "roles": [
+        "mid",
+        "jungle"
+      ],
+      "archetype": "ad-assassin",
+      "physicalShare": 0.95,
+      "traits": {
+        "frontline": 0,
+        "engage": 1,
+        "peel": 0,
+        "control": 0,
+        "scaling": 2
+      },
+      "tags": [
+        "dive"
+      ],
+      "key": "238",
+      "traitSource": "curated sample",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Zeri",
+      "name": "Zeri",
+      "archetype": "marksman",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "221",
+      "roles": [
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Ziggs",
+      "name": "Ziggs",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "115",
+      "roles": [
+        "mid",
+        "adc"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Zilean",
+      "name": "Zilean",
+      "archetype": "support",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "26",
+      "roles": [
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Zoe",
+      "name": "Zoe",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "142",
+      "roles": [
+        "mid",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
+    },
+    {
+      "id": "Zyra",
+      "name": "Zyra",
+      "archetype": "mage",
+      "physicalShare": null,
+      "traits": {
+        "frontline": null,
+        "engage": null,
+        "peel": null,
+        "control": null,
+        "scaling": null
+      },
+      "tags": [],
+      "key": "143",
+      "roles": [
+        "jungle",
+        "support"
+      ],
+      "traitSource": "unrated",
+      "roleSource": "OP.GG observed roles"
     }
   ],
   "matchups": {

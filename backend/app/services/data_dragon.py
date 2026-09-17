@@ -1,10 +1,17 @@
 """Optional static-data adapter. Runtime analysis never calls external services."""
 import httpx
+import re
 
 class DataDragonService:
     base_url = "https://ddragon.leagueoflegends.com"
 
-    def __init__(self, version="14.24.1"):
+    def __init__(self, version=None):
+        if version is None:
+            response = httpx.get(f"{self.base_url}/api/versions.json", timeout=20)
+            response.raise_for_status()
+            version = response.json()[0]
+        if not isinstance(version, str) or not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
+            raise ValueError("Invalid Data Dragon version")
         self.version = version
 
     def fetch_json(self, filename):
