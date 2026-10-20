@@ -13,3 +13,8 @@ playwright-report/
 test-results/
 *.tsbuildinfo
 .cache/
+
+.data/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm

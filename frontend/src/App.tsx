@@ -27,6 +27,8 @@ import Portrait from "./components/Portrait";
 import Modal from "./components/Modal";
 import Build from "./components/Build";
 import AdcAdvice from "./components/AdcAdvice";
+import Onetricks from "./components/Onetricks";
+import SavedDrafts from "./components/SavedDrafts";
 import Statistics from "./components/Statistics";
 import type { Analysis, Catalog, Draft, Role } from "./types";
 
@@ -322,6 +324,17 @@ export default function App() {
               ) : (
                 <div className="builder-grid">
                   <div className="builder-main">
+                    <SavedDrafts
+                      draft={draft}
+                      onLoad={(saved) => {
+                        setDraft(saved);
+                        setAnalysis(null);
+                        setError("");
+                        setAnnouncement(
+                          "Saved draft loaded. Analyze again for current results.",
+                        );
+                      }}
+                    />
                     <section className="panel role-panel">
                       <div className="section-heading">
                         <span className="step-number">01</span>
@@ -795,6 +808,9 @@ export default function App() {
                       <p className="explanation">{result.explanation}</p>
                     </section>
                     <Statistics result={result} />
+                    {result.onetricks && (
+                      <Onetricks evidence={result.onetricks} />
+                    )}
                     <div
                       className="result-tabs"
                       role="tablist"

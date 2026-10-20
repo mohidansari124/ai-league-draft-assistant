@@ -1,0 +1,68 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      STATS_PROVIDER: disabled
+      EXPLANATION_PROVIDER: template
+      DATABASE_PATH: ${{ github.workspace }}/.test-artifacts/ci.sqlite3
+      CI: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: backend/requirements.lock.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install Python dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -r backend/requirements.lock.txt
+      - name: Backend tests
+        working-directory: backend
+        run: ../.venv/bin/python -m pytest -q
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: |
+          npm install -g pnpm@11.19.0
+          pnpm install --frozen-lockfile
+      - name: Format check and production build
+        working-directory: frontend
+        run: |
+          pnpm format:check
+          pnpm build
+      - name: Browser tests
+        working-directory: frontend
+        run: |
+          pnpm exec playwright install --with-deps chromium
+          pnpm test:e2e
+      - name: Build container and smoke test persistence
+        run: |
+          docker build -t draftwise:ci .
+          docker run -d --name draftwise-ci -p 8080:8000 -e STATS_PROVIDER=disabled -v draftwise-ci-data:/data draftwise:ci
+          for attempt in $(seq 1 30); do curl -fsS http://localhost:8080/api/health && break || sleep 2; done
+          curl -fsS http://localhost:8080/ > /dev/null
+          curl -fsS -c /tmp/draftwise-cookie -H 'Content-Type: application/json' -d '{"name":"CI persistence","draft":{"role":"adc","championPool":["Draven"]}}' http://localhost:8080/api/drafts > /dev/null
+          docker restart draftwise-ci
+          for attempt in $(seq 1 30); do curl -fsS http://localhost:8080/api/health && break || sleep 2; done
+          curl -fsS -b /tmp/draftwise-cookie http://localhost:8080/api/drafts | python -c 'import json,sys; assert json.load(sys.stdin)[0]["name"] == "CI persistence"'
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-failure-evidence
+          path: |
+            frontend/test-results
+            .test-artifacts/*.png

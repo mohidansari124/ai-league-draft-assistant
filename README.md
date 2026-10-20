@@ -2,7 +2,7 @@
 
 A working CS4800 Software Engineering with AI MVP. Enter a League draft, choose a personal champion pool, and get up to three contextual recommendations with transparent scores, matchup notes, runes, item suggestions, and a game plan.
 
-**React + TypeScript + Vite + Tailwind CSS frontend; Python + FastAPI backend.** Includes all 173 champions in Riot Data Dragon 16.18.1 and real OP.GG statistics through its official public MCP service. Works without API keys. No login or accounts.
+**React + TypeScript + Vite + Tailwind CSS frontend; Python + FastAPI backend; SQLite database.** Includes all 173 champions in Riot Data Dragon 16.18.1 and real OP.GG statistics through its official public MCP service. Works without API keys. No login or accounts.
 
 ## Run on Windows (PowerShell)
 
@@ -39,11 +39,11 @@ cd frontend
 pnpm.cmd dev
 ```
 
-Vite proxies `/api` to port 8000. Both servers bind to localhost. No production deployment is configured.
+Vite proxies `/api` to port 8000. Both servers bind to localhost. A Docker/EC2 deployment configuration is prepared; see [deployment](docs/DEPLOYMENT.md). No cloud deployment has been performed.
 
 ## Demonstration
 
-The app starts with the required example. **Load example** resets it at any time:
+The app starts with the personal ADC example. **Load example** loads the original top-lane demonstration:
 
 - Role: Top
 - Pool: Ornn, Garen, Malphite, Mordekaiser; comfort defaults to 3 / 5
@@ -117,7 +117,7 @@ cd ..
 
 Browser tests start the two servers automatically if needed. They cover the required example, results tabs, champion search, duplicate prevention, comfort selection, all roles, partial drafts, empty pools, failure recovery, keyboard modal behavior and 390px mobile layout. Screenshots go to `.test-artifacts/`, which is not committed. Playwright traces are retained for failing tests.
 
-The build outputs `frontend/dist/`. Serving that static build in production still requires routing `/api` to FastAPI; a production host is intentionally out of scope.
+The build outputs `frontend/dist/`. Serving that static build in production still requires routing `/api` to FastAPI; the included Docker image serves it alongside FastAPI; cloud deployment is pending.
 
 ## Optional AI explanations
 
@@ -185,3 +185,20 @@ Draftwise is not endorsed by Riot Games and does not reflect the views or opinio
 The app starts with Draven, Twitch, Caitlyn and Ashe and an editable example lane. It compares all four eligible picks and includes a source-linked ADC matchup notebook for ten common ADC opponents, with extra threat notes for Nautilus and Lux. Other champions and roles remain available. `Load example` restores the original top-lane demo.
 
 The notebook is a small reviewed mechanics library, separate from live OP.GG statistics. It does not supply matchup win rates, matchup-specific builds or rune substitutions. Each note links its evidence and shows its review date; unreviewed opponents are labeled. See [data sources](docs/DATA_SOURCES.md).
+
+
+## Persistence, Onetricks evidence, and CI
+
+Saved drafts persist in SQLite, including champion pool, comfort and empty team-role slots. Use **Saved drafts** in the builder to save, reload or delete. Drafts are scoped to an anonymous HttpOnly browser cookie. They survive server restarts; clearing cookies loses access. There are no cross-device accounts. By default the database is `.data/draftwise.sqlite3`, excluded from Git. Override `DATABASE_PATH` for a persistent cloud volume.
+
+New APIs: `GET /api/drafts`, `POST /api/drafts` with `{name, draft}`, and `DELETE /api/drafts/{id}`. Saving rejects unknown champions and invalid drafts. Each browser can retain up to 50 drafts.
+
+Onetricks evidence is stored in the same database and shown separately from OP.GG. Import the small reviewed research snapshot:
+
+```powershell
+./.venv/Scripts/python.exe backend/scripts/import_onetricks.py backend/app/data/onetricks_reviewed.json
+```
+
+This batch contains six matchup observations for the focused champions, reviewed from indexed public counter pages on October 20, 2026. Their source patch is unknown and some source crawls are older: these are **reference snapshots, not current live data**. It contains no matchup-specific builds. Direct HTTP access encountered a security checkpoint, and no scraper bypass is implemented. [Onetricks import format and limits](docs/ONETRICKS.md).
+
+GitHub Actions runs backend tests, frontend format/build checks, browser flows and a container persistence smoke test on pushes/PRs. The Docker/EC2 configuration is prepared but **not deployed**. [Deployment instructions](docs/DEPLOYMENT.md).

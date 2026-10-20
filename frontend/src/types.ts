@@ -48,7 +48,49 @@ export type AdcAdvice = {
   decisions: string[];
   limitations: string;
 };
+export type OnetricksEvidence = {
+  status: "imported" | "unavailable";
+  opponent: string | null;
+  buildUrl: string;
+  counterUrl: string;
+  notice: string;
+  records: {
+    champion: string;
+    opponent: string;
+    patch: string | null;
+    region: string;
+    cohort: string;
+    sourceUrl: string;
+    observedAt: string;
+    notes: string;
+    reportedPerspective: string;
+    winRate: number | null;
+    games: number | null;
+    goldDiff15: number | null;
+    freshness: string;
+    patchMatches: boolean;
+    buildEligible: boolean;
+    build: {
+      items: string[];
+      games: number;
+      runes: {
+        primary: string;
+        secondary: string;
+        keystone: string;
+        runes: string[];
+        shards: string[];
+      } | null;
+    } | null;
+  }[];
+};
+export type SavedDraft = {
+  id: string;
+  name: string;
+  draft: Draft;
+  createdAt: string;
+};
 export type Recommendation = {
+  onetricks: OnetricksEvidence | null;
   adcAdvice: AdcAdvice | null;
   champion: string;
   score: number;

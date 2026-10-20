@@ -55,3 +55,8 @@ The notebook combines the player's champion plan with opposing-champion notes. T
 Review date is our editorial retrieval date, not the publisher's update date or a claim that all advice is current-patch optimized. Mechanic summaries deliberately omit obsolete purchases present in some source prose. Build/rune data still comes from the existing OP.GG provider when sufficient and patch-matched, otherwise its labeled fallback. The new purchase-decision section is app-authored qualitative guidance; it does not prescribe opponent-specific rune pages or item orders.
 
 There is no LoLalytics scraper, Reddit feed, or Onetricks ingestion in this implementation. Future sources need their own access and quality checks. This narrow library can be replaced or expanded independently of the statistics adapter.
+
+
+## Onetricks evidence update — 2026-10-20
+
+A SQLite-backed reviewed-observation import and UI are now implemented. Six dated public counter-page observations are included as an explicit import batch. Their patches are unknown; they do not influence ranking. Live fetching hit a security checkpoint, and no matchup-specific build/rune data was verified. See [Onetricks status](ONETRICKS.md) for source interpretation, format and remaining work. This supersedes the earlier statement that no Onetricks ingestion exists: reviewed JSON imports now work, live scraping does not.

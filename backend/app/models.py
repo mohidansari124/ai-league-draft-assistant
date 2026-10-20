@@ -107,6 +107,7 @@ class Recommendation(BaseModel):
     runeSource: str = "Sample guide"
     traitSource: str = "curated sample"
     adcAdvice: AdcAdvice | None = None
+    onetricks: dict | None = None
 
 class Composition(BaseModel):
     traits: dict[str, float]
@@ -124,3 +125,30 @@ class AnalysisResponse(BaseModel):
     scoringVersion: str = "2.0"
     explanationMode: str = "template"
     statisticsMode: str = "heuristic"
+
+
+class SavedDraftInput(BaseModel):
+    name: str = Field(min_length=1, max_length=80)
+    draft: dict
+
+    @model_validator(mode="after")
+    def check_draft(self):
+        from app.services.catalog import champions_by_name
+        self.name = self.name.strip()
+        if not self.name:
+            raise ValueError("Give your draft a name.")
+        # Preserve empty UI role slots in storage; validate the compact API form.
+        if set(self.draft) - {"role", "championPool", "allies", "enemies", "laneOpponent", "comfort"}:
+            raise ValueError("Unknown draft field.")
+        compact = dict(self.draft)
+        for key, limit in (("allies",4),("enemies",5)):
+            value = compact.get(key, [])
+            if not isinstance(value,list) or len(value)>limit or any(not isinstance(n,str) for n in value):
+                raise ValueError("Invalid team slots.")
+            compact[key] = [n for n in value if n]
+        request = AnalyzeRequest.model_validate(compact)
+        names = set(request.championPool + request.allies + request.enemies)
+        if names - champions_by_name().keys():
+            raise ValueError("Unknown champion in saved draft.")
+        self.draft = {**request.model_dump(), "allies":self.draft.get("allies",[]), "enemies":self.draft.get("enemies",[])}
+        return self

@@ -1,3 +1,5 @@
+import { execFileSync } from "node:child_process";
+import path from "node:path";
 import { test, expect } from "@playwright/test";
 import fs from "node:fs";
 const artifacts = "../.test-artifacts";
@@ -268,6 +270,118 @@ test("ADC default pool has four picks and cited opponent advice", async ({
   ).toBe(true);
   await page.screenshot({
     path: `${artifacts}/adc-notebook-mobile.png`,
+    fullPage: true,
+  });
+});
+
+test("saved ADC drafts survive reload and preserve empty role slots", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page
+    .getByRole("button", { name: "Remove allied Ornn", exact: true })
+    .click();
+  await page
+    .getByRole("combobox", { name: "Draven comfort" })
+    .selectOption("5");
+  await page
+    .getByRole("textbox", { name: "Draft name" })
+    .fill("Saved ADC lane");
+  await page.getByRole("button", { name: "Save draft", exact: true }).click();
+  await expect(
+    page.getByRole("button", { name: "Load Saved ADC lane", exact: true }),
+  ).toBeVisible();
+  await page.reload();
+  await page
+    .getByRole("button", { name: "Load Saved ADC lane", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "Select allied Top", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Select allied Jungle: Vi", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("combobox", { name: "Draven comfort" }),
+  ).toHaveValue("5");
+  await page
+    .getByRole("button", { name: "Analyze draft", exact: true })
+    .click();
+  await expect(
+    page.getByRole("region", { name: "Onetricks matchup evidence" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("region", { name: "Onetricks matchup evidence" }),
+  ).toContainText("not a live feed");
+  await page
+    .getByRole("button", { name: "Back to draft", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Delete Saved ADC lane", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "Load Saved ADC lane", exact: true }),
+  ).toHaveCount(0);
+});
+
+test("imported Onetricks evidence displays champion perspective and missing builds", async ({
+  page,
+}) => {
+  const python = path.resolve(
+    process.platform === "win32"
+      ? "../.venv/Scripts/python.exe"
+      : "../.venv/bin/python",
+  );
+  execFileSync(
+    python,
+    [
+      path.resolve("../backend/scripts/import_onetricks.py"),
+      path.resolve("../backend/app/data/onetricks_reviewed.json"),
+    ],
+    {
+      env: {
+        ...process.env,
+        DATABASE_PATH:
+          process.env.DATABASE_PATH ||
+          path.resolve("../.test-artifacts/browser-tests.sqlite3"),
+      },
+    },
+  );
+  await page.goto("/");
+  await page
+    .getByRole("button", { name: "Analyze draft", exact: true })
+    .click();
+  await page
+    .locator(".recommendation-card")
+    .filter({ hasText: "Draven" })
+    .click();
+  const evidence = page.getByRole("region", {
+    name: "Onetricks matchup evidence",
+  });
+  await expect(evidence).toContainText("55.8%");
+  await expect(evidence).toContainText("1,022");
+  await expect(evidence).toContainText("Patch: Unknown");
+  await expect(evidence).toContainText(
+    "No verified matchup-specific item or rune record",
+  );
+  await expect(
+    evidence.getByRole("link", { name: "View observation source" }),
+  ).toHaveAttribute(
+    "href",
+    "https://www.onetricks.gg/champions/counter/Draven",
+  );
+  await page.screenshot({
+    path: `${artifacts}/onetricks-desktop.png`,
+    fullPage: true,
+  });
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({
+    path: `${artifacts}/onetricks-mobile.png`,
     fullPage: true,
   });
 });

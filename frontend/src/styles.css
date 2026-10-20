@@ -1908,3 +1908,50 @@ footer p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.saved-drafts {
+  padding: 24px;
+}
+.saved-drafts h2 {
+  font-size: 17px;
+}
+.saved-drafts p,
+.saved-drafts small {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #9ba8b6;
+  margin-top: 8px;
+}
+.save-form,
+.saved-row,
+.source-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.save-form input {
+  flex: 1;
+  min-width: 160px;
+  background: #111820;
+  border: 1px solid #344152;
+  border-radius: 8px;
+  padding: 10px;
+  color: #e2e8f0;
+}
+.saved-row {
+  padding-top: 12px;
+  border-top: 1px solid #344152;
+}
+.saved-row > div {
+  flex: 1;
+  min-width: 130px;
+  overflow-wrap: anywhere;
+}
+.saved-row small {
+  display: block;
+}
+.adc-advice .statistics-grid strong {
+  font-size: 20px;
+}

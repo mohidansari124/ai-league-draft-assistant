@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DATABASE_PATH: /data/draftwise.sqlite3
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      STATS_PROVIDER: ${STATS_PROVIDER:-opgg}
+      EXPLANATION_PROVIDER: template
+    volumes:
+      - draftwise-data:/data
+  proxy:
+    image: caddy:2
+    profiles: [cloud]
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      DOMAIN: ${DOMAIN:-localhost}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [app]
+volumes:
+  draftwise-data:
+  caddy-data:
+  caddy-config:

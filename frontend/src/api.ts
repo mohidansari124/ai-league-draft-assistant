@@ -1,4 +1,4 @@
-import type { Analysis, Catalog, Draft } from "./types";
+import type { Analysis, Catalog, Draft, SavedDraft } from "./types";
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   let response: Response;
   try {
@@ -32,4 +32,16 @@ export const analyzeDraft = (draft: Draft) =>
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(draft),
+  });
+
+export const listSavedDrafts = () => request<SavedDraft[]>("/api/drafts");
+export const saveDraft = (name: string, draft: Draft) =>
+  request<SavedDraft>("/api/drafts", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, draft }),
+  });
+export const deleteSavedDraft = (id: string) =>
+  request<{ deleted: boolean }>(`/api/drafts/${encodeURIComponent(id)}`, {
+    method: "DELETE",
   });
