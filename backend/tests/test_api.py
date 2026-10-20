@@ -73,3 +73,16 @@ def test_ai_success_changes_only_prose(monkeypatch):
     for key in baseline:
         if key not in ("explanation", "explanationSource"):
             assert baseline[key] == result[key]
+
+
+def test_entire_roster_has_official_toolkits():
+    from app.services.catalog import public_catalog
+    catalog = public_catalog()
+    for champion in catalog["champions"]:
+        kit = champion["toolkit"]
+        assert kit["classes"]
+        assert kit["stats"]["hp"] > 0
+        assert kit["stats"]["attackrange"] > 0
+        assert [a["key"] for a in kit["abilities"]] == ["Passive", "Q", "W", "E", "R"]
+        assert all(a["name"] and a["description"] and "<" not in a["description"] for a in kit["abilities"])
+        assert kit["sourceUrl"] == f"https://ddragon.leagueoflegends.com/cdn/{catalog['metadataVersion']}/data/en_US/champion/{champion['id']}.json"

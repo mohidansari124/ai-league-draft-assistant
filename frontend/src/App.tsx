@@ -1,3 +1,4 @@
+import ChampionToolkit from "./components/ChampionToolkit";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -840,30 +841,37 @@ export default function App() {
                     >
                       {tab === "overview" && (
                         <>
-                          <section className="panel detail-panel">
-                            <div className="detail-heading">
-                              <Target size={19} />
-                              <h2>Lane matchup</h2>
-                              <span
-                                className={`matchup-badge ${result.matchup.rating === "Difficult" ? "difficult" : ""}`}
-                              >
-                                {result.matchup.rating}
+                          {result.matchup.known && (
+                            <section className="panel detail-panel">
+                              <div className="detail-heading">
+                                <Target size={19} />
+                                <h2>Lane matchup</h2>
+                                <span
+                                  className={`matchup-badge ${result.matchup.rating === "Difficult" ? "difficult" : ""}`}
+                                >
+                                  {result.matchup.rating}
+                                </span>
+                              </div>
+                              <h3>
+                                {result.champion}{" "}
+                                <span className="muted">vs.</span>{" "}
+                                {result.matchup.opponent || "Unknown opponent"}
+                              </h3>
+                              <p>{result.matchup.explanation}</p>
+                              <span className="data-label">
+                                {result.matchup.known
+                                  ? result.matchup.source === "OP.GG"
+                                    ? "OP.GG match outcomes · not lane-win statistics"
+                                    : "Historical sample matchup · not statistical data"
+                                  : "Unrated matchup · neutral scoring applied"}
                               </span>
-                            </div>
-                            <h3>
-                              {result.champion}{" "}
-                              <span className="muted">vs.</span>{" "}
-                              {result.matchup.opponent || "Unknown opponent"}
-                            </h3>
-                            <p>{result.matchup.explanation}</p>
-                            <span className="data-label">
-                              {result.matchup.known
-                                ? result.matchup.source === "OP.GG"
-                                  ? "OP.GG match outcomes · not lane-win statistics"
-                                  : "Historical sample matchup · not statistical data"
-                                : "Unrated matchup · neutral scoring applied"}
-                            </span>
-                          </section>
+                            </section>
+                          )}
+                          <ChampionToolkit
+                            champion={champion(result.champion)}
+                            opponent={champion(result.matchup.opponent || "")}
+                            patch={catalog?.metadataVersion}
+                          />
                           {result.adcAdvice && (
                             <AdcAdvice advice={result.adcAdvice} />
                           )}
@@ -905,7 +913,16 @@ export default function App() {
                           </section>
                         </>
                       )}
-                      {tab === "build" && <Build result={result} />}
+                      {tab === "build" && (
+                        <>
+                          <Build result={result} />
+                          <ChampionToolkit
+                            champion={champion(result.champion)}
+                            patch={catalog?.metadataVersion}
+                            buildRole={draft.role}
+                          />
+                        </>
+                      )}
                       {tab === "score" && (
                         <section className="panel detail-panel">
                           <div className="detail-heading">

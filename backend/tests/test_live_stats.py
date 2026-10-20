@@ -31,7 +31,7 @@ def test_provider_data_actually_changes_the_ranking():
 
 
 def test_weak_counter_rate_is_from_selected_champion_perspective():
-    raw={"champion":"ORNN","position":"TOP","data":{"summary":{"positions":[{"name":"TOP","stats":{"play":1000,"win_rate":.51}}]},"weak_counters":[{"champion_name":"Darius","play":500,"my_win_rate":.42,"counter_win_rate":.58}],"trends":{"win":{"version":"16.18"}}}}
+    raw={"champion":"ORNN","position":"TOP","data":{"summary":{"positions":[{"name":"TOP","stats":{"play":1000,"win_rate":.51}}]},"weak_counters":[{"champion_name":"Darius","play":500,"my_win_rate":.42,"counter_win_rate":.58}],"trends":{"win":{"version":stats()["patch"]}}}}
     normalized=opgg.normalize(raw,"Ornn","top",datetime.now(timezone.utc).isoformat())
     assert normalized["matchups"]["Darius"]["winRate"] == .42
     result=analyze(AnalyzeRequest(role="top",championPool=["Ornn"],enemies=["Darius"],laneOpponent="Darius"),{"Ornn":normalized},True).recommendations[0]

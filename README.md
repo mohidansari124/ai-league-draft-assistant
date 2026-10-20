@@ -2,7 +2,7 @@
 
 A working CS4800 Software Engineering with AI MVP. Enter a League draft, choose a personal champion pool, and get up to three contextual recommendations with transparent scores, matchup notes, runes, item suggestions, and a game plan.
 
-**React + TypeScript + Vite + Tailwind CSS frontend; Python + FastAPI backend; SQLite database.** Includes all 173 champions in Riot Data Dragon 16.18.1 and real OP.GG statistics through its official public MCP service. Works without API keys. No login or accounts.
+**React + TypeScript + Vite + Tailwind CSS frontend; Python + FastAPI backend; SQLite database.** Includes all 173 champions in Riot Data Dragon 16.21.1 and real OP.GG statistics through its official public MCP service. Works without API keys. No login or accounts.
 
 ## Run on Windows (PowerShell)
 
@@ -137,7 +137,7 @@ Restart the backend. `EXPLANATION_PROVIDER=template` (the default) or an absent 
 
 ## Real statistics and the full roster
 
-**173 champions**, including the latest roster entries, are selectable across the draft. Riot Data Dragon **16.18.1** supplies names, titles, portraits and static item metadata. Observed OP.GG role shares determine the initial role map (at least 10% of that champion's observed games in the role); this is not a prohibition on creative off-meta picks. In the personal pool, the app currently filters by supported roles.
+**173 champions**, including the latest roster entries, are selectable across the draft. Riot Data Dragon **16.21.1** supplies names, titles, portraits and static item metadata. Observed OP.GG role shares determine the initial role map (at least 10% of that champion's observed games in the role); this is not a prohibition on creative off-meta picks. In the personal pool, the app currently filters by supported roles.
 
 `STATS_PROVIDER=opgg` is the default. No OP.GG or Riot API key is required for the public MCP integration. Requests fetch statistics only for eligible pool champions. Results are cached locally under ignored `.cache/opgg/` for six hours, with a maximum of four concurrent requests and an 18-second overall statistics budget. No website HTML is scraped and no private website endpoints are used.
 
@@ -157,7 +157,7 @@ Disable external calls with `STATS_PROVIDER=disabled` in the root `.env`, then r
 ./.venv/Scripts/python.exe backend/scripts/sync_data.py
 ```
 
-The script fetches the latest published Data Dragon version, refreshes the entire roster and portraits, and refreshes observed role mappings through OP.GG when available. Existing reviewed profiles are preserved; new profiles are explicitly unrated. Restart the backend afterward. To pin a version, add `--version 16.18.1`. Refreshing metadata does not calibrate heuristic traits or update the historical fallback guides.
+The script fetches the latest published Data Dragon version, refreshes the entire roster and portraits, and refreshes observed role mappings through OP.GG when available. Existing reviewed profiles are preserved; new profiles are explicitly unrated. Restart the backend afterward. To pin a version, add `--version 16.21.1`. Refreshing metadata does not calibrate heuristic traits or update the historical fallback guides.
 
 See [data-source research](docs/DATA_SOURCES.md) for OP.GG, U.GG and FOW findings, and [the scoring specification](docs/SCORING.md) for the exact formulas.
 
@@ -202,3 +202,9 @@ Onetricks evidence is stored in the same database and shown separately from OP.G
 This batch contains six matchup observations for the focused champions, reviewed from indexed public counter pages on October 20, 2026. Their source patch is unknown and some source crawls are older: these are **reference snapshots, not current live data**. It contains no matchup-specific builds. Direct HTTP access encountered a security checkpoint, and no scraper bypass is implemented. [Onetricks import format and limits](docs/ONETRICKS.md).
 
 GitHub Actions runs backend tests, frontend format/build checks, browser flows and a container persistence smoke test on pushes/PRs. The Docker/EC2 configuration is prepared but **not deployed**. [Deployment instructions](docs/DEPLOYMENT.md).
+
+### Champion toolkit coverage
+
+The bundled Riot 16.21.1 snapshot includes passive and Q/W/E/R descriptions, classes, resource type and base stats for every one of the 173 champions. Each recommendation shows its kit alongside the selected lane opponent, with source links. These facts remain available offline and do not change the heuristic scoring. The build tab also links to champion-specific OP.GG and Onetricks research pages.
+
+Empty statistics, matchup, rune, item and Onetricks panels are omitted. Existing observations keep their patch/sample/source disclosures; missing empirical inputs still receive neutral scoring, explained in Score breakdown. Full-roster kit coverage does not mean full-roster verified matchup or build coverage. `sync_data.py` now fetches complete kits before publishing a refreshed snapshot.

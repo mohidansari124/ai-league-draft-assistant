@@ -2,6 +2,7 @@ import { ExternalLink, Info } from "lucide-react";
 import type { Recommendation } from "../types";
 export default function Statistics({ result }: { result: Recommendation }) {
   const stats = result.statistics;
+  if (!stats) return null;
   return (
     <section
       className="panel statistics-panel"
@@ -61,19 +62,7 @@ export default function Statistics({ result }: { result: Recommendation }) {
             round rates. Composition and situational advice remain heuristics.
           </small>
         </>
-      ) : (
-        <p>
-          Live statistics are unavailable for this pick. Statistical factors
-          receive neutral credit; any historical build or matchup guide is
-          labeled separately.
-        </p>
-      )}
-      {result.traitSource === "unrated" && (
-        <p className="stats-warning">
-          Team-composition traits for this champion are unreviewed and receive
-          neutral credit.
-        </p>
-      )}
+      ) : null}
     </section>
   );
 }

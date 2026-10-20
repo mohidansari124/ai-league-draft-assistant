@@ -2,6 +2,8 @@
 import argparse
 import asyncio
 import json
+import re
+from html import unescape
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -51,6 +53,22 @@ def main():
     catalog["champions"] = sorted(roster,key=lambda c:c["name"])
     catalog["version"] = f"Riot {service.version} roster + heuristic traits v1"
     metadata = {"version":service.version,"source":service.base_url,"champions":{c["id"]:{"name":c["name"],"title":c["title"]} for c in raw.values()},"items":{k:{"name":v["name"],"gold":v["gold"]["total"]} for k,v in items.items()}}
+    # Fetch each complete kit before writing any snapshot; never publish a partial roster.
+    def clean(value):
+        return unescape(re.sub(r"<[^>]+>", " ", value)).strip()
+    def toolkit(c):
+        detail = service.fetch_json(f"champion/{c['id']}")["data"][c["id"]]
+        return c["id"], {
+            "classes": detail["tags"], "resource": detail["partype"],
+            "stats": detail["stats"],
+            "abilities": [{"key":"Passive", "name":detail["passive"]["name"], "description":clean(detail["passive"]["description"])}] + [
+                {"key":key,"name":spell["name"],"description":clean(spell["description"])}
+                for key, spell in zip("QWER",detail["spells"])],
+            "sourceUrl": f"{service.base_url}/cdn/{service.version}/data/en_US/champion/{c['id']}.json"
+        }
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for champion_id, kit in pool.map(toolkit, roster):
+            metadata["champions"][champion_id]["toolkit"] = kit
     portraits = ROOT / "frontend/public/portraits"
     portraits.mkdir(parents=True,exist_ok=True)
     def download(c):

@@ -87,7 +87,10 @@ test("search, pool editing, comfort, draft changes, and duplicate prevention", a
   await page
     .getByRole("button", { name: "Analyze draft", exact: true })
     .click();
-  await expect(page.locator(".matchup-badge")).toHaveText("Unrated");
+  await expect(
+    page.getByRole("region", { name: "Champion reference" }),
+  ).toContainText("Camille");
+  await expect(page.locator(".matchup-badge")).toHaveCount(0);
 });
 
 test("all roles work with partial drafts and jungle disables lane opponent", async ({
@@ -221,7 +224,7 @@ test("full roster champions can be searched, picked, and analyzed", async ({
     .click();
   await expect(page.locator(".recommendation-card")).toHaveCount(3);
   await expect(
-    page.getByRole("region", { name: "Recommendation statistics" }),
+    page.getByRole("region", { name: "Champion reference" }),
   ).toBeVisible();
 });
 
@@ -308,11 +311,8 @@ test("saved ADC drafts survive reload and preserve empty role slots", async ({
     .getByRole("button", { name: "Analyze draft", exact: true })
     .click();
   await expect(
-    page.getByRole("region", { name: "Onetricks matchup evidence" }),
+    page.getByRole("region", { name: "Champion reference" }),
   ).toBeVisible();
-  await expect(
-    page.getByRole("region", { name: "Onetricks matchup evidence" }),
-  ).toContainText("not a live feed");
   await page
     .getByRole("button", { name: "Back to draft", exact: true })
     .click();
@@ -361,7 +361,7 @@ test("imported Onetricks evidence displays champion perspective and missing buil
   await expect(evidence).toContainText("55.8%");
   await expect(evidence).toContainText("1,022");
   await expect(evidence).toContainText("Patch: Unknown");
-  await expect(evidence).toContainText(
+  await expect(evidence).not.toContainText(
     "No verified matchup-specific item or rune record",
   );
   await expect(
@@ -382,6 +382,66 @@ test("imported Onetricks evidence displays champion perspective and missing buil
   ).toBe(true);
   await page.screenshot({
     path: `${artifacts}/onetricks-mobile.png`,
+    fullPage: true,
+  });
+});
+
+test("all-roster champion shows real kit data without empty evidence panels", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Mid", exact: true }).click();
+  const response = await page.request.post(
+    "http://127.0.0.1:8000/api/analyze",
+    {
+      data: {
+        role: "mid",
+        championPool: ["Akali"],
+        allies: [],
+        enemies: ["Ahri"],
+        laneOpponent: "Ahri",
+        comfort: {},
+      },
+    },
+  );
+  expect(response.ok()).toBeTruthy();
+  const analysis = await response.json();
+  await page.route("**/api/analyze", (route) =>
+    route.fulfill({ json: analysis }),
+  );
+  await page
+    .getByRole("button", { name: "Analyze draft", exact: true })
+    .click();
+  const kit = page.getByRole("region", { name: "Champion reference" });
+  await expect(kit).toContainText("Assassin's Mark");
+  await expect(kit).toContainText("Five Point Strike");
+  await expect(kit).toContainText("Ahri");
+  await expect(
+    page.getByRole("heading", { name: "Observed performance" }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("region", { name: "Onetricks matchup evidence" }),
+  ).toHaveCount(0);
+  await expect(
+    page.getByRole("heading", { name: "Lane matchup", exact: true }),
+  ).toHaveCount(0);
+  await page.getByRole("tab", { name: "Build & runes" }).click();
+  await expect(page.getByRole("heading", { name: "Rune page" })).toHaveCount(0);
+  await expect(
+    page.getByRole("heading", { name: "Core items", exact: true }),
+  ).toHaveCount(0);
+  await expect(kit.getByRole("link", { name: "OP.GG builds" })).toHaveAttribute(
+    "href",
+    "https://op.gg/lol/champions/akali/build/mid",
+  );
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBeTruthy();
+  await page.screenshot({
+    path: `${artifacts}/champion-toolkit-mobile.png`,
     fullPage: true,
   });
 });

@@ -2,10 +2,6 @@
   "source": "https://github.com/opgginc/opgg-mcp",
   "note": "Observed roles with at least 10% champion role share; not win-rate data.",
   "roles": {
-    "Nasus": [
-      "top",
-      "mid"
-    ],
     "Malphite": [
       "top"
     ],
@@ -13,60 +9,35 @@
       "top",
       "mid"
     ],
+    "Ornn": [
+      "top"
+    ],
+    "Mordekaiser": [
+      "top"
+    ],
+    "Teemo": [
+      "top",
+      "jungle"
+    ],
     "Garen": [
       "top"
     ],
     "Gangplank": [
       "top"
     ],
-    "Shen": [
-      "top",
-      "support"
-    ],
-    "Teemo": [
-      "top",
-      "jungle",
-      "support"
-    ],
-    "Darius": [
-      "top",
-      "jungle"
-    ],
-    "Ornn": [
-      "top"
-    ],
     "Sett": [
       "top"
     ],
-    "Singed": [
-      "top"
-    ],
-    "Jax": [
+    "Shen": [
       "top",
-      "jungle"
+      "support"
     ],
     "Camille": [
       "top",
       "support"
     ],
-    "Cho'Gath": [
-      "top",
-      "jungle"
-    ],
-    "Irelia": [
-      "top",
-      "mid"
-    ],
-    "Renekton": [
+    "Fiora": [
       "top"
-    ],
-    "Kayle": [
-      "top",
-      "mid"
-    ],
-    "Aatrox": [
-      "top",
-      "jungle"
     ],
     "Pantheon": [
       "top",
@@ -74,43 +45,61 @@
       "jungle",
       "support"
     ],
+    "Aatrox": [
+      "top",
+      "jungle"
+    ],
+    "Darius": [
+      "top",
+      "jungle"
+    ],
+    "Irelia": [
+      "top",
+      "mid"
+    ],
+    "Nasus": [
+      "top",
+      "mid"
+    ],
+    "Renekton": [
+      "top"
+    ],
+    "Jax": [
+      "top",
+      "jungle"
+    ],
+    "Singed": [
+      "top"
+    ],
+    "Kayle": [
+      "top",
+      "mid"
+    ],
+    "Olaf": [
+      "top"
+    ],
+    "Cho'Gath": [
+      "top",
+      "jungle"
+    ],
+    "Yasuo": [
+      "top",
+      "mid",
+      "adc"
+    ],
+    "Urgot": [
+      "top"
+    ],
     "Tryndamere": [
       "top"
     ],
-    "Zaahen": [
-      "top"
-    ],
-    "Olaf": [
+    "Dr. Mundo": [
       "top"
     ],
     "Gwen": [
       "top",
       "mid",
       "jungle"
-    ],
-    "Kennen": [
-      "top"
-    ],
-    "Urgot": [
-      "top"
-    ],
-    "Kled": [
-      "top"
-    ],
-    "Warwick": [
-      "top",
-      "jungle"
-    ],
-    "Dr. Mundo": [
-      "top"
-    ],
-    "Mordekaiser": [
-      "top"
-    ],
-    "Yasuo": [
-      "top",
-      "mid",
-      "adc"
     ],
     "Illaoi": [
       "top"
@@ -120,29 +109,50 @@
       "mid",
       "jungle"
     ],
-    "Fiora": [
+    "Kled": [
       "top"
+    ],
+    "Zaahen": [
+      "top"
+    ],
+    "Sion": [
+      "top"
+    ],
+    "Warwick": [
+      "top",
+      "jungle"
     ],
     "Quinn": [
       "top",
       "jungle"
     ],
-    "Anivia": [
+    "Tahm Kench": [
+      "top",
+      "support"
+    ],
+    "Volibear": [
+      "top",
+      "jungle"
+    ],
+    "Akali": [
       "top",
       "mid"
     ],
     "Gnar": [
       "top"
     ],
-    "Akali": [
+    "Anivia": [
       "top",
       "mid"
     ],
-    "Tahm Kench": [
-      "top",
-      "support"
+    "Kennen": [
+      "top"
     ],
     "Ambessa": [
+      "top",
+      "jungle"
+    ],
+    "Jayce": [
       "top",
       "jungle"
     ],
@@ -152,11 +162,7 @@
     "Yorick": [
       "top"
     ],
-    "Sion": [
-      "top",
-      "mid"
-    ],
-    "Jayce": [
+    "Zac": [
       "top",
       "jungle"
     ],
@@ -164,28 +170,35 @@
       "top",
       "jungle"
     ],
+    "Vladimir": [
+      "top",
+      "mid"
+    ],
     "Poppy": [
       "top",
       "support"
     ],
-    "Vladimir": [
-      "top",
-      "mid",
-      "adc"
+    "Heimerdinger": [
+      "top"
     ],
-    "Volibear": [
+    "Aurora": [
       "top",
-      "jungle"
+      "mid"
+    ],
+    "K'Sante": [
+      "top"
     ],
     "Trundle": [
       "top",
       "jungle"
     ],
-    "K'Sante": [
-      "top"
+    "Vayne": [
+      "top",
+      "adc"
     ],
-    "Heimerdinger": [
-      "top"
+    "Malzahar": [
+      "top",
+      "mid"
     ],
     "Swain": [
       "top",
@@ -193,20 +206,8 @@
       "adc",
       "support"
     ],
-    "Ryze": [
-      "top",
-      "mid"
-    ],
     "Rumble": [
       "top"
-    ],
-    "Cassiopeia": [
-      "top",
-      "mid"
-    ],
-    "Vayne": [
-      "top",
-      "adc"
     ],
     "Varus": [
       "top",
@@ -216,17 +217,12 @@
       "top",
       "jungle"
     ],
+    "Corki": [
+      "top",
+      "adc"
+    ],
     "Ahri": [
       "mid"
-    ],
-    "Xerath": [
-      "mid",
-      "adc",
-      "support"
-    ],
-    "Fizz": [
-      "mid",
-      "jungle"
     ],
     "Viktor": [
       "mid",
@@ -236,30 +232,42 @@
       "mid",
       "jungle"
     ],
+    "Fizz": [
+      "mid",
+      "jungle"
+    ],
     "Katarina": [
       "mid",
       "adc"
     ],
+    "Twisted Fate": [
+      "mid"
+    ],
+    "Lissandra": [
+      "mid"
+    ],
     "Vex": [
       "mid"
     ],
-    "Twisted Fate": [
+    "Locke": [
       "mid"
     ],
     "Zed": [
       "mid",
       "jungle"
     ],
-    "LeBlanc": [
-      "mid",
-      "support"
-    ],
-    "Lissandra": [
-      "mid"
-    ],
     "Syndra": [
       "mid",
       "adc"
+    ],
+    "Xerath": [
+      "mid",
+      "adc",
+      "support"
+    ],
+    "LeBlanc": [
+      "mid",
+      "support"
     ],
     "Lux": [
       "mid",
@@ -269,20 +277,6 @@
       "mid",
       "adc",
       "support"
-    ],
-    "Locke": [
-      "mid"
-    ],
-    "Sylas": [
-      "mid",
-      "jungle"
-    ],
-    "Malzahar": [
-      "mid"
-    ],
-    "Veigar": [
-      "mid",
-      "adc"
     ],
     "Zoe": [
       "mid",
@@ -295,6 +289,21 @@
     "Kassadin": [
       "mid"
     ],
+    "Sylas": [
+      "mid",
+      "jungle"
+    ],
+    "Annie": [
+      "mid"
+    ],
+    "Veigar": [
+      "mid",
+      "adc"
+    ],
+    "Talon": [
+      "mid",
+      "jungle"
+    ],
     "Qiyana": [
       "mid",
       "jungle"
@@ -303,55 +312,55 @@
       "mid",
       "support"
     ],
-    "Annie": [
+    "Akshan": [
       "mid"
-    ],
-    "Aurora": [
-      "mid"
-    ],
-    "Aurelion Sol": [
-      "mid",
-      "adc"
-    ],
-    "Talon": [
-      "mid",
-      "jungle"
     ],
     "Vel'Koz": [
       "mid",
       "adc",
       "support"
     ],
-    "Akshan": [
-      "mid"
+    "Aurelion Sol": [
+      "mid",
+      "adc"
     ],
     "Taliyah": [
       "mid",
       "jungle"
+    ],
+    "Ziggs": [
+      "mid",
+      "adc"
+    ],
+    "Kog'Maw": [
+      "mid",
+      "adc"
     ],
     "Brand": [
       "mid",
       "adc",
       "support"
     ],
-    "Ziggs": [
-      "mid",
-      "adc"
-    ],
-    "Azir": [
+    "Orianna": [
       "mid"
     ],
     "Naafiri": [
       "mid",
       "jungle"
     ],
-    "Orianna": [
+    "Azir": [
+      "mid"
+    ],
+    "Cassiopeia": [
       "mid"
     ],
     "Mel": [
       "mid",
       "adc",
       "support"
+    ],
+    "Ryze": [
+      "mid"
     ],
     "Smolder": [
       "mid",
@@ -360,93 +369,90 @@
     "Rammus": [
       "jungle"
     ],
+    "Lillia": [
+      "jungle"
+    ],
+    "Lee Sin": [
+      "jungle"
+    ],
+    "Master Yi": [
+      "jungle"
+    ],
     "Shyvana": [
       "jungle"
     ],
     "Briar": [
       "jungle"
     ],
-    "Master Yi": [
-      "jungle"
-    ],
-    "Nocturne": [
-      "jungle"
-    ],
-    "Lee Sin": [
-      "jungle"
-    ],
-    "Viego": [
-      "jungle"
-    ],
-    "Kayn": [
-      "jungle"
-    ],
-    "Nidalee": [
-      "jungle"
-    ],
-    "Evelynn": [
-      "jungle"
-    ],
     "Shaco": [
       "jungle",
       "support"
     ],
-    "Bel'Veth": [
-      "jungle"
-    ],
-    "Graves": [
-      "jungle"
-    ],
-    "Zac": [
+    "Kayn": [
       "jungle"
     ],
     "Sejuani": [
       "jungle"
     ],
-    "Rek'Sai": [
-      "jungle"
-    ],
-    "Fiddlesticks": [
-      "jungle",
-      "support"
-    ],
-    "Kha'Zix": [
-      "jungle"
-    ],
-    "Jarvan IV": [
-      "jungle"
-    ],
-    "Lillia": [
-      "jungle"
-    ],
-    "Hecarim": [
-      "jungle"
-    ],
-    "Zyra": [
-      "jungle",
-      "support"
-    ],
-    "Vi": [
-      "jungle"
-    ],
-    "Nunu & Willump": [
-      "jungle"
-    ],
-    "Ivern": [
-      "jungle"
-    ],
-    "Amumu": [
-      "jungle",
-      "support"
-    ],
-    "Skarner": [
+    "Graves": [
       "jungle"
     ],
     "Elise": [
       "jungle",
       "support"
     ],
+    "Kha'Zix": [
+      "jungle"
+    ],
+    "Nidalee": [
+      "jungle"
+    ],
+    "Viego": [
+      "jungle"
+    ],
+    "Jarvan IV": [
+      "jungle"
+    ],
+    "Bel'Veth": [
+      "jungle"
+    ],
+    "Fiddlesticks": [
+      "jungle",
+      "support"
+    ],
+    "Rek'Sai": [
+      "jungle"
+    ],
+    "Evelynn": [
+      "jungle"
+    ],
+    "Zyra": [
+      "jungle",
+      "support"
+    ],
+    "Hecarim": [
+      "jungle"
+    ],
+    "Ivern": [
+      "jungle"
+    ],
     "Kindred": [
+      "jungle"
+    ],
+    "Amumu": [
+      "jungle",
+      "support"
+    ],
+    "Nunu & Willump": [
+      "jungle"
+    ],
+    "Nocturne": [
+      "jungle"
+    ],
+    "Skarner": [
+      "jungle"
+    ],
+    "Vi": [
       "jungle"
     ],
     "Xin Zhao": [
@@ -469,32 +475,28 @@
     "Tristana": [
       "adc"
     ],
+    "Jhin": [
+      "adc"
+    ],
     "Kai'Sa": [
       "adc"
     ],
     "Xayah": [
       "adc"
     ],
-    "Yunara": [
-      "adc"
-    ],
-    "Jhin": [
-      "adc"
-    ],
     "Caitlyn": [
-      "adc"
-    ],
-    "Ashe": [
-      "adc",
-      "support"
-    ],
-    "Zeri": [
       "adc"
     ],
     "Twitch": [
       "adc"
     ],
-    "Kog'Maw": [
+    "Zeri": [
+      "adc"
+    ],
+    "Yunara": [
+      "adc"
+    ],
+    "Aphelios": [
       "adc"
     ],
     "Sivir": [
@@ -503,21 +505,18 @@
     "Lucian": [
       "adc"
     ],
+    "Ashe": [
+      "adc",
+      "support"
+    ],
     "Miss Fortune": [
-      "adc"
-    ],
-    "Samira": [
-      "adc"
-    ],
-    "Aphelios": [
       "adc"
     ],
     "Draven": [
       "adc"
     ],
-    "Seraphine": [
-      "adc",
-      "support"
+    "Samira": [
+      "adc"
     ],
     "Nilah": [
       "adc"
@@ -528,25 +527,28 @@
     "Ezreal": [
       "adc"
     ],
-    "Corki": [
-      "adc"
-    ],
     "Thresh": [
       "support"
     ],
     "Leona": [
       "support"
     ],
-    "Braum": [
+    "Blitzcrank": [
       "support"
     ],
-    "Lulu": [
+    "Braum": [
       "support"
     ],
     "Nami": [
       "support"
     ],
-    "Blitzcrank": [
+    "Lulu": [
+      "support"
+    ],
+    "Janna": [
+      "support"
+    ],
+    "Alistar": [
       "support"
     ],
     "Senna": [
@@ -555,49 +557,46 @@
     "Rell": [
       "support"
     ],
+    "Nautilus": [
+      "support"
+    ],
     "Milio": [
       "support"
     ],
-    "Alistar": [
-      "support"
-    ],
-    "Janna": [
-      "support"
-    ],
-    "Soraka": [
-      "support"
-    ],
-    "Nautilus": [
+    "Seraphine": [
       "support"
     ],
     "Zilean": [
       "support"
     ],
-    "Sona": [
+    "Rakan": [
       "support"
     ],
-    "Rakan": [
+    "Soraka": [
+      "support"
+    ],
+    "Sona": [
       "support"
     ],
     "Pyke": [
       "support"
     ],
-    "Morgana": [
-      "support"
-    ],
     "Karma": [
       "support"
     ],
-    "Bard": [
+    "Morgana": [
       "support"
     ],
     "Taric": [
       "support"
     ],
-    "Yuumi": [
+    "Bard": [
       "support"
     ],
     "Renata Glasc": [
+      "support"
+    ],
+    "Yuumi": [
       "support"
     ],
     "Neeko": [

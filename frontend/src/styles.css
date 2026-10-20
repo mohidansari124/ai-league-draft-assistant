@@ -1955,3 +1955,19 @@ footer p {
 .adc-advice .statistics-grid strong {
   font-size: 20px;
 }
+
+.champion-kit + .champion-kit {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 24px;
+}
+.kit-ability {
+  margin: 16px 0;
+}
+.kit-ability h4 {
+  margin: 0 0 6px;
+}
+.champion-kit summary {
+  cursor: pointer;
+  margin: 16px 0;
+}

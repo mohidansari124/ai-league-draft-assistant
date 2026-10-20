@@ -1,5 +1,13 @@
+export type ChampionToolkit = {
+  classes: string[];
+  resource: string;
+  stats: Record<string, number>;
+  abilities: { key: string; name: string; description: string }[];
+  sourceUrl: string;
+};
 export type Role = "top" | "jungle" | "mid" | "adc" | "support";
 export type Champion = {
+  toolkit?: ChampionToolkit;
   id: string;
   name: string;
   roles: Role[];

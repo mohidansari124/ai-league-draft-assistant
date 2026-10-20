@@ -27,4 +27,5 @@ def public_catalog():
     return {"dataVersion": catalog["version"], "metadataVersion": metadata["version"],
             "notice": catalog["notice"], "statisticsProvider": "OP.GG" if os.getenv("STATS_PROVIDER", "opgg") == "opgg" else "disabled", "champions": [
                 {**c, "title": metadata["champions"].get(c["id"], {}).get("title", c["archetype"]),
+                 "toolkit": metadata["champions"].get(c["id"], {}).get("toolkit"),
                  "portrait": f"/portraits/{c['id']}.png"} for c in catalog["champions"]]}

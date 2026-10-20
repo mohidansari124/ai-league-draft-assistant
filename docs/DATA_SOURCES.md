@@ -4,7 +4,7 @@
 
 Official documentation: https://developer.riotgames.com/docs/lol#data-dragon
 
-The versions endpoint returned **16.18.1**. Its champion.json contains **173 champions**. All names, stable numeric/string IDs, titles and identification portraits are included. Item names/costs are retained as static metadata. Data Dragon does not supply match win rates, matchup performance or optimal builds.
+Refreshed 2026-10-20: the versions endpoint returned **16.21.1**. Its champion.json contains **173 champions**. All names, stable numeric/string IDs, titles and identification portraits are included. Per-champion endpoints also supply passive/Q/W/E/R descriptions, classes, resource type and base stats for all 173 champions. Descriptions are stripped of markup and rendered as plain React text. Item names/costs are retained as static metadata. Data Dragon does not supply match win rates, matchup performance or optimal builds.
 
 ## Implemented: OP.GG public MCP
 

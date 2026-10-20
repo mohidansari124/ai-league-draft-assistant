@@ -1,5 +1,5 @@
 {
-  "version": "Riot 16.18.1 roster + heuristic traits v1",
+  "version": "Riot 16.21.1 roster + heuristic traits v1",
   "notice": "Full Riot roster. Win rates, builds and runes use OP.GG when available; team-composition traits remain labeled heuristics. Missing statistics are neutral, never invented.",
   "champions": [
     {
@@ -273,6 +273,7 @@
       "tags": [],
       "key": "893",
       "roles": [
+        "top",
         "mid"
       ],
       "traitSource": "unrated",
@@ -481,7 +482,6 @@
       "tags": [],
       "key": "69",
       "roles": [
-        "top",
         "mid"
       ],
       "traitSource": "unrated",
@@ -523,6 +523,7 @@
       "tags": [],
       "key": "42",
       "roles": [
+        "top",
         "adc"
       ],
       "traitSource": "unrated",
@@ -1449,6 +1450,7 @@
       "tags": [],
       "key": "96",
       "roles": [
+        "mid",
         "adc"
       ],
       "traitSource": "unrated",
@@ -1684,6 +1686,7 @@
       "tags": [],
       "key": "90",
       "roles": [
+        "top",
         "mid"
       ],
       "traitSource": "unrated",
@@ -2387,7 +2390,6 @@
       "tags": [],
       "key": "13",
       "roles": [
-        "top",
         "mid"
       ],
       "traitSource": "unrated",
@@ -2474,7 +2476,6 @@
       "tags": [],
       "key": "147",
       "roles": [
-        "adc",
         "support"
       ],
       "traitSource": "unrated",
@@ -2599,8 +2600,7 @@
       "tags": [],
       "key": "14",
       "roles": [
-        "top",
-        "mid"
+        "top"
       ],
       "traitSource": "unrated",
       "roleSource": "OP.GG observed roles"
@@ -2875,8 +2875,7 @@
       "key": "17",
       "roles": [
         "top",
-        "jungle",
-        "support"
+        "jungle"
       ],
       "traitSource": "unrated",
       "roleSource": "OP.GG observed roles"
@@ -3235,8 +3234,7 @@
       "key": "8",
       "roles": [
         "top",
-        "mid",
-        "adc"
+        "mid"
       ],
       "traitSource": "unrated",
       "roleSource": "OP.GG observed roles"
@@ -3506,6 +3504,7 @@
       "tags": [],
       "key": "154",
       "roles": [
+        "top",
         "jungle"
       ],
       "traitSource": "unrated",

@@ -5,6 +5,7 @@ export default function Onetricks({
 }: {
   evidence: OnetricksEvidence;
 }) {
+  if (!evidence.records.length) return null;
   return (
     <section
       className="panel detail-panel adc-advice"
@@ -15,14 +16,6 @@ export default function Onetricks({
         <h2>Onetricks matchup evidence</h2>
       </div>
       <p>{evidence.notice}</p>
-      {!evidence.records.length && (
-        <p className="stats-warning">
-          {evidence.opponent
-            ? `No imported evidence for this pick against ${evidence.opponent}.`
-            : "Select an opposing ADC to look up imported evidence."}{" "}
-          Overall OP.GG builds remain separate.
-        </p>
-      )}
       {evidence.records.map((record, i) => (
         <article key={`${record.sourceUrl}-${record.observedAt}-${i}`}>
           <h3>
@@ -84,12 +77,7 @@ export default function Onetricks({
                   : "Reference only: patch differs/is unknown, review is older than seven days, or build sample is below 100."}
               </p>
             </>
-          ) : (
-            <p className="stats-warning">
-              No verified matchup-specific item or rune record in this
-              observation.
-            </p>
-          )}
+          ) : null}
           <a
             className="text-button"
             href={record.sourceUrl}
