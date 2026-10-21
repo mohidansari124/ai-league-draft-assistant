@@ -31,6 +31,11 @@ jobs:
         run: |
           python -m venv .venv
           .venv/bin/python -m pip install -r backend/requirements.lock.txt
+      - name: Check Linux deployment scripts
+        run: |
+          bash -n deploy/bootstrap.sh
+          bash -n deploy/run-server.sh
+          if grep -n $'\r' deploy/*.sh; then exit 1; fi
       - name: Backend tests
         working-directory: backend
         run: ../.venv/bin/python -m pytest -q

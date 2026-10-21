@@ -1,5 +1,9 @@
 # AWS deployment
 
+Live demo: **https://77.112.209.133.sslip.io**. Stack: `draftwise-mvp`, region: `us-east-2`, instance: `i-099db5f828ed2921a`. Application release: `63e1e15e287adee6958d87222d8098db2e9ea422`. Initial launch: October 20, 2026 (America/Los_Angeles). GitHub CI passed for the application before launch; the deployment-script fixes are committed separately.
+
+The local `draftwise` CLI profile is authenticated through AWS browser login. Do not commit its cached credentials. The $25 monthly AWS budget is tracking only: it has no email subscribers or automatic shutdown action.
+
 `deploy/ec2-stack.json` provisions the single-instance course MVP in an existing VPC/subnet: Amazon Linux 2023, t3.small (standard CPU credits), 20 GB encrypted root disk, a separate retained 5 GB encrypted data volume, Elastic IP, HTTP/HTTPS security group, private versioned release bucket, and an instance role limited to release downloads plus Systems Manager. SSH is closed. `deploy/bootstrap.sh` is the readable source of the user data embedded in the template; keep them synchronized.
 
 The server builds the committed source archive, imports the reviewed Onetricks observations idempotently, and runs the API/frontend and Caddy containers. SQLite and TLS state live on the data volume at `/srv/draftwise`. A free `<elastic-ip>.sslip.io` hostname provides the demo URL; it depends on that external DNS service. Caddy obtains and renews HTTPS certificates. Local saved drafts are not uploaded.

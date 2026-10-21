@@ -1,5 +1,7 @@
 # Draftwise — AI League Draft Assistant
 
+**Live AWS demo:** https://77.112.209.133.sslip.io
+
 A working CS4800 Software Engineering with AI MVP. Enter a League draft, choose a personal champion pool, and get up to three contextual recommendations with transparent scores, matchup notes, runes, item suggestions, and a game plan.
 
 **React + TypeScript + Vite + Tailwind CSS frontend; Python + FastAPI backend; SQLite database.** Includes all 173 champions in Riot Data Dragon 16.21.1 and real OP.GG statistics through its official public MCP service. Works without API keys. No login or accounts.
@@ -39,7 +41,7 @@ cd frontend
 pnpm.cmd dev
 ```
 
-Vite proxies `/api` to port 8000. Both servers bind to localhost. A Docker/EC2 deployment configuration is prepared; see [deployment](docs/DEPLOYMENT.md). No cloud deployment has been performed.
+Vite proxies `/api` to port 8000. Both servers bind to localhost. The public demo runs on AWS EC2 in Ohio; see [deployment](docs/DEPLOYMENT.md) for operations and costs.
 
 ## Demonstration
 
