@@ -14,6 +14,9 @@ mkdir -p /srv/draftwise
 UUID=$(blkid -s UUID -o value "$DISK")
 grep -q "$UUID" /etc/fstab || echo "UUID=$UUID /srv/draftwise ext4 defaults,nofail 0 2" >> /etc/fstab
 mount /srv/draftwise
+mkdir -p /etc/systemd/system/docker.service.d
+printf '[Unit]\nRequiresMountsFor=/srv/draftwise\n' > /etc/systemd/system/docker.service.d/draftwise-storage.conf
+systemctl daemon-reload
 mkdir -p /srv/draftwise/database /srv/draftwise/caddy /srv/draftwise/caddy-config /opt/draftwise
 chown 10001:10001 /srv/draftwise/database
 # Standard CPU credits avoid unlimited-mode CPU surplus charges.
