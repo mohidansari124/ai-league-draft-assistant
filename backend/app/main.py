@@ -7,6 +7,7 @@ import hashlib
 import secrets
 import re
 from app import database
+from app.services.traffic import TrafficLimits
 from app.services.onetricks import evidence_for
 from fastapi.middleware.cors import CORSMiddleware
 from app.models import AnalyzeRequest, AnalysisResponse, SavedDraftInput
@@ -18,6 +19,8 @@ from app.services.explanations import add_explanations
 load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 app = FastAPI(title="Draftwise — AI League Draft Assistant", version="0.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=[s.strip() for s in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")], allow_credentials=True, allow_methods=["GET", "POST", "DELETE"], allow_headers=["Content-Type"])
+
+app.add_middleware(TrafficLimits)
 
 @app.get("/api/health")
 def health():

@@ -1,0 +1,295 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Draftwise single-instance course MVP; private artifacts, HTTPS and retained SQLite volume.",
+  "Parameters": {
+    "ArtifactBucket": {
+      "Type": "String"
+    },
+    "ReleaseKey": {
+      "Type": "String"
+    },
+    "VpcId": {
+      "Type": "AWS::EC2::VPC::Id"
+    },
+    "SubnetId": {
+      "Type": "AWS::EC2::Subnet::Id"
+    },
+    "AvailabilityZone": {
+      "Type": "AWS::EC2::AvailabilityZone::Name"
+    },
+    "ImageId": {
+      "Type": "AWS::EC2::Image::Id"
+    }
+  },
+  "Resources": {
+    "Artifacts": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "BucketName": {
+          "Ref": "ArtifactBucket"
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      }
+    },
+    "ArtifactPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "Artifacts"
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:*",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "Artifacts",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Sub": "${Artifacts.Arn}/*"
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "SecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Draftwise web only; administration via SSM",
+        "VpcId": {
+          "Ref": "VpcId"
+        },
+        "SecurityGroupIngress": [
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 80,
+            "ToPort": 80,
+            "CidrIp": "0.0.0.0/0"
+          },
+          {
+            "IpProtocol": "tcp",
+            "FromPort": 443,
+            "ToPort": 443,
+            "CidrIp": "0.0.0.0/0"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "draftwise-web"
+          }
+        ]
+      }
+    },
+    "ServerRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+        ],
+        "Policies": [
+          {
+            "PolicyName": "ReadDraftwiseRelease",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:GetObject"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "arn:aws:s3:::${ArtifactBucket}/releases/*"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "InstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "ServerRole"
+          }
+        ]
+      }
+    },
+    "DataVolume": {
+      "Type": "AWS::EC2::Volume",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "AvailabilityZone": {
+          "Ref": "AvailabilityZone"
+        },
+        "Size": 5,
+        "VolumeType": "gp3",
+        "Encrypted": true,
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "draftwise-persistent-data"
+          }
+        ]
+      }
+    },
+    "PublicIp": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc"
+      }
+    },
+    "Server": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": {
+          "Ref": "ImageId"
+        },
+        "InstanceType": "t3.small",
+        "SubnetId": {
+          "Ref": "SubnetId"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "SecurityGroup"
+          }
+        ],
+        "IamInstanceProfile": {
+          "Ref": "InstanceProfile"
+        },
+        "CreditSpecification": {
+          "CPUCredits": "standard"
+        },
+        "MetadataOptions": {
+          "HttpTokens": "required",
+          "HttpPutResponseHopLimit": 1
+        },
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+              "VolumeSize": 20,
+              "VolumeType": "gp3",
+              "Encrypted": true,
+              "DeleteOnTermination": true
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "draftwise-mvp"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Sub": [
+              "#!/bin/bash\nset -euo pipefail\nexec > >(tee -a /var/log/draftwise-bootstrap.log) 2>&1\nfor attempt in $(seq 1 12); do dnf install -y docker awscli-2 && break || sleep 10; done\nsystemctl enable --now docker\nsystemctl enable --now amazon-ssm-agent\n# A separate retained EBS volume keeps database and TLS data across instance replacement.\nDISK=/dev/disk/by-id/nvme-Amazon_Elastic_Block_Store_${DataVolumeId}\nDISK=$(echo \"$DISK\" | sed 's/vol-/vol/')\nfor attempt in $(seq 1 120); do [ -b \"$DISK\" ] && break || sleep 5; done\n[ -b \"$DISK\" ]\nif ! blkid \"$DISK\"; then mkfs.ext4 \"$DISK\"; fi\nmkdir -p /srv/draftwise\nUUID=$(blkid -s UUID -o value \"$DISK\")\ngrep -q \"$UUID\" /etc/fstab || echo \"UUID=$UUID /srv/draftwise ext4 defaults,nofail 0 2\" >> /etc/fstab\nmount /srv/draftwise\nmkdir -p /srv/draftwise/database /srv/draftwise/caddy /srv/draftwise/caddy-config /opt/draftwise\nchown 10001:10001 /srv/draftwise/database\n# Standard CPU credits avoid unlimited-mode CPU surplus charges.\nfor attempt in $(seq 1 90); do aws s3 cp s3://${ArtifactBucket}/releases/${ReleaseKey}.tar.gz /opt/draftwise/source.tar.gz --region ${AWS::Region} && break || sleep 10; done\ntar -xzf /opt/draftwise/source.tar.gz -C /opt/draftwise\ncd /opt/draftwise\nprintf '%s\\n' '${PublicIp}.sslip.io' > /srv/draftwise/domain\nbash deploy/run-server.sh '${ReleaseKey}'\n",
+              {
+                "DataVolumeId": {
+                  "Ref": "DataVolume"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "DataAttachment": {
+      "Type": "AWS::EC2::VolumeAttachment",
+      "Properties": {
+        "Device": "/dev/sdf",
+        "InstanceId": {
+          "Ref": "Server"
+        },
+        "VolumeId": {
+          "Ref": "DataVolume"
+        }
+      }
+    },
+    "IpAttachment": {
+      "Type": "AWS::EC2::EIPAssociation",
+      "Properties": {
+        "InstanceId": {
+          "Ref": "Server"
+        },
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "PublicIp",
+            "AllocationId"
+          ]
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "InstanceId": {
+      "Value": {
+        "Ref": "Server"
+      }
+    },
+    "DataVolumeId": {
+      "Value": {
+        "Ref": "DataVolume"
+      }
+    },
+    "ArtifactBucket": {
+      "Value": {
+        "Ref": "Artifacts"
+      }
+    },
+    "PublicUrl": {
+      "Value": {
+        "Fn::Sub": "https://${PublicIp}.sslip.io"
+      }
+    }
+  }
+}
